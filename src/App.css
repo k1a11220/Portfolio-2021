@@ -12,9 +12,11 @@ Bold 700
 
 html,
 body {
-  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
+  cursor: none;
 }
 
 .contents-wrapper {
