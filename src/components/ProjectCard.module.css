@@ -1,0 +1,21 @@
+.card_wrapper {
+  background-color: #f3f3f3;
+  margin-top: 2vw;
+  width: 33vw;
+  height: 410px;
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 3vw;
+  margin-left: 3vw;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 1vw;
+  margin-left: 3vw;
+}

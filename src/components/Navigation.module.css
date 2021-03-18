@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
+li {
+  list-style: none;
+}
+
+.nav_wrapper {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.select_area {
+  display: flex;
+  align-items: center;
+}
+
+.select_area p {
+  font-size: 18px;
+  margin-left: 40px;
+  font-weight: 400;
+}
