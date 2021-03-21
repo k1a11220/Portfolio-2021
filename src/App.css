@@ -16,9 +16,23 @@ body {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
-  cursor: none;
+  /* cursor: none; */
 }
 
-.contents-wrapper {
-  width: 68vw;
+.container {
+  width: 1320px;
+}
+
+.center_wrapper {
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 94vw;
+  }
 }

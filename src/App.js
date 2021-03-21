@@ -1,24 +1,26 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
-import Cursor from "./components/Cursor";
+// import Cursor from "./components/Cursor";
+import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import About from "./routes/About";
 import Work from "./routes/Work";
+import OLED from "./routes/OLED";
 
 function App() {
   return (
-    <>
-      <Cursor />
-      <section className="contents-wrapper">
-        <HashRouter>
-          <Navigation />
-          <Route path="/" exact={true} component={Work} />
-          <Route path="/Work" component={Work} />
-          <Route path="/About" component={About} />
-        </HashRouter>
-      </section>
-    </>
+    <section className="center_wrapper">
+      <HashRouter>
+        {/* <Cursor /> */}
+        <Navigation />
+        <Route path="/" exact={true} component={Work} />
+        <Route path="/Work" component={Work} />
+        <Route path="/About" component={About} />
+        <Route path="/OLED" component={OLED} />
+        <Footer />
+      </HashRouter>
+    </section>
   );
 }
 
