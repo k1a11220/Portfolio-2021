@@ -1,0 +1,42 @@
+.title {
+  font-size: 100px;
+  font-weight: 600;
+  padding-top: 120px;
+  padding-bottom: 18px;
+}
+
+.details {
+  width: 60%;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 22px;
+}
+
+.line {
+  height: 2px;
+  background-color: #0a0a0a;
+}
+
+.details_wrapper {
+  display: flex;
+}
+
+.details_wrapper div {
+  padding-right: 160px;
+}
+
+.experience_title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.experience_details {
+  display: flex;
+}
+
+.experience_details ul li {
+  font-size: 18px;
+  margin-right: 60px;
+  margin-top: 12px;
+}
