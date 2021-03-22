@@ -45,3 +45,26 @@
 .copyright {
   font-size: 12px;
 }
+
+@media screen and (max-width: 1400px) {
+  .footer_wrapper {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 470px) {
+  .footer_container {
+    height: 320px;
+  }
+  .footer_wrapper {
+    justify-content: center;
+  }
+  .footer_info {
+    flex-direction: column;
+  }
+  .footer_info div {
+    padding-bottom: 30px;
+  }
+  .footer_info div {
+    padding-right: 0;
+  }
+}

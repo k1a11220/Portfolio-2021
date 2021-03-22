@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  width: 1320px;
+  width: 1280px;
 }
 
 .center_wrapper {
@@ -33,6 +33,6 @@ body {
 
 @media screen and (max-width: 1400px) {
   .container {
-    width: 94vw;
+    width: 90vw;
   }
 }

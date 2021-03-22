@@ -31,3 +31,17 @@ li {
   margin-left: 40px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 767px) {
+  .nav_wrapper {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  .select_area {
+    display: none;
+  }
+  .logo p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
