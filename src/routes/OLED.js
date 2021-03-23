@@ -1,19 +1,18 @@
 import React from "react";
 
-import projectList from "../ProjectList";
+// import projectList from "../ProjectList";
 
-import DetailTitle from "../components/DetailTitle";
-import LargeBox from "../components/LargeBox";
-import MediumBox from "../components/MediumBox";
-// import MediumLongBox from "../components/MediumLongBox";
-import UpMargin from "../components/UpMargin";
-import styles from "./Detail.module.css";
-import SmallBox from "../components/SmallBox";
+// import DetailTitle from "../components/DetailTitle";
+// import LargeBox from "../components/LargeBox";
+// import MediumBox from "../components/MediumBox";
+// import UpMargin from "../components/UpMargin";
+// import styles from "./Detail.module.css";
+// import SmallBox from "../components/SmallBox";
 
 const OLED = () => {
   return (
     <section className="container">
-      <LargeBox title="" background="https://i.imgur.com/f71RFmr.png" />
+      {/* <LargeBox title="" background="https://i.imgur.com/f71RFmr.png" />
       <DetailTitle
         title={projectList[0].title}
         company={projectList[0].company}
@@ -31,7 +30,7 @@ const OLED = () => {
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />
-      </div>
+      </div> */}
     </section>
   );
 };

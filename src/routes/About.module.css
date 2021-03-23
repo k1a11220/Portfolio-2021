@@ -1,42 +1,85 @@
-.title {
-  font-size: 100px;
-  font-weight: 600;
-  padding-top: 120px;
-  padding-bottom: 18px;
-}
-
-.details {
-  width: 60%;
-  font-size: 16px;
-  font-weight: 400;
-  padding-top: 22px;
-}
-
 .line {
-  height: 2px;
+  height: 1px;
   background-color: #0a0a0a;
 }
 
 .details_wrapper {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.details_wrapper div {
-  padding-right: 160px;
-}
-
-.experience_title {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 28px;
+.details_wrapper li {
+  width: 50%;
+  margin-bottom: 40px;
 }
 
 .experience_details {
   display: flex;
+  flex-direction: column;
+  margin-top: 32px;
 }
 
-.experience_details ul li {
-  font-size: 16px;
-  margin-right: 60px;
-  margin-top: 12px;
+.experience_grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-gap: 32px;
+  margin-bottom: 8px;
+}
+
+.clients_grid {
+  display: grid;
+  grid-template-columns: 260px;
+  grid-gap: 32px;
+  margin-bottom: 14px;
+}
+
+.skills_grid {
+  display: grid;
+  grid-template-columns: 210px 2.5fr;
+  grid-gap: 32px;
+  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 1400px) {
+  .details_wrapper li {
+    width: 60vw;
+  }
+  .experience_grid {
+    grid-template-columns: 110px 180px 2fr;
+  }
+  .skills_grid {
+    grid-template-columns: 180px 360px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience_title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .experience_grid {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    grid-gap: 6px;
+  }
+  .clients_grid {
+    margin-bottom: 8px;
+  }
+  .skills_grid {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4px;
+  }
+  .details_wrapper li {
+    width: 100%;
+  }
+
+  .experience_details {
+    margin-top: 20px;
+  }
 }
