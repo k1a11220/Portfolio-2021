@@ -6,12 +6,14 @@ const About = () => {
   return (
     <section className="container">
       <div className="title_wrapper">
-        <h1 className="font_gradient">HELLO</h1>
-        <h3 className="font_light">
-          I love to make impact with awesome products. <br />
-          I’m currently working as a design engineer at TNG and Product Designer
-          at BE THE LIGHT
-        </h3>
+        <div>
+          <h1 className="font_gradient">HELLO</h1>
+          <h2 className="font_regular font_gray">
+            I love to make impact with awesome products. <br />
+            I’m currently working as a design engineer at TNG and Product
+            Designer at BE THE LIGHT
+          </h2>
+        </div>
       </div>
       <ul className={styles.details_wrapper}>
         <li>

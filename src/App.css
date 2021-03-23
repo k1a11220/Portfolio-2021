@@ -56,18 +56,37 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
+.me {
+  width: 24vw;
+  left: 10%;
+}
+
 .container {
   width: 1280px;
 }
 
 .title_wrapper {
+  position: relative;
   height: 720px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title_wrapper div h1,
+h2 {
+  position: relative;
+  z-index: 100;
+}
+
+.title_wrapper h2 {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .title_wrapper h3 {
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -80,6 +99,16 @@ h4 {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .me {
+    width: 48vw;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    z-index: 0;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   h1 {
     font-size: 64px;
@@ -88,7 +117,7 @@ h4 {
     width: 90vw;
   }
   .title_wrapper {
-    height: 64vw;
+    height: 72vw;
   }
 }
 
@@ -96,10 +125,21 @@ h4 {
   h1 {
     font-size: 40px;
   }
+  h2 {
+    font-size: 18px;
+  }
+  .title_wrapper h2 {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 589px) {
   h1 {
     font-size: 32px;
+  }
+  .me {
+    top: -8%;
   }
 }

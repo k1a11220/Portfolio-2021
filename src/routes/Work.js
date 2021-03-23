@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import projectList from "../ProjectList";
 import CardCover from "../components/Work/CardCover";
 import TableCover from "../components/Work/TableCover";
+import ME from "../media/me.png";
 
 const Work = () => {
   const [card, setCard] = useState(true);
@@ -18,13 +19,18 @@ const Work = () => {
   return (
     <section className="container">
       <div className="title_wrapper">
-        <h1 className="font_gradient">
-          LET'S <br /> MAKE <br /> HISTORY
-        </h1>
-        <h3 className="font_light">
-          I'm Beomsoo Son, an engineer/designer based in South Korea, <br />
-          focused on Industrial Design & Engineering and Product Design.
-        </h3>
+        <div>
+          <h1 className="font_gradient">
+            LET'S <br /> MAKE <br /> HISTORY
+          </h1>
+          <h2 className="font_regular font_gradient">
+            I'm Beomsoo Son, an engineer/designer based in South Korea, focused
+            on Industrial Design & Engineering and Product Design.
+          </h2>
+        </div>
+        <div>
+          <img className="me" src={ME}></img>
+        </div>
       </div>
 
       {/* <div className={styles.stateBtn_wrapper}>
