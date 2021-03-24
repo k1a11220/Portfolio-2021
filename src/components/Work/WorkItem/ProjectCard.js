@@ -20,21 +20,21 @@ const ProjectCard = (props) => {
       <Link to={links}>
         <div className={styles.card_contents}>
           <h2
-            className={styles.title}
+            className={`${styles.title} font_regular`}
             style={{
               color: `${color}`,
             }}
           >
             {title}
           </h2>
-          <h3
-            className={styles.info}
+          <h4
+            className={`${styles.info} font_light`}
             style={{
               color: `${color}`,
             }}
           >
             {company} - {year}
-          </h3>
+          </h4>
         </div>
       </Link>
     </div>

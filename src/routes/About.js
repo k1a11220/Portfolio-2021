@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./About.module.css";
 // import UpMargin from "../components/UpMargin";
-
+const TITLEARRAY = [
+  "Hello",
+  "안녕하세요",
+  "Hallo",
+  "Bonjour",
+  "こんにちは",
+  "你好",
+  "Привет",
+  "مرحبا",
+  "Ciao",
+  "Halo",
+];
 const About = () => {
+  const [title, setTitle] = useState("Hello");
+
+  const shuffle = useCallback(() => {
+    const index = Math.floor(Math.random() * TITLEARRAY.length);
+    setTitle(TITLEARRAY[index]);
+  }, []);
+
+  useEffect(() => {
+    const intervalID = setInterval(shuffle, 3000);
+    return () => clearInterval(intervalID);
+  }, [shuffle]);
+
   return (
     <section className="container">
       <div className="title_wrapper">
         <div>
-          <h1 className="font_gradient">HELLO</h1>
-          <h2 className="font_regular font_gray">
+          <h1 className="font_gradient">{`[ ${title} ]`}</h1>
+          <h2 className="font_regular font_gray font_gradient">
             I love to make impact with awesome products. <br />
             I’m currently working as a design engineer at TNG and Product
             Designer at BE THE LIGHT

@@ -8,42 +8,30 @@
 }
 
 .title {
-  font-size: 26px;
-  font-weight: 600;
   margin-bottom: 1vw;
 }
 
 .info {
-  font-size: 16px;
-  font-weight: 500;
   margin-bottom: 1vw;
-  color: rgba(0, 0, 0, 0.4);
 }
 
 .details {
-  font-size: 16px;
-  font-weight: 400;
   padding-top: 10px;
   width: 50%;
 }
 
 @media screen and (max-width: 767px) {
   .container {
-    justify-content: center;
-    align-items: center;
     padding-top: 0;
     margin-bottom: 0;
   }
   .title {
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
   }
   .details {
-    text-align: center;
-    width: 80%;
-    font-size: 14px;
+    text-align: left;
+    width: 100%;
   }
   .info {
-    font-size: 14px;
   }
 }

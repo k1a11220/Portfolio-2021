@@ -4,9 +4,11 @@ import styles from "./ProjectDetail.module.css";
 const ProjectDetail = (props) => {
   return (
     <div className={styles.container}>
-      <h3 className={styles.info}>{props.company}</h3>
-      <h1 className={styles.title}>{props.title}</h1>
-      <h3 className={styles.details}>{props.details}</h3>
+      <h2 className={`${styles.info} font_regular font_gray`}>
+        {props.company}
+      </h2>
+      <p className={`${styles.title} title_h1 font_extraBold`}>{props.title}</p>
+      <h3 className={`${styles.details} font_light`}>{props.details}</h3>
     </div>
   );
 };

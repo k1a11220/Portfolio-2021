@@ -1,0 +1,15 @@
+.bar1_checked {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(3.5px, 0px);
+}
+
+.bar2_checked {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+.bar3_checked {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(7px, -7px) rotatez(45deg);
+}

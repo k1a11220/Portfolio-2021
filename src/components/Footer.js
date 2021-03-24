@@ -32,6 +32,9 @@ const Footer = () => {
             >
               LinkedIn
             </a>
+            <a className={styles.details} href="https://github.com/k1a11220">
+              Github
+            </a>
           </div>
         </li>
         <li>

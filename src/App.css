@@ -29,6 +29,15 @@ h4 {
   font-size: 14px;
 }
 
+.title_h1 {
+  font-size: 40px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.font_extraBold {
+  font-weight: 700;
+}
+
 .font_bold {
   font-weight: 600;
 }
@@ -56,6 +65,19 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
+.font_gradient_2 {
+  background: linear-gradient(
+      69.7deg,
+      rgba(244, 37, 243, 1) 1.4%,
+      rgba(244, 87, 1, 1) 36.2%,
+      rgba(255, 204, 37, 1) 72.2%,
+      rgba(20, 196, 6, 1) 113%
+    )
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .me {
   width: 24vw;
   left: 10%;
@@ -77,6 +99,7 @@ h4 {
 h2 {
   position: relative;
   z-index: 100;
+  transition: all 0.2s ease-in;
 }
 
 .title_wrapper h2 {
@@ -119,14 +142,23 @@ h2 {
   .title_wrapper {
     height: 72vw;
   }
+  .title_h1 {
+    font-size: 32px;
+    font-family: "Oxygen", sans-serif;
+  }
 }
 
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
   }
+
   h2 {
     font-size: 18px;
+  }
+  .title_h1 {
+    font-size: 24px;
+    font-family: "Oxygen", sans-serif;
   }
   .title_wrapper h2 {
     width: 100%;
