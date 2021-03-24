@@ -25,7 +25,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-gap: 32px;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 
 .clients_grid {
@@ -60,26 +60,23 @@
     font-weight: 500;
     margin-bottom: 28px;
   }
-  .experience_grid {
+  .experience_grid,
+  .skills_grid {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     grid-gap: 6px;
+    margin-bottom: 14px;
   }
   .clients_grid {
-    margin-bottom: 8px;
-  }
-  .skills_grid {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 4px;
+    margin-bottom: 14px;
   }
   .details_wrapper li {
     width: 100%;
   }
 
   .experience_details {
-    margin-top: 20px;
+    margin-top: 24px;
   }
 }

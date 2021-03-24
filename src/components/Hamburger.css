@@ -1,3 +1,61 @@
+.hamburger_container {
+  display: none;
+}
+
+.hamburger_menu {
+  display: none;
+  justify-content: center;
+  /* background-color: #222222; */
+  align-items: center;
+  width: 100vw;
+  height: 0px;
+  position: relative;
+  top: -400px;
+  margin-bottom: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger_menu > div {
+  width: 90vw;
+}
+
+.hamburger_menu p {
+  font-weight: 500;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  cursor: pointer;
+}
+
+label span {
+  background: #222222;
+  border-radius: 10px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 50%;
+}
+
+span:nth-of-type(2) {
+  width: 100%;
+}
+
+span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
 .bar1_checked {
   transform-origin: bottom;
   transform: rotatez(45deg) translate(3.5px, 0px);
@@ -12,4 +70,13 @@
   transform-origin: bottom;
   width: 50%;
   transform: translate(7px, -7px) rotatez(45deg);
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger_container {
+    display: block;
+  }
+  .hamburger_menu {
+    display: flex;
+  }
 }

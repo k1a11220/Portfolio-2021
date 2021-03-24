@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import projectList from "../ProjectList";
 import CardCover from "../components/Work/CardCover";
-import TableCover from "../components/Work/TableCover";
+// import TableCover from "../components/Work/TableCover";
 import ME from "../media/me.png";
 
 const Work = () => {
-  const [card, setCard] = useState(true);
-  const [list, setList] = useState(false);
+  // const [card, setCard] = useState(true);
+  // const [list, setList] = useState(false);
 
-  const hideCard = () => {
-    setCard(false);
-    setList(true);
-  };
-  const showCard = () => {
-    setCard(true);
-    setList(false);
-  };
+  // const hideCard = () => {
+  //   setCard(false);
+  //   setList(true);
+  // };
+  // const showCard = () => {
+  //   setCard(true);
+  //   setList(false);
+  // };
   return (
     <section className="container">
       <div className="title_wrapper">
@@ -29,7 +29,7 @@ const Work = () => {
           </h2>
         </div>
         <div>
-          <img className="me" src={ME}></img>
+          <img className="me" src={ME} alt="Beomsoo (me)"></img>
         </div>
       </div>
 
@@ -41,8 +41,9 @@ const Work = () => {
           List View
         </button>
       </div> */}
-      {list === true ? <TableCover results={projectList} /> : null}
-      {card === true ? <CardCover results={projectList} /> : null}
+      {/* {list === true ? <TableCover results={projectList} /> : null}
+      {card === true ? <CardCover results={projectList} /> : null} */}
+      <CardCover results={projectList} />
     </section>
   );
 };

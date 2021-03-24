@@ -1,3 +1,4 @@
+/*All*/
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +88,7 @@ h4 {
   width: 1280px;
 }
 
+/*Home (Work) Page*/
 .title_wrapper {
   position: relative;
   height: 720px;
@@ -120,6 +122,20 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.2s ease-in;
+}
+
+/*Project Detail*/
+.box_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1024px) {

@@ -6,7 +6,6 @@ import ProjectDetail from "../components/Work/WorkItem/ProjectDetail";
 import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
 import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
 import UpMargin from "../components/Assets/UpMargin";
-import styles from "./Detail.module.css";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const OLED = () => {
@@ -20,13 +19,13 @@ const OLED = () => {
         details={projectList[0].details}
       />
       <UpMargin />
-      <div className={styles.box_area}>
+      <div className="box_area">
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
       </div>
-      <div className={styles.box_area}>
+      <div className="box_area">
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />
         <SmallBox background="https://i.imgur.com/f71RFmr.png" />

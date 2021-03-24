@@ -33,12 +33,14 @@ const Navigation = () => {
             <Link to="/About">
               <p>About</p>
             </Link>
-            <Link>
+            <Link to="/Bside">
               <p>B-side</p>
             </Link>
-            <p>Contact</p>
+            <div className={styles.contact}>
+              <a href="mailto: beskar.son@gmail.com">Contact</a>
+            </div>
           </div>
-          <div className={styles.hamburger_container}>
+          <div className="hamburger_container">
             <label for="check">
               <input type="checkbox" id="check" onClick={showMenu} />
               <span className={hamburger ? "bar1_checked" : ""}></span>
@@ -49,7 +51,7 @@ const Navigation = () => {
         </nav>
       </section>
       <div
-        className={styles.hamburger_menu}
+        className="hamburger_menu"
         style={{
           opacity: hamburger ? 1 : 0,
           top: hamburger ? "0px" : "-200px",

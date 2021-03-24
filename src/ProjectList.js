@@ -43,13 +43,14 @@ const projectList = [
     titleColor: "Black",
   },
   {
-    title: "Javara-light",
-    links: "/JavaraLight",
-    company: "BE THE LIGHT",
+    title: "Bokdda",
+    links: "/LiquidHydrogen",
+    company: "Personal Project",
     year: "2021",
     background: "",
-    tag: "Design",
-    details: "",
+    tag: "UI/UX",
+    details:
+      "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
     titleColor: "Black",
   },
   {
@@ -73,6 +74,27 @@ const projectList = [
     details:
       "Toothbrush can be used as a module type. We made it compatible with ready-made toothbrush holders.",
     titleColor: "White",
+  },
+  {
+    title: "Liquid hydrogen compressor",
+    links: "/LiquidHydrogen",
+    company: "KIMM",
+    year: "2021",
+    background: "",
+    tag: "Engineering",
+    details:
+      "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
+    titleColor: "Black",
+  },
+  {
+    title: "Javara-light",
+    links: "/JavaraLight",
+    company: "BE THE LIGHT",
+    year: "2021",
+    background: "",
+    tag: "Design",
+    details: "",
+    titleColor: "Black",
   },
 ];
 
