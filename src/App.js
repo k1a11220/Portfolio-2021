@@ -16,6 +16,7 @@ import Hydrogen from "./routes/Hydrogen";
 import Toothbrush from "./routes/Toothbrush";
 import JavaraLight from "./routes/JavaraLight";
 import LiquidHydrogen from "./routes/LiquidHydrogen";
+import ScrollToTop from "./components/ScrollToTop";
 // import Contact from "./components/Contact";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       {/* <Contact /> */}
       <section className="center_wrapper">
         <HashRouter>
+          <ScrollToTop />
           {/* <Cursor /> */}
           <Navigation />
           <Route path="/" exact={true} component={Work} />
