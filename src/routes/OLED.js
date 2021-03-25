@@ -9,14 +9,17 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const OLED = () => {
+  const oled = projectList[0];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/f71RFmr.png" />
       <ProjectDetail
-        title={projectList[0].title}
-        company={projectList[0].company}
-        year={projectList[0].year}
-        details={projectList[0].details}
+        title={oled.title}
+        company={oled.company}
+        year={oled.year}
+        details={oled.details}
+        role={oled.role}
+        goal={oled.goal}
       />
       <UpMargin />
       <div className="box_area">

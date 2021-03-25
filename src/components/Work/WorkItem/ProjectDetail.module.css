@@ -11,12 +11,12 @@
   margin-bottom: 1vw;
 }
 
-.info {
-  margin-bottom: 1vw;
+.info_cover {
+  display: flex;
 }
 
 .details {
-  padding-top: 10px;
+  margin-top: 1vw;
   width: 50%;
 }
 

@@ -7,8 +7,10 @@ const projectList = [
     background: "https://i.imgur.com/f71RFmr.png",
     tag: "Engineering",
     details:
-      "This equipment is used to safely transport OLED materials. First considers compatibility with existing equipment and operator safety.",
+      "This equipment is used to safely transport OLED materials. We considered compatibility with existing equipment and operator's safety",
     titleColor: "Black",
+    role: "Design Engineering, Rendering",
+    goal: "Protect operator, Increase usability",
   },
   {
     title: "Padintosh",
@@ -19,6 +21,7 @@ const projectList = [
     tag: "Design",
     details: "Retro iPad Stand.",
     titleColor: "White",
+    role: "Design Engineering, Web Develop",
   },
   {
     title: "Fire Alarm",
@@ -43,15 +46,15 @@ const projectList = [
     titleColor: "Black",
   },
   {
-    title: "Bokdda",
-    links: "/LiquidHydrogen",
+    title: "볶다 · Bokdda",
+    links: "/Bokdda",
     company: "Personal Project",
     year: "2021",
-    background: "",
+    background: "https://i.imgur.com/QPNqqhO.png",
     tag: "UI/UX",
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "Black",
+    titleColor: "white",
   },
   {
     title: "Hydrogen compressor",
@@ -76,6 +79,16 @@ const projectList = [
     titleColor: "White",
   },
   {
+    title: "Javara-light",
+    links: "/JavaraLight",
+    company: "BE THE LIGHT",
+    year: "2021",
+    background: "https://i.imgur.com/8fQdX3T.png",
+    tag: "Design",
+    details: "",
+    titleColor: "Black",
+  },
+  {
     title: "Liquid hydrogen compressor",
     links: "/LiquidHydrogen",
     company: "KIMM",
@@ -84,16 +97,6 @@ const projectList = [
     tag: "Engineering",
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "Black",
-  },
-  {
-    title: "Javara-light",
-    links: "/JavaraLight",
-    company: "BE THE LIGHT",
-    year: "2021",
-    background: "",
-    tag: "Design",
-    details: "",
     titleColor: "Black",
   },
 ];

@@ -90,6 +90,7 @@
   }
   .largeBox {
     background-color: #ffffff;
+    margin-bottom: 8vw;
   }
   .details {
     width: 80%;
@@ -98,6 +99,7 @@
   .mediumBox {
     width: 100%;
     height: 56vw;
+    margin-bottom: 8vw;
   }
 }
 
