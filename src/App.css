@@ -23,11 +23,11 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .title_h1 {
@@ -48,7 +48,7 @@ h4 {
 }
 
 .font_light {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .font_gray {
@@ -175,6 +175,12 @@ h2 {
 
   h2 {
     font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
   }
   .title_h1 {
     font-size: 24px;

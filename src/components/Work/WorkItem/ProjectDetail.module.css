@@ -27,11 +27,13 @@
   }
   .title {
     text-align: left;
+    margin-bottom: 16px;
   }
   .details {
     text-align: left;
     width: 100%;
   }
-  .info {
+  .info_cover {
+    margin-bottom: 4px;
   }
 }

@@ -9,7 +9,7 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const Toothbrush = () => {
-  const toothbrush = projectList[6];
+  const toothbrush = projectList[7];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/f71RFmr.png" />

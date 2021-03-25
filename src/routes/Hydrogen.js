@@ -9,7 +9,7 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const Hydrogen = () => {
-  const hydrogen = projectList[5];
+  const hydrogen = projectList[4];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/f71RFmr.png" />

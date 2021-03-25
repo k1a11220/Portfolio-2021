@@ -10,7 +10,7 @@ import UpMargin from "../components/Assets/UpMargin";
 import insertGif from "../media/Padintosh_1.gif";
 
 const Padintosh = () => {
-  const padintosh = projectList[1];
+  const padintosh = projectList[5];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/x47sS54.jpg" />

@@ -9,7 +9,7 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const ALD = () => {
-  const ald = projectList[3];
+  const ald = projectList[0];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/f71RFmr.png" />

@@ -9,10 +9,10 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const Bokdda = () => {
-  const bokdda = projectList[4];
+  const bokdda = projectList[1];
   return (
     <section className="container">
-      <LargeBox background="https://i.imgur.com/f71RFmr.png" />
+      <LargeBox background="https://i.imgur.com/QPNqqhO.png" />
       <ProjectDetail
         title={bokdda.title}
         company={bokdda.company}

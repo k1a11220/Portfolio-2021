@@ -9,7 +9,7 @@ import UpMargin from "../components/Assets/UpMargin";
 import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const JavaraLight = () => {
-  const javaraLight = projectList[7];
+  const javaraLight = projectList[3];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/f71RFmr.png" />

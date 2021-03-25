@@ -9,7 +9,7 @@ import UpMargin from "../components/Assets/UpMargin";
 // import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const FireAlarm = () => {
-  const fireAlarm = projectList[2];
+  const fireAlarm = projectList[6];
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/u9fWvx0.png" />
