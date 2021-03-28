@@ -8,26 +8,32 @@
 html,
 body {
   width: 100vw;
-  background-color: #ffffff;
+  background-color: #fdfdfd;
   display: flex;
   justify-content: center;
+  text-rendering: optimizeLegibility;
   /* cursor: none; */
 }
 
 h1 {
   font-size: 100px;
+  color: #4a4a4a;
 }
 
 h2 {
   font-size: 22px;
+  color: #4a4a4a;
 }
 
 h3 {
   font-size: 18px;
+  line-height: 1.6em;
+  color: #4a4a4a;
 }
 
 h4 {
   font-size: 16px;
+  color: #4a4a4a;
 }
 
 .title_h1 {

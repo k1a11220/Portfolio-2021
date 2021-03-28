@@ -1,0 +1,12 @@
+.desc_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc_container > div {
+  width: 65%;
+}
+
+.desc_container h3 {
+}

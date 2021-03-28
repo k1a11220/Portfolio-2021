@@ -1,0 +1,12 @@
+.lock {
+  width: 32px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .lock {
+    margin: 24px;
+  }
+}

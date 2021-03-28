@@ -8,7 +8,8 @@
 }
 
 .title {
-  margin-bottom: 1vw;
+  margin-bottom: 1.8vw;
+  margin-top: 0.4vw;
 }
 
 .info_cover {
@@ -16,8 +17,8 @@
 }
 
 .details {
-  margin-top: 1vw;
-  width: 50%;
+  margin-top: 1.8vw;
+  width: 60%;
 }
 
 @media screen and (max-width: 767px) {

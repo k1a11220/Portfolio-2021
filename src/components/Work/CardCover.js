@@ -7,6 +7,7 @@ const CardCover = (results) => {
       {results.results.map((post) => {
         return (
           <ProjectCard
+            key={post.key}
             title={post.title}
             links={post.links}
             company={post.company}
@@ -14,6 +15,7 @@ const CardCover = (results) => {
             background={post.background}
             color={post.titleColor}
             tag={post.tag}
+            lock={post.lock}
           />
         );
       })}

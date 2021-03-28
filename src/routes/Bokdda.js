@@ -6,7 +6,8 @@ import ProjectDetail from "../components/Work/WorkItem/ProjectDetail";
 import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
 import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
 import UpMargin from "../components/Assets/UpMargin";
-import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
+import ProjectDesc from "../components/Work/WorkItem/ProjectDesc";
+// import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
 
 const Bokdda = () => {
   const bokdda = projectList[1];
@@ -25,14 +26,8 @@ const Bokdda = () => {
       <div className="box_area">
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
         <MediumBox background="https://i.imgur.com/f71RFmr.png" />
-        <MediumBox background="https://i.imgur.com/f71RFmr.png" />
-        <MediumBox background="https://i.imgur.com/f71RFmr.png" />
       </div>
-      <div className="box_area">
-        <SmallBox background="https://i.imgur.com/f71RFmr.png" />
-        <SmallBox background="https://i.imgur.com/f71RFmr.png" />
-        <SmallBox background="https://i.imgur.com/f71RFmr.png" />
-      </div>
+      <ProjectDesc />
     </section>
   );
 };

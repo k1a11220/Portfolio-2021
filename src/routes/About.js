@@ -40,7 +40,7 @@ const About = () => {
       </div>
       <ul className={styles.details_wrapper}>
         <li>
-          <h2 className="font_regular font_gradient">Work Experience</h2>
+          <h2 className="font_regular font_gradient">- Work Experience</h2>
           <div className={styles.experience_details}>
             <div className={styles.experience_grid}>
               <h3 className="font_regular">Leader, STUDIO</h3>
@@ -63,7 +63,7 @@ const About = () => {
 
         <li>
           <h2 className="font_regular font_gradient">
-            Clients I've worked with
+            - Clients I've worked with
           </h2>
           <div className={styles.experience_details}>
             <div className={styles.clients_grid}>
@@ -79,7 +79,7 @@ const About = () => {
         </li>
 
         <li>
-          <h2 className="font_regular font_gradient">Skills</h2>
+          <h2 className="font_regular font_gradient">- Skills</h2>
           <div className={styles.experience_details}>
             <div className={styles.skills_grid}>
               <h3 className="font_regular">Design Engineering</h3>

@@ -41,7 +41,7 @@ const Navigation = () => {
             </div>
           </div>
           <div className="hamburger_container">
-            <label for="check">
+            <label htmlFor="check">
               <input type="checkbox" id="check" onClick={showMenu} />
               <span className={hamburger ? "bar1_checked" : ""}></span>
               <span className={hamburger ? "bar2_checked" : ""}></span>
