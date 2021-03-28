@@ -63,7 +63,7 @@ const projectList = [
     // links: "/Hydrogen",
     company: "TNG",
     year: "2021",
-    background: "",
+    background: "https://i.imgur.com/q0NzHyl.png",
     tag: "Design Engineering",
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",

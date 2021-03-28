@@ -33,9 +33,9 @@ const Navigation = () => {
             <Link to="/About">
               <p>About</p>
             </Link>
-            <Link to="/Bside">
+            {/* <Link to="/Bside">
               <p>B-side</p>
-            </Link>
+            </Link> */}
             <div className={styles.contact}>
               <a href="mailto: beskar.son@gmail.com">Contact</a>
             </div>
@@ -66,9 +66,9 @@ const Navigation = () => {
           <Link to="/About">
             <p onClick={hideMenu}>About</p>
           </Link>
-          <Link>
+          {/* <Link>
             <p onClick={hideMenu}>B-side</p>
-          </Link>
+          </Link> */}
           <p onClick={hideMenu}>Contact</p>
         </div>
       </div>
