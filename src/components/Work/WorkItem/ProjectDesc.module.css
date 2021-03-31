@@ -1,12 +1,24 @@
 .desc_container {
-  width: 100%;
-  display: flex;
+  width: 800px;
+  /* display: flex; */
   justify-content: space-between;
-}
-
-.desc_container > div {
-  width: 65%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  align-self: center;
 }
 
 .desc_container h3 {
+  margin-top: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .desc_container {
+    width: 100%;
+    padding: 0;
+  }
 }

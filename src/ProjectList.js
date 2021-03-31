@@ -10,7 +10,7 @@ const projectList = [
     details:
       "Prototype of the equipment to perform the ALD process of 100mm Wafer. Maintaining the degree of vacuum in the rotating chamber was the key point. Eventually, magnetic fluid was used to solve it, but there are many limitations and a new type of equipment is being developed.",
     titleColor: "#0a0a0a",
-    role: "#Design Engineering #Manufacturing #S/W Product Design",
+    role: "#Design Engineering #Manufacturing #Product Design",
     goal: "Improve communication function",
   },
   {
@@ -52,7 +52,7 @@ const projectList = [
     tag: "Design",
     details: "",
     titleColor: "#0a0a0a",
-    role: "#Design",
+    role: "#Industrial Design #Prototyping",
     goal: "Lights for kids",
     lock: true,
     cursor: "default",
