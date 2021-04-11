@@ -16,7 +16,7 @@ const projectList = [
   {
     key: 1,
     title: "볶다",
-    links: "/Bokdda",
+    // links: "/Bokdda",
     company: "Personal Project",
     year: "2021",
     background: "https://i.imgur.com/QPNqqhO.png",
@@ -63,11 +63,11 @@ const projectList = [
     // links: "/Hydrogen",
     company: "TNG",
     year: "2021",
-    background: "https://i.imgur.com/q0NzHyl.png",
+    background: "https://i.imgur.com/FWmJjFY.png",
     tag: "Design Engineering",
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "#0a0a0a",
+    titleColor: "#fdfdfd",
     role: "#Design Engineering",
     lock: true,
   },
