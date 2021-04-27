@@ -25,7 +25,7 @@ const Work = () => {
           </h1>
           <h2 className="font_regular font_gradient">
             I'm Beomsoo Son, an engineer/designer based in South Korea, focused
-            on Industrial Design & Engineering and Product Design.
+            on Industrial Design & Engineering and Digital Product Design.
           </h2>
         </div>
         <div>
