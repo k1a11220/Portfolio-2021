@@ -55,7 +55,7 @@ const About = () => {
               <h3 className="font_regular font_gray">2020 ~</h3>
             </div>
             <div className={styles.experience_grid}>
-              <h3 className="font_regular ">Product Designer, BE THE LIGHT</h3>
+              <h3 className="font_regular ">Design lead, BE THE LIGHT</h3>
               <h3 className="font_regular font_gray">2021 ~</h3>
             </div>
           </div>
