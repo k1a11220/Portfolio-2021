@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 // import lock from "../../../media/lock.svg";
@@ -12,16 +12,19 @@ const ProjectCard = (props) => {
   const background = props.background;
   const color = props.color;
   const setLock = props.lock;
+  const category = useRef(props.category);
+  console.log(category);
   return (
     <div
-      className={styles.card_wrapper}
+      className={`${styles.card_wrapper}`}
       style={{
         backgroundImage: `url("${background}")`,
       }}
+      ref={category}
     >
       <Link to={links}>
         <div
-          className={styles.card_contents}
+          className={`${styles.card_contents} ${category}`}
           style={{ cursor: `${setLock === true ? "default" : "point"}` }}
         >
           <div>

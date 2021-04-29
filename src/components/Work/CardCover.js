@@ -1,7 +1,15 @@
 import React from "react";
 import ProjectCard from "./WorkItem/ProjectCard";
 
-const CardCover = (results) => {
+const CardCover = (results, tabState) => {
+  console.log(tabState);
+  if (tabState === 0) {
+    console.log("this is all");
+  } else if (tabState === 68) {
+    console.log("this is industrial");
+  } else {
+    console.log("this is digital");
+  }
   return (
     <div className={`card_area scene_element--fadein scene_element`}>
       {results.results.map((post) => {
@@ -15,6 +23,7 @@ const CardCover = (results) => {
             background={post.background}
             color={post.titleColor}
             tag={post.tag}
+            category={post.category}
             lock={post.lock}
           />
         );

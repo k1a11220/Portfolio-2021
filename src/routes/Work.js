@@ -1,48 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import projectList from "../ProjectList";
 import CardCover from "../components/Work/CardCover";
-// import TableCover from "../components/Work/TableCover";
-import ME from "../media/me.png";
-
+import styles from "./Work.module.css";
+// import ME from "../media/me.png";
 const Work = () => {
-  // const [card, setCard] = useState(true);
-  // const [list, setList] = useState(false);
-
-  // const hideCard = () => {
-  //   setCard(false);
-  //   setList(true);
-  // };
-  // const showCard = () => {
-  //   setCard(true);
-  //   setList(false);
-  // };
+  const [tabLocation, setTabLocation] = useState(0);
+  const [tabWidth, setTabwidth] = useState(66);
+  const allSelected = () => {
+    setTabLocation(0);
+    setTabwidth(65);
+  };
+  const industrialSelected = () => {
+    setTabLocation(68);
+    setTabwidth(111);
+  };
+  const digitalSelected = () => {
+    setTabLocation(182);
+    setTabwidth(90);
+  };
   return (
     <section className="container">
       <div className="title_wrapper">
         <div>
-          <h1 className="font_gradient">
+          {/* <h1 className="font_gradient">
             LET'S <br /> MAKE <br /> HISTORY
-          </h1>
+          </h1> */}
           <h2 className="font_regular font_gradient">
-            I'm Beomsoo Son, an engineer/designer based in South Korea, focused
-            on Industrial Design & Engineering and Digital Product Design.
+            I'm Beomsoo Son, an Engineer and Designer based in Suwon, South
+            Korea focused on Industrial Design engineering and Digital product
+            design.
           </h2>
         </div>
-        <div>
-          <img className="me" src={ME} alt="Beomsoo (me)"></img>
-        </div>
       </div>
-
-      {/* <div className={styles.stateBtn_wrapper}>
-        <button className={styles.stateBtn} onClick={showCard}>
-          Card View
-        </button>
-        <button className={styles.stateBtn} onClick={hideCard}>
-          List View
-        </button>
-      </div> */}
-      {/* {list === true ? <TableCover results={projectList} /> : null}
-      {card === true ? <CardCover results={projectList} /> : null} */}
+      <ul className={styles.filter_wrapper}>
+        <li
+          onClick={allSelected}
+          style={{
+            color: tabLocation === 0 ? "#ffffff" : "#0a0a0a",
+          }}
+        >
+          All
+        </li>
+        <li
+          onClick={industrialSelected}
+          style={{
+            color: tabLocation === 68 ? "#ffffff" : "#0a0a0a",
+          }}
+        >
+          Industrial
+        </li>
+        <li
+          onClick={digitalSelected}
+          style={{
+            color: tabLocation === 182 ? "#ffffff" : "#0a0a0a",
+          }}
+        >
+          Digital
+        </li>
+        <div
+          className={styles.tab_indicator}
+          style={{
+            width: `${tabWidth}px`,
+            transform: `translate(${tabLocation}px, -3.5px)`,
+          }}
+        ></div>
+      </ul>
       <CardCover results={projectList} />
     </section>
   );

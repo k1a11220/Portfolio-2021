@@ -19,7 +19,7 @@ const Navigation = () => {
       <section className="container">
         <nav
           className={styles.nav_wrapper}
-          style={{ marginBottom: hamburger ? 0 : "20px" }}
+          // style={{ marginBottom: hamburger ? 0 : "20px" }}
         >
           <div className={styles.logo}>
             <Link to="/Work">

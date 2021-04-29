@@ -12,6 +12,7 @@ const projectList = [
     titleColor: "#0a0a0a",
     role: "#Design Engineering #Manufacturing #Product Design",
     goal: "Improve communication function",
+    category: "industrial",
   },
   {
     key: 1,
@@ -26,6 +27,7 @@ const projectList = [
     titleColor: "#fdfdfd",
     role: "#Product Design #MVP",
     goal: "복지 검색과 신청 개선",
+    category: "digital",
     lock: true,
   },
   {
@@ -41,6 +43,7 @@ const projectList = [
     titleColor: "#0a0a0a",
     role: "#Design Engineering",
     goal: "Protect operator, Increase usability",
+    category: "industrial",
   },
   {
     key: 3,
@@ -56,6 +59,7 @@ const projectList = [
     goal: "Lights for kids",
     lock: true,
     cursor: "default",
+    category: "industrial",
   },
   {
     key: 4,
@@ -69,6 +73,7 @@ const projectList = [
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
     titleColor: "#fdfdfd",
     role: "#Design Engineering",
+    category: "industrial",
     lock: true,
   },
   {
@@ -83,6 +88,7 @@ const projectList = [
     titleColor: "#fdfdfd",
     role: "#Design Engineering #Web Develop",
     goal: "Back to the old days :)",
+    category: "industrial",
   },
   {
     key: 6,
@@ -97,6 +103,7 @@ const projectList = [
     titleColor: "#0a0a0a",
     role: "#Design Engineering",
     goal: "Improve communication function",
+    category: "industrial",
   },
   {
     key: 7,
@@ -111,6 +118,7 @@ const projectList = [
     titleColor: "#fdfdfd",
     role: "#Design Engineering",
     goal: "Replaceable toothbrush",
+    category: "industrial",
   },
   {
     key: 8,
@@ -123,6 +131,7 @@ const projectList = [
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
     titleColor: "#0a0a0a",
+    category: "industrial",
     lock: true,
   },
 ];

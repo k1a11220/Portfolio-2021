@@ -102,7 +102,8 @@ h4 {
 /*Home (Work) Page*/
 .title_wrapper {
   position: relative;
-  height: 720px;
+  width: 80%;
+  height: 322px;
   display: flex;
   justify-content: space-between;
   align-items: center;
