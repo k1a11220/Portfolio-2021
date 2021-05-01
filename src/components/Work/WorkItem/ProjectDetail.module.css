@@ -1,24 +1,45 @@
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   padding-top: 40px;
   margin-bottom: 40px;
 }
 
 .title {
-  margin-bottom: 1.8vw;
-  margin-top: 0.4vw;
+  margin-bottom: 32px;
+  margin-top: 4px;
 }
 
 .info_cover {
+  width: 760px;
   display: flex;
+  flex-direction: column;
+}
+
+.info_cover > h2 {
+  margin-bottom: 16px;
+}
+
+.info_cover:first-child > h3 {
+  margin-bottom: 66px;
 }
 
 .details {
   margin-top: 1.8vw;
   width: 60%;
+}
+
+.roleBtnText {
+  text-align: center;
+  font-size: 12px;
+  padding: 8px;
+  color: #f3f3f3;
+  border-radius: 4px;
+  background-color: #444444;
+  border: none;
+  margin-top: 16px;
+  margin-right: 16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -36,5 +57,17 @@
   }
   .info_cover {
     margin-bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+  .info_cover {
+    width: 90vw;
+  }
+  .roleBtnText {
+    font-size: 10px;
   }
 }

@@ -8,10 +8,11 @@ const projectList = [
     background: "https://i.imgur.com/5zCniEb.png",
     tag: "Engineering",
     details:
-      "Prototype of the equipment to perform the ALD process of 100mm Wafer. Maintaining the degree of vacuum in the rotating chamber was the key point. Eventually, magnetic fluid was used to solve it, but there are many limitations and a new type of equipment is being developed.",
+      "In the ALD process wafer can't move to another space. Because wafers can be polluted by gas or particles. But if wafer can move to another space without pollution, process productivity will increase. So, our team developed this equipment prototype to prove our theory.",
     titleColor: "#0a0a0a",
     role: "#Design Engineering #Manufacturing #Product Design",
-    goal: "Improve communication function",
+    goal:
+      "Wafer transporting in process Rotating chamber Vaccum sealing with magnetic fluid",
     category: "industrial",
   },
   {

@@ -27,7 +27,7 @@ const ProjectCard = (props) => {
           className={`${styles.card_contents} ${category}`}
           style={{ cursor: `${setLock === true ? "default" : "point"}` }}
         >
-          <div>
+          <div className={styles.contents_wrapper}>
             <h2
               className={`${styles.title} font_regular`}
               style={{
@@ -44,6 +44,7 @@ const ProjectCard = (props) => {
             >
               {company} - {year}
             </h4>
+            <button className={styles.roleBtnText}>Design engineering</button>
           </div>
           {setLock === true ? <Lock /> : null}
           {/* <img
