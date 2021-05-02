@@ -12,7 +12,7 @@ const projectList = [
     titleColor: "#0a0a0a",
     role: "#Design Engineering #Manufacturing #Product Design",
     goal:
-      "Wafer transporting in process Rotating chamber Vaccum sealing with magnetic fluid",
+      "- Wafer transporting in process <br /> - Rotating chamber <br />- Vaccum sealing with magnetic fluid",
     category: "industrial",
   },
   {
