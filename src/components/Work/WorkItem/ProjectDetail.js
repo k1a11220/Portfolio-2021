@@ -19,11 +19,8 @@ const ProjectDetail = (props) => {
         </div>
         <div className={styles.info_cover}>
           <h2>Project goals</h2>
-          {/* {props.goal} */}
           <h3 className="font_light">
-            - Wafer transporting in process <br />
-            - Rotating chamber <br />
-            - Vaccum sealing with magnetic fluid
+            {props.goal}
             <br />
           </h3>
         </div>
