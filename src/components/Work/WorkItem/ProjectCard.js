@@ -44,7 +44,7 @@ const ProjectCard = (props) => {
             >
               {company} - {year}
             </h4>
-            <button className={styles.roleBtnText}>Design engineering</button>
+            {/* <button className={styles.roleBtnText}>Design engineering</button> */}
           </div>
           {setLock === true ? <Lock /> : null}
           {/* <img
