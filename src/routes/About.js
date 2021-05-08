@@ -1,111 +1,79 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 import styles from "./About.module.css";
 // import UpMargin from "../components/UpMargin";
-const TITLEARRAY = [
-  "Hello",
-  "안녕하세요",
-  "Hallo",
-  "Bonjour",
-  "こんにちは",
-  "你好",
-  "Привет",
-  "مرحبا",
-  "Ciao",
-  "Halo",
-];
 const About = () => {
-  const [title, setTitle] = useState("Hello");
-
-  const shuffle = useCallback(() => {
-    const index = Math.floor(Math.random() * TITLEARRAY.length);
-    setTitle(TITLEARRAY[index]);
-  }, []);
-
-  useEffect(() => {
-    const intervalID = setInterval(shuffle, 3000);
-    return () => clearInterval(intervalID);
-  }, [shuffle]);
-
   return (
     <section className="container">
-      <div className="title_wrapper">
-        <div>
-          <h1 className="font_gradient">{`[ ${title} ]`}</h1>
-          <h2 className="font_regular font_gray font_gradient">
-            I love to make impact with awesome products. <br />
-            I’m currently working as a design engineer at TNG and Product
-            Designer at BE THE LIGHT
-          </h2>
+      <div className={styles.me_img}></div>
+      <div className={styles.title_wrapper}>
+        <p className="font-md font-regular font-gradient">
+          I love to make impact with awesome products. <br />
+          I’m currently working as a design engineer at TNG and Product Designer
+          at BE THE LIGHT
+        </p>
+      </div>
+      <div>
+        <h2 className="font-xl font-gray font-bold">Education</h2>
+        <div className={styles.details_wrapper}>
+          <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
+          <p className="font-light">
+            Mechatronics, Mechanical Engineering · Mar 2017 ~ Jan 2020
+          </p>
         </div>
       </div>
-      <ul className={styles.details_wrapper}>
-        <li>
-          <h2 className="font_regular font_gradient">Work Experience</h2>
-          <div className={styles.experience_details}>
-            <div className={styles.experience_grid}>
-              <h3 className="font_regular">Leader, STUDIO</h3>
-              <h3 className="font_regular font_gray">2017 ~ 2019</h3>
-            </div>
-            <div className={styles.experience_grid}>
-              <h3 className="font_regular">Engineering Instructor, May KING</h3>
-              <h3 className="font_regular font_gray">2018 ~ 2020</h3>
-            </div>
-            <div className={styles.experience_grid}>
-              <h3 className="font_regular ">Design Engineer, TNG</h3>
-              <h3 className="font_regular font_gray">2020 ~</h3>
-            </div>
-            <div className={styles.experience_grid}>
-              <h3 className="font_regular ">Design lead, BE THE LIGHT</h3>
-              <h3 className="font_regular font_gray">2021 ~</h3>
-            </div>
+      <div className={styles.up_margin}></div>
+      <div className={styles.work_wrapper}>
+        <div className={styles.work}>
+          <h2 className="font-xl font-gray font-bold">Work Experience</h2>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">May KING</p>
+            <p className="font-light">
+              Founder, Design Instructor · Jan 2018 ~ Dec 2019
+            </p>
           </div>
-        </li>
-
-        <li>
-          <h2 className="font_regular font_gradient">
-            Clients I've worked with
-          </h2>
-          <div className={styles.experience_details}>
-            <div className={styles.clients_grid}>
-              <h3 className="font_regular">KITECH · 한국생산기술연구원</h3>
-            </div>
-            <div className={styles.clients_grid}>
-              <h3 className="font_regular">Gaon Tech · 가온테크</h3>
-            </div>
-            <div className={styles.clients_grid}>
-              <h3 className="font_regular ">NowFun · 나우펀</h3>
-            </div>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">TNG</p>
+            <p className="font-light">Design Engineer · Jan 2020 ~ Present</p>
           </div>
-        </li>
-
-        <li>
-          <h2 className="font_regular font_gradient">Skills</h2>
-          <div className={styles.experience_details}>
-            <div className={styles.skills_grid}>
-              <h3 className="font_regular">Design Engineering</h3>
-              <h3 className="font_regular font_gray">
-                Fusion 360, Solidworks, Ansys Maxwell, Keyshot
-              </h3>
-            </div>
-            <div className={styles.skills_grid}>
-              <h3 className="font_regular">Coding</h3>
-              <h3 className="font_regular font_gray">
-                Javascript, python, SwiftUI
-              </h3>
-            </div>
-            <div className={styles.skills_grid}>
-              <h3 className="font_regular">Prototyping</h3>
-              <h3 className="font_regular font_gray">
-                Adobe After Effects, Protopie
-              </h3>
-            </div>
-            <div className={styles.skills_grid}>
-              <h3 className="font_regular">Digital Product Design</h3>
-              <h3 className="font_regular font_gray">Adobe XD, Sketch</h3>
-            </div>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">BE THE LIGHT</p>
+            <p className="font-light">Product Designer · Mar 2021 ~ Present</p>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div className={styles.work}>
+          <h2 className="font-xl font-gray font-bold">Skills</h2>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">Design Engineering</p>
+            <button className={styles.roleBtnText}>Fusion 360</button>
+            <button className={styles.roleBtnText}>Solidworks</button>
+            <button className={styles.roleBtnText}>Ansys Maxwell</button>
+            <button className={styles.roleBtnText}>Keyshot</button>
+          </div>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">Coding</p>
+            <button className={styles.roleBtnText}>Javascript</button>
+            <button className={styles.roleBtnText}>Python</button>
+            <button className={styles.roleBtnText}>SwiftUI</button>
+          </div>
+          <div className={styles.details_wrapper}>
+            <p className="font-md font-regular">Digital Product Design</p>
+            <button className={styles.roleBtnText}>Adobe XD</button>
+            <button className={styles.roleBtnText}>Figma</button>
+            <button className={styles.roleBtnText}>Adobe After Effets</button>
+            <button className={styles.roleBtnText}>ProtoPie</button>
+          </div>
+        </div>
+      </div>
+      <div className={styles.up_margin}></div>
+      <div>
+        <h2 className="font-xl font-gray font-bold">Clients worked with</h2>
+        <div className={styles.details_wrapper}>
+          <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
+          <p className="font-light">
+            Mechatronics, Mechanical Engineering · Mar 2017 ~ Jan 2020
+          </p>
+        </div>
+      </div>
     </section>
   );
 };

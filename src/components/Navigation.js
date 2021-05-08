@@ -37,6 +37,9 @@ const Navigation = () => {
               <p>B-side</p>
             </Link> */}
             <div className={styles.contact}>
+              <a href="https://www.beomsoo.me">Blog</a>
+            </div>
+            <div className={styles.contact}>
               <a href="mailto: beskar.son@gmail.com">Contact</a>
             </div>
           </div>

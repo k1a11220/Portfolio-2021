@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
         >
           <div className={styles.contents_wrapper}>
             <h2
-              className={`${styles.title} font_regular`}
+              className={`${styles.title} font-regular`}
               style={{
                 color: `${color}`,
               }}
@@ -37,7 +37,7 @@ const ProjectCard = (props) => {
               {title}
             </h2>
             <h4
-              className={`${styles.info} font_light`}
+              className={`${styles.info} font-light`}
               style={{
                 color: `${color}`,
               }}

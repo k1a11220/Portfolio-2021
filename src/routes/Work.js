@@ -25,11 +25,11 @@ const Work = () => {
           {/* <h1 className="font_gradient">
             LET'S <br /> MAKE <br /> HISTORY
           </h1> */}
-          <h2 className="font_regular font_gradient">
+          <p className="font-md font-regular font-gradient">
             I'm Beomsoo Son, an Engineer and Designer based in Suwon, South
             Korea focused on Industrial Design engineering and Digital product
             design.
-          </h2>
+          </p>
         </div>
       </div>
       <ul className={styles.filter_wrapper}>

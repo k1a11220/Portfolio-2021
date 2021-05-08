@@ -5,24 +5,24 @@ const ProjectDetail = (props) => {
   return (
     <section className={styles.container}>
       <div>
-        <h2 className="font_regular font_gray">{props.company}</h2>
-        <p className={`${styles.title} title_h1 font_extraBold`}>
+        <p className="font-lg font-regular font-gray">{props.company}</p>
+        <h2 className={`${styles.title} title_h1 font-regular`}>
           {props.title}
-        </p>
+        </h2>
         <button className={styles.roleBtnText}>Design engineering</button>
         <button className={styles.roleBtnText}>Product design</button>
       </div>
       <div>
         <div className={styles.info_cover}>
-          <h2>Summary</h2>
-          <h3 className="font_light">{props.details}</h3>
+          <h3 className="font-md font-regular">Summary</h3>
+          <p className="font-light">{props.details}</p>
         </div>
         <div className={styles.info_cover}>
-          <h2>Project goals</h2>
-          <h3 className="font_light">
+          <h3 className="font-md font-regular">Project goals</h3>
+          <p className="font-light">
             {props.goal}
             <br />
-          </h3>
+          </p>
         </div>
         {/* <h3 className={`${styles.details} font_light`}>{props.role}</h3> */}
       </div>
