@@ -88,7 +88,7 @@ const projectList = [
     details: "Retro iPad Stand.",
     titleColor: "#fdfdfd",
     role: "#Design Engineering #Web Develop",
-    goal: "Back to the old days :)",
+    goal: "Back to the old days :D",
     category: "industrial",
   },
   {

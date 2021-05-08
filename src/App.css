@@ -36,7 +36,8 @@ body {
   font-size: 2rem; /*32px*/
 }
 
-p {
+p,
+a {
   font-size: 1.125rem;
   line-height: 1.875rem;
 }

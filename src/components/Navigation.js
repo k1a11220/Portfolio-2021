@@ -37,10 +37,14 @@ const Navigation = () => {
               <p>B-side</p>
             </Link> */}
             <div className={styles.contact}>
-              <a href="https://www.beomsoo.me">Blog</a>
+              <p>
+                <a href="https://www.beomsoo.me">Blog</a>
+              </p>
             </div>
             <div className={styles.contact}>
-              <a href="mailto: beskar.son@gmail.com">Contact</a>
+              <p>
+                <a href="mailto: beskar.son@gmail.com">Contact</a>
+              </p>
             </div>
           </div>
           <div className="hamburger_container">
@@ -69,10 +73,14 @@ const Navigation = () => {
           <Link to="/About">
             <p onClick={hideMenu}>About</p>
           </Link>
-          {/* <Link>
-            <p onClick={hideMenu}>B-side</p>
-          </Link> */}
-          <p onClick={hideMenu}>Contact</p>
+          <div className={styles.contact}>
+            <p href="https://www.beomsoo.me">Blog</p>
+          </div>
+          <div className={styles.contact}>
+            <p>
+              <a href="mailto: beskar.son@gmail.com">Contact</a>
+            </p>
+          </div>
         </div>
       </div>
     </>

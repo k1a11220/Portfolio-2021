@@ -31,14 +31,17 @@ li {
   margin-left: 40px;
   font-weight: 400;
 }
-.contact {
+
+.contact a {
   font-size: 16px;
-  margin-left: 40px;
   font-weight: 400;
 }
 
 @media screen and (max-width: 767px) {
   .logo p {
+    font-size: 20px;
+  }
+  .contact {
     font-size: 20px;
   }
   .nav_wrapper {
