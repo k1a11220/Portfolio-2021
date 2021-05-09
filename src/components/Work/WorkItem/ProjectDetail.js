@@ -15,7 +15,7 @@ const ProjectDetail = (props) => {
       <div>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Summary</h3>
-          <p className="font-light">{props.details}</p>
+          <p className="font-light font-gray">{props.details}</p>
         </div>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Project goals</h3>

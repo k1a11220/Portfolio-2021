@@ -8,7 +8,7 @@ const projectList = [
     background: "https://i.imgur.com/5zCniEb.png",
     tag: "Engineering",
     details:
-      "In the ALD process wafer can't move to another space. Because wafers can be polluted by gas or particles. But if wafer can move to another space without pollution, process productivity will increase. So, our team developed this equipment prototype to prove our theory.",
+      "In the ALD process, wafer can't move to another space. Because wafers can be polluted by gas or particles. But if wafer can move to another space without pollution, process productivity will increase. So, our team developed this equipment prototype to prove our theory.",
     titleColor: "#0a0a0a",
     role: "#Design Engineering #Manufacturing #Product Design",
     goal:
@@ -24,7 +24,7 @@ const projectList = [
     background: "https://i.imgur.com/QPNqqhO.png",
     tag: "UI/UX",
     details:
-      "복지서비스 검색과 신청과정의 단순화를 위해 기획한 서비스 입니다. 총 6가지의 기준으로 복지를 분류하였고, 정부서비스와 연동하여 가족관계증명서, 주민등록등본 등 자주 쓰이는 서류를 생체인증 한번으로 제출할 수 있게끔 했습니다.",
+      "복지서비스 검색과 신청과정의 단순화를 위해 기획한 서비스입니다. 총 6가지의 기준으로 복지를 분류하였고, 정부서비스와 연동하여 가족관계증명서, 주민등록등본 등 자주 쓰이는 서류를 생체인증 한번으로 제출할 수 있게끔 했습니다.",
     titleColor: "#fdfdfd",
     role: "#Product Design #MVP",
     goal: "복지 검색과 신청 개선",
