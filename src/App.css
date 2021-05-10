@@ -3,8 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Spoqa Han Sans Neo", sans-serif; */
-  font-family: "NanumSquare", sans-serif;
+  font-family: "Roboto", "Spoqa Han Sans Neo", sans-serif;
+  /* font-family: "NanumSquare", sans-serif; */
 }
 
 html,
@@ -41,7 +41,7 @@ p,
 a {
   font-size: 1.125rem;
   line-height: 1.875rem;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
   word-break: keep-all;
 }
 
@@ -67,15 +67,15 @@ h4 {
 }
 
 .font_extraBold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .font-bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .font-regular {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .font-light {
@@ -199,12 +199,8 @@ h2 {
   .container {
     width: 90vw;
   }
-  .title_wrapper {
-    height: 72vw;
-  }
   .title_h1 {
     font-size: 32px;
-    font-family: "Oxygen", sans-serif;
   }
 }
 
@@ -224,7 +220,6 @@ h2 {
   }
   .title_h1 {
     font-size: 24px;
-    font-family: "Oxygen", sans-serif;
   }
   .title_wrapper h2 {
     width: 100%;

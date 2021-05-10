@@ -131,7 +131,7 @@ const projectList = [
     tag: "Engineering",
     details:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "#0a0a0a",
+    titleColor: "#fdfdfd",
     category: "industrial",
     lock: true,
   },

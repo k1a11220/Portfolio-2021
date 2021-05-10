@@ -12,14 +12,14 @@ const ProjectDetail = (props) => {
         <button className={styles.roleBtnText}>Design engineering</button>
         <button className={styles.roleBtnText}>Product design</button>
       </div>
-      <div>
+      <div className={styles.info_wrapper}>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Summary</h3>
           <p className="font-light font-gray">{props.details}</p>
         </div>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Project goals</h3>
-          <p className="font-light">
+          <p className="font-light font-gray">
             {props.goal}
             <br />
           </p>
