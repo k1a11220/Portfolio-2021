@@ -18,7 +18,7 @@ li {
 
 .logo p {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .select_area {
@@ -32,17 +32,12 @@ li {
   font-weight: 400;
 }
 
-.contact a {
-  font-size: 16px;
-  font-weight: 400;
-}
-
 @media screen and (max-width: 767px) {
   .logo p {
     font-size: 20px;
   }
   .contact {
-    font-size: 20px;
+    font-size: 18px;
   }
   .nav_wrapper {
     height: 80px;

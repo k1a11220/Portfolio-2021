@@ -63,7 +63,7 @@ const Navigation = () => {
           opacity: hamburger ? 1 : 0,
           top: hamburger ? "0px" : "-200px",
           marginBottom: hamburger ? "4px" : "0px",
-          height: hamburger ? "200px" : "0px",
+          height: hamburger ? "260px" : "0px",
         }}
       >
         <div>
@@ -73,14 +73,16 @@ const Navigation = () => {
           <Link to="/About">
             <p onClick={hideMenu}>About</p>
           </Link>
-          <div className={styles.contact}>
-            <p href="https://www.beomsoo.me">Blog</p>
-          </div>
-          <div className={styles.contact}>
-            <p>
-              <a href="mailto: beskar.son@gmail.com">Contact</a>
-            </p>
-          </div>
+          <p>
+            <a className={styles.contact} href="https://www.beomsoo.me">
+              Blog
+            </a>
+          </p>
+          <p>
+            <a className={styles.contact} href="mailto: beskar.son@gmail.com">
+              Contact
+            </a>
+          </p>
         </div>
       </div>
     </>
