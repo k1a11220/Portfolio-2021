@@ -21,7 +21,7 @@
 }
 
 .info_cover:first-child > p {
-  margin-bottom: 66px;
+  margin-bottom: 60px;
 }
 
 .details {
@@ -57,8 +57,14 @@
     text-align: left;
     width: 100%;
   }
-  .info_cover {
-    margin-bottom: 4px;
+  .roleBtnText {
+    margin-top: 0rem;
+  }
+  .info_cover:first-child > p {
+    margin-bottom: 20px;
+  }
+  .up_margin {
+    height: 20px;
   }
 }
 
@@ -74,5 +80,8 @@
   }
   .info_wrapper {
     margin-top: 40px;
+  }
+  .info_cover:first-child > p {
+    margin-bottom: 20px;
   }
 }

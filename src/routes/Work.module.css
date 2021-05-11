@@ -15,9 +15,15 @@
   background-color: #4a4a4a;
   width: 66px;
   height: 43px;
-  border-radius: 21px;
+  border-radius: 20px;
   color: #ffffff;
   position: absolute;
   transform: translateY(-3.5px);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .filter_wrapper {
+    margin-top: 26px;
+  }
 }

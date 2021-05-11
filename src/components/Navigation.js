@@ -62,8 +62,8 @@ const Navigation = () => {
         style={{
           opacity: hamburger ? 1 : 0,
           top: hamburger ? "0px" : "-200px",
-          marginBottom: hamburger ? "4px" : "0px",
-          height: hamburger ? "260px" : "0px",
+          marginBottom: hamburger ? "26px" : "0px",
+          height: hamburger ? "240px" : "0px",
         }}
       >
         <div>

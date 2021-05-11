@@ -5,6 +5,7 @@ const ProjectDetail = (props) => {
   return (
     <section className={styles.container}>
       <div>
+        <div className={styles.up_margin}></div>
         <p className="font-lg font-regular font-gray">{props.company}</p>
         <h2 className={`${styles.title} title_h1 font-regular`}>
           {props.title}

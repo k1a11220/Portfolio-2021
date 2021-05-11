@@ -7,19 +7,12 @@ const About = () => {
       <div className={styles.me_img}></div>
       <div className={styles.title_wrapper}>
         <p className="font-md font-regular font-gradient">
-          I love to make impact with awesome products. <br />
+          I love to make impact with awesome products.
+        </p>
+        <p className="font-md font-regular font-gradient">
           I’m currently working as a design engineer at TNG and Product Designer
           at BE THE LIGHT
         </p>
-      </div>
-      <div>
-        <h2 className="font-xl font-gray font-bold">Education</h2>
-        <div className={styles.details_wrapper}>
-          <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
-          <p className="font-light">
-            Mechatronics, Mechanical Engineering · Mar 2017 ~ Jan 2020
-          </p>
-        </div>
       </div>
       <div className={styles.up_margin}></div>
       <div className={styles.work_wrapper}>
@@ -65,7 +58,7 @@ const About = () => {
         </div>
       </div>
       <div className={styles.up_margin}></div>
-      <div>
+      <div className={styles.work}>
         <h2 className="font-xl font-gray font-bold">Clients worked with</h2>
         <div className={styles.details_wrapper}>
           <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
