@@ -2,7 +2,7 @@ import React from "react";
 
 import projectList from "../ProjectList";
 
-import ProjectDetail from "../components/Work/WorkItem/ProjectDetail";
+import ProjectSummary from "../components/Work/WorkItem/ProjectSummary";
 import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
 import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
 import UpMargin from "../components/Assets/UpMargin";
@@ -14,11 +14,11 @@ const Padintosh = () => {
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/x47sS54.jpg" />
-      <ProjectDetail
+      <ProjectSummary
         title={padintosh.title}
         company={padintosh.company}
         year={padintosh.year}
-        details={padintosh.details}
+        summary={padintosh.summary}
         role={padintosh.role}
         goal={padintosh.goal}
       />

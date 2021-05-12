@@ -2,7 +2,7 @@ import React from "react";
 
 import projectList from "../ProjectList";
 
-import ProjectDetail from "../components/Work/WorkItem/ProjectDetail";
+import ProjectSummary from "../components/Work/WorkItem/ProjectSummary";
 import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
 import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
 import UpMargin from "../components/Assets/UpMargin";
@@ -13,7 +13,7 @@ const OLED = () => {
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/N5bGFiu.jpg" />
-      <ProjectDetail
+      <ProjectSummary
         title={oled.title}
         company={oled.company}
         year={oled.year}

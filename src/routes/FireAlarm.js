@@ -2,7 +2,7 @@ import React from "react";
 
 import projectList from "../ProjectList";
 
-import ProjectDetail from "../components/Work/WorkItem/ProjectDetail";
+import ProjectSummary from "../components/Work/WorkItem/ProjectSummary";
 import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
 import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
 import UpMargin from "../components/Assets/UpMargin";
@@ -13,11 +13,11 @@ const FireAlarm = () => {
   return (
     <section className="container">
       <LargeBox background="https://i.imgur.com/u9fWvx0.png" />
-      <ProjectDetail
+      <ProjectSummary
         title={fireAlarm.title}
         company={fireAlarm.company}
         year={fireAlarm.year}
-        details={fireAlarm.details}
+        summary={fireAlarm.summary}
         role={fireAlarm.role}
         goal={fireAlarm.goal}
       />

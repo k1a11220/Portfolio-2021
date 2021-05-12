@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ProjectDetail.module.css";
+import styles from "./ProjectSummary.module.css";
 
 const ProjectDetail = (props) => {
   const goals = props.goal.split(",");
