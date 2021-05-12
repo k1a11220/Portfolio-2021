@@ -17,7 +17,7 @@ const OLED = () => {
         title={oled.title}
         company={oled.company}
         year={oled.year}
-        details={oled.details}
+        summary={oled.summary}
         role={oled.role}
         goal={oled.goal}
       />

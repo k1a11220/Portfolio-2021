@@ -13,7 +13,6 @@ const ProjectCard = (props) => {
   const color = props.color;
   const setLock = props.lock;
   const category = useRef(props.category);
-  console.log(category);
   return (
     <div
       className={`${styles.card_wrapper}`}

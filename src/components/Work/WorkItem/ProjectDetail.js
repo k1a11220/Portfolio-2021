@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./ProjectDetail.module.css";
 
 const ProjectDetail = (props) => {
+  const goals = props.goal.split(",");
   return (
-    <section className={styles.container}>
+    <article className={styles.container}>
       <div>
         <div className={styles.up_margin}></div>
         <p className="font-lg font-regular font-gray">{props.company}</p>
@@ -16,18 +17,20 @@ const ProjectDetail = (props) => {
       <div className={styles.info_wrapper}>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Summary</h3>
-          <p className="font-light font-gray">{props.details}</p>
+          <p className="font-light font-gray">{props.summary}</p>
         </div>
         <div className={styles.info_cover}>
           <h3 className="font-md font-regular">Project goals</h3>
           <p className="font-light font-gray">
-            {props.goal}
-            <br />
+            {goals[1]} <br />
+            {goals[2]} <br />
+            {goals[3]} <br />
+            {goals[4]}
           </p>
         </div>
         {/* <h3 className={`${styles.details} font_light`}>{props.role}</h3> */}
       </div>
-    </section>
+    </article>
   );
 };
 

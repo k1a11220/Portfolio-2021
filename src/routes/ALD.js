@@ -17,7 +17,7 @@ const ALD = () => {
         title={ald.title}
         company={ald.company}
         year={ald.year}
-        details={ald.details}
+        summary={ald.summary}
         role={ald.role}
         goal={ald.goal}
       />
