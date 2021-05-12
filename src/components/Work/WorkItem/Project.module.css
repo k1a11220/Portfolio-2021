@@ -20,6 +20,10 @@
   margin-bottom: 0.625rem;
 }
 
+.detail_cover > h3 {
+  margin-bottom: 0.625rem;
+}
+
 .info_cover:first-child > p {
   margin-bottom: 60px;
 }
