@@ -28,7 +28,7 @@ const ALD = () => {
         <p className="font-gray">
           There were two challenges that we have to solve.
         </p>
-        <p className="font-gray">
+        <p className="font-bold font-gray">
           First, 'How to rotate chamber'. Second, 'Sealing chamber in rotating
           process'.
         </p>
@@ -36,32 +36,23 @@ const ALD = () => {
       <UpMargin />
       <LargeBox background="https://i.imgur.com/ndH1BGy.jpg" />
       <article className="container_article">
-        <h3 className="font-md font-regular">Gear and motors</h3>
-        <p className="font-gray" style={{ marginBottom: "1rem" }}>
+        <h3 className="font-md font-regular">Design</h3>
+        <p className="font-gray" style={{ marginBottom: "0.625rem" }}>
           To rotate the chamber, our team determined to use a servo motor and
           internal gears. So we calculated the gear ratio by those formulas.
           Based on the result data we selected internal gears and servo motor
           type.
         </p>
-        <h3 className="font-md font-regular">
-          Sealing with O-ring & Magnetic fluid
-        </h3>
-        <p className="font-gray">
+        <p className="font-gray" style={{ marginBottom: "0.625rem" }}>
           O-ring design was not difficult. But we spent a lot of time to think
-          magnetic fluid.
+          magnetic fluid. It's not recommended to use an o-ring with moving
+          parts. Because o-ring makes particles by friction. Particles bring the
+          critical issue to the wafer. So we have to find material that meet two
+          criteria.
         </p>
-        <p className="font-gray" style={{ marginBottom: "0.625rem" }}>
-          It's not recommended to use an o-ring with moving parts. Because
-          o-ring makes particles by friction. Particles bring the critical issue
-          to the wafer.
-        </p>
-        <p className="font-gray" style={{ marginBottom: "0.625rem" }}>
-          So we have to find material that meet two criteria.
-          <br /> 1. Don't make any particles <br />
+        <p className="font-bold font-dark__gray">1. Don't make any particles</p>
+        <p className="font-bold font-dark__gray">
           2. Vacuum sealing during rotating chamber.
-        </p>
-        <p className="font-gray">
-          Finally we found magnetic fluid with magnet.
         </p>
       </article>
       <UpMargin />

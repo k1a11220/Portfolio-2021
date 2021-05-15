@@ -9,15 +9,29 @@ li {
   list-style: none;
 }
 
+.nav_container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
 .nav_wrapper {
-  height: 120px;
+  width: 1280px;
+  height: 78px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -34,6 +48,12 @@ li {
 
 .contact {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .nav_container {
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 767px) {

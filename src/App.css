@@ -86,7 +86,7 @@ h4 {
 }
 
 .font-gray {
-  color: #757575;
+  color: #4a4a4a;
 }
 
 .font-dark__gray {
@@ -132,10 +132,14 @@ h4 {
 
 .container {
   width: 1280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container_article {
-  width: 60%;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*Home (Work) Page*/
@@ -151,7 +155,6 @@ h4 {
 .title_wrapper div h1,
 h2 {
   position: relative;
-  z-index: 100;
   transition: all 0.2s ease-in;
 }
 

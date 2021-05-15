@@ -16,7 +16,7 @@ const Navigation = () => {
 
   return (
     <>
-      <section className="container">
+      <section className={styles.nav_container}>
         <nav
           className={styles.nav_wrapper}
           // style={{ marginBottom: hamburger ? 0 : "20px" }}
