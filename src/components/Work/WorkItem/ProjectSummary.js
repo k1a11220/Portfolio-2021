@@ -5,14 +5,13 @@ const ProjectDetail = (props) => {
   const goals = props.goal.split(",");
   return (
     <article className={styles.container}>
-      <div>
-        <div className={styles.up_margin}></div>
+      <div style={{ marginBottom: "40px" }}>
         <p className="font-lg font-regular font-gray">{props.company}</p>
         <h2 className={`${styles.title} title_h1 font-regular`}>
           {props.title}
         </h2>
-        <button className={styles.roleBtnText}>Design engineering</button>
-        <button className={styles.roleBtnText}>Product design</button>
+        {/* <button className={styles.roleBtnText}>Design engineering</button>
+        <button className={styles.roleBtnText}>Product design</button> */}
       </div>
       <div className={styles.info_wrapper}>
         <div className={styles.info_cover}>

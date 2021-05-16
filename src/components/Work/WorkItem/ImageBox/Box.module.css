@@ -13,7 +13,7 @@
 }
 
 .largeBox {
-  height: 720px;
+  height: 394px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,8 +27,8 @@
 }
 
 .mediumBox {
-  width: 620px;
-  height: 400px;
+  width: 340px;
+  height: 200px;
   background-color: #f3f3f3;
   border-radius: 4px;
   margin-bottom: 40px;
