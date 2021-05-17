@@ -61,18 +61,10 @@ const About = () => {
       <div className={styles.work}>
         <h2 className="font-xl font-gray font-bold">Clients worked with</h2>
         <div className={styles.details_wrapper}>
-          <p className="font-md font-regular">KITECH</p>
+          <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
           <p className="font-light">
-            ALD Design engineering project, ALD Equipment patent
+            Mechatronics, Mechanical Engineering · Mar 2017 ~ Jan 2020
           </p>
-        </div>
-        <div className={styles.details_wrapper}>
-          <p className="font-md font-regular">GaonTech</p>
-          <p className="font-light">Fire Alarm design project</p>
-        </div>
-        <div className={styles.details_wrapper}>
-          <p className="font-md font-regular">ADM Tech</p>
-          <p className="font-light">Mask design project</p>
         </div>
       </div>
     </section>
