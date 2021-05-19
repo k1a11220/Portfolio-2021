@@ -7,6 +7,10 @@
   margin-bottom: 40px;
 }
 
+.info_wrapper {
+  width: 700px;
+}
+
 .title {
   margin-top: 4px;
 }
@@ -76,9 +80,9 @@
   .container {
     flex-direction: column;
   }
-  .info_cover {
+  /* .info_cover {
     width: 90vw;
-  }
+  } */
   .roleBtnText {
     font-size: 10px;
   }
