@@ -1,9 +1,0 @@
-.up {
-  height: 40px;
-}
-
-@media screen and (max-width: 767px) {
-  .up {
-    height: 20px;
-  }
-}

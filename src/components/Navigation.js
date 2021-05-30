@@ -33,9 +33,6 @@ const Navigation = () => {
             <Link to="/About">
               <p>About</p>
             </Link>
-            {/* <Link to="/Bside">
-              <p>B-side</p>
-            </Link> */}
             <div className={styles.contact}>
               <p>
                 <a href="https://www.beomsoo.me">Blog</a>
