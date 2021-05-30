@@ -18,7 +18,7 @@ import Work from "./routes/Work";
 // import OLED from "./posts/OLED";
 // import Padintosh from "./posts/Padintosh";
 // import FireAlarm from "./posts/FireAlarm";
-// import ALD from "./posts/ALD";
+import ALD from "./posts/ALD";
 // import Bokdda from "./posts/Bokdda";
 // import Hydrogen from "./posts/Hydrogen";
 // import Toothbrush from "./posts/Toothbrush";
@@ -44,12 +44,12 @@ function App() {
           <Navigation />
           <Route path="/" exact={true} component={Work} />
           <Route path="/Work" component={Work} />
-          {/* <Route path="/About" component={About} /> */}
-          {/* <Route path="/OLED" component={OLED} />
+          {/* <Route path="/About" component={About} />
+          <Route path="/OLED" component={OLED} />
           <Route path="/Padintosh" component={Padintosh} />
-          <Route path="/FireAlarm" component={FireAlarm} />
+          <Route path="/FireAlarm" component={FireAlarm} /> */}
           <Route path="/ALD" component={ALD} />
-          <Route path="/Bokdda" component={Bokdda} />
+          {/* <Route path="/Bokdda" component={Bokdda} />
           <Route path="/Hydrogen" component={Hydrogen} />
           <Route path="/Toothbrush" component={Toothbrush} />
           <Route path="/JavaraLight" component={JavaraLight} />

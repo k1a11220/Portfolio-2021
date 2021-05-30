@@ -16,6 +16,8 @@ const Container = styled.section`
   top: 0px;
   z-index: 2;
   transition: all 0.5s ease-in-out;
+
+  border-bottom: solid 1px #f3f3f3;
 `;
 
 const SelectArea = styled.div`

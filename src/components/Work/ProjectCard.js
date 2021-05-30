@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import Lock from "../../Lock";
+import Lock from "../Lock";
 
 const Card = styled.div`
   display: flex;

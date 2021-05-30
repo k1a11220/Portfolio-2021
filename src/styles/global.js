@@ -6,7 +6,7 @@ const GlobalStyle = css`
     padding: 0;
     font-family: "Roboto", "Spoqa Han Sans Neo", sans-serif;
     text-decoration: none;
-    color: #222222;
+    color: #1d1d1d;
   }
 
   li {
@@ -46,6 +46,7 @@ const GlobalStyle = css`
     font-size: 1.125rem; // 18px
     line-height: 1.75rem; // 28px
     word-break: keep-all;
+    font-weight: 400;
   }
 
   a {

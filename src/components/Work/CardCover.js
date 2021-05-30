@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import ProjectCard from "./WorkItem/ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const Wrapper = styled.div`
   display: grid;
