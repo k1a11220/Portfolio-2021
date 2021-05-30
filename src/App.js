@@ -1,9 +1,11 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
+/** @jsxImportSource @emotion/react */
+import styled from "@emotion/styled";
 import "./App.css";
 
 import { Global } from "@emotion/react";
-import GlobalStyle from "./GlobalStyle";
+import global from "./styles/global";
 
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
@@ -12,22 +14,30 @@ import ScrollToTop from "./hooks/ScrollToTop";
 // import Cursor from "./components/Cursor";
 
 import Work from "./routes/Work";
-// import About from "./routes/About";
-// import OLED from "./routes/OLED";
-// import Padintosh from "./routes/Padintosh";
-// import FireAlarm from "./routes/FireAlarm";
-// import ALD from "./routes/ALD";
-// import Bokdda from "./routes/Bokdda";
-// import Hydrogen from "./routes/Hydrogen";
-// import Toothbrush from "./routes/Toothbrush";
-// import JavaraLight from "./routes/JavaraLight";
-// import LiquidHydrogen from "./routes/LiquidHydrogen";
+// import About from "./posts/About";
+// import OLED from "./posts/OLED";
+// import Padintosh from "./posts/Padintosh";
+// import FireAlarm from "./posts/FireAlarm";
+// import ALD from "./posts/ALD";
+// import Bokdda from "./posts/Bokdda";
+// import Hydrogen from "./posts/Hydrogen";
+// import Toothbrush from "./posts/Toothbrush";
+// import JavaraLight from "./posts/JavaraLight";
+// import LiquidHydrogen from "./posts/LiquidHydrogen";
+
+const Wrapper = styled.section`
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function App() {
   return (
     <>
-      <Global styles={GlobalStyle} />
-      <section className="center_wrapper">
+      <Global styles={global} />
+      <Wrapper>
         <HashRouter>
           <ScrollToTop />
           {/* <Cursor /> */}
@@ -46,7 +56,7 @@ function App() {
           <Route path="/LiquidHydrogen" component={LiquidHydrogen} /> */}
           <Footer />
         </HashRouter>
-      </section>
+      </Wrapper>
     </>
   );
 }

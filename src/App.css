@@ -77,17 +77,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.me {
-  width: 24vw;
-  left: 10%;
-}
-
-.container {
-  width: 1280px;
-  display: flex;
-  flex-direction: column;
-}
-
 .container_article {
   width: 90%;
   margin-top: 20px;
@@ -122,21 +111,6 @@ h2 {
   margin-bottom: 40px;
 }
 
-.center_wrapper {
-  width: 100vw;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card_area {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  transition: all 0.2s ease-in;
-}
-
 /*Project Detail*/
 .box_area {
   display: flex;
@@ -144,20 +118,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1024px) {
-  .me {
-    width: 48vw;
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    z-index: 0;
-  }
-}
-
 @media screen and (max-width: 1400px) {
-  h1 {
-    font-size: 64px;
-  }
   .container {
     width: 90vw;
   }

@@ -1,13 +1,19 @@
 /** @jsxImportSource @emotion/react */
-import { Global, jsx, css } from "@emotion/react";
-
+import styled from "@emotion/styled";
 import React from "react";
+
 import projectList from "../ProjectList";
 import CardCover from "../components/Work/CardCover";
 
+const Container = styled.section`
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Work = () => {
   return (
-    <section className="container">
+    <Container>
       <div className="title_wrapper">
         <div>
           <p className="font-md font-regular font-gradient">
@@ -18,7 +24,7 @@ const Work = () => {
         </div>
       </div>
       <CardCover results={projectList} />
-    </section>
+    </Container>
   );
 };
 

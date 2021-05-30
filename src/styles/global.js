@@ -18,26 +18,25 @@ const GlobalStyle = css`
   }
 
   h1 {
-    font-size: 100px;
+    font-size: 3rem; // 48px
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 2rem; // 32px
   }
 
   h3 {
-    font-size: 18px;
-    line-height: 1.6em;
-    margin-bottom: 0.625rem;
+    font-size: 1.5rem; // 24px
+    line-height: 2.25rem; // 36px
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 1.125rem; // 18px
+    line-height: 1.75rem; // 28px
     word-break: keep-all;
   }
 
@@ -45,6 +44,15 @@ const GlobalStyle = css`
     font-size: 1.125rem;
     line-height: 1.75rem;
     word-break: keep-all;
+  }
+
+  @media screen and (max-width: 1400px) {
+  }
+  @media screen and (max-width: 1024px) {
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 480px) {
   }
 `;
 

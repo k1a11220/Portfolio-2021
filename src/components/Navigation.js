@@ -17,10 +17,7 @@ const Navigation = () => {
   return (
     <>
       <section className={styles.nav_container}>
-        <nav
-          className={styles.nav_wrapper}
-          // style={{ marginBottom: hamburger ? 0 : "20px" }}
-        >
+        <nav className={styles.nav_wrapper}>
           <div className={styles.logo}>
             <Link to="/Work">
               <p>Beomsoo Son</p>

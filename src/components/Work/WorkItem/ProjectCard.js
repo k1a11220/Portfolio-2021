@@ -1,60 +1,56 @@
-import React, { useRef } from "react";
+import React from "react";
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
-// import lock from "../../../media/lock.svg";
 import Lock from "../../Lock";
 
+const Card = styled.div`
+  display: flex;
+  height: 380px;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  background-image: url("${(props) => props.color}");
+  background-clip: border-box;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.1s ease-in;
+  cursor: ${(props) => (props.lock === true ? "default" : "pointer")};
+
+  &:hover {
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.1s ease-in;
+    transform: scale(1.02);
+  }
+`;
+
 const ProjectCard = (props) => {
-  const links = props.links;
-  const title = props.title;
-  const company = props.company;
-  const year = props.year;
-  const background = props.background;
-  const color = props.color;
-  const setLock = props.lock;
-  const category = useRef(props.category);
   return (
-    <div
-      className={`${styles.card_wrapper}`}
-      style={{
-        backgroundImage: `url("${background}")`,
-      }}
-      ref={category}
-    >
-      <Link to={links}>
-        <div
-          className={`${styles.card_contents} ${category}`}
-          style={{ cursor: `${setLock === true ? "default" : "point"}` }}
-        >
-          <div className={styles.contents_wrapper}>
-            <h2
-              className={`${styles.title} font-regular`}
-              style={{
-                color: `${color}`,
-              }}
-            >
-              {title}
-            </h2>
-            <h4
-              className={`${styles.info} font-light`}
-              style={{
-                color: `${color}`,
-              }}
-            >
-              {company} - {year}
-            </h4>
-            {/* <button className={styles.roleBtnText}>Design engineering</button> */}
-          </div>
-          {setLock === true ? <Lock /> : null}
-          {/* <img
-            style={{ display: `${setLock === true ? "block" : "none"}` }}
-            className={styles.lock}
-            src={lock}
-            alt="lock"
-          ></img> */}
+    <Link to={props.links === undefined ? "" : props.links}>
+      <Card color={props.background} lock={props.lock}>
+        <div className={styles.contents_wrapper}>
+          <h3
+            className={`${styles.title} font-regular`}
+            style={{
+              color: `${props.color}`,
+            }}
+          >
+            {props.title}
+          </h3>
+          <h4
+            className={`${styles.info} font-light`}
+            style={{
+              color: `${props.color}`,
+            }}
+          >
+            {props.company} - {props.year}
+          </h4>
         </div>
-      </Link>
-    </div>
+        {props.lock === true ? <Lock /> : null}
+      </Card>
+    </Link>
   );
 };
 
