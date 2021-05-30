@@ -5,6 +5,12 @@ const GlobalStyle = css`
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Spoqa Han Sans Neo", sans-serif;
+    text-decoration: none;
+    color: #222222;
+  }
+
+  li {
+    list-style: none;
   }
 
   html,
