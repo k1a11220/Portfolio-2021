@@ -34,10 +34,12 @@ const GlobalStyle = css`
   h3 {
     font-size: 1.5rem; // 24px
     line-height: 2.25rem; // 36px
+    font-weight: 500;
   }
 
   h4 {
     font-size: 1rem;
+    font-weight: 400;
   }
 
   p {
@@ -57,6 +59,12 @@ const GlobalStyle = css`
   @media screen and (max-width: 1024px) {
   }
   @media screen and (max-width: 768px) {
+    h3 {
+      font-size: 1.25rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
   }
   @media screen and (max-width: 480px) {
   }

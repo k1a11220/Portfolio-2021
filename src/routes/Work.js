@@ -9,6 +9,10 @@ const Container = styled.section`
   width: 1200px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1400px) {
+    width: 90vw;
+  }
 `;
 
 const Work = () => {

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import styles from "./ProjectCard.module.css";
 import Lock from "../../Lock";
 
 const Card = styled.div`
@@ -24,30 +23,36 @@ const Card = styled.div`
     transition: all 0.1s ease-in;
     transform: scale(1.02);
   }
+
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 260px;
+  }
+`;
+
+const ContentsWrapper = styled.div`
+  margin-top: 40px;
+  margin-left: 40px;
+
+  @media screen and (max-width: 786px) {
+    margin-top: 24px;
+    margin-left: 24px;
+  }
 `;
 
 const ProjectCard = (props) => {
   return (
     <Link to={props.links === undefined ? "" : props.links}>
       <Card color={props.background} lock={props.lock}>
-        <div className={styles.contents_wrapper}>
-          <h3
-            className={`${styles.title} font-regular`}
-            style={{
-              color: `${props.color}`,
-            }}
-          >
-            {props.title}
-          </h3>
-          <h4
-            className={`${styles.info} font-light`}
-            style={{
-              color: `${props.color}`,
-            }}
-          >
-            {props.company} - {props.year}
+        <ContentsWrapper>
+          <h3 style={{ color: `${props.color}` }}>{props.title}</h3>
+          <h4 style={{ color: `${props.color}` }}>
+            {props.company} · {props.year}
           </h4>
-        </div>
+        </ContentsWrapper>
         {props.lock === true ? <Lock /> : null}
       </Card>
     </Link>

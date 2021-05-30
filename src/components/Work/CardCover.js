@@ -7,6 +7,14 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   transition: all 0.2s ease-in;
+
+  @media screen and (max-width: 1400px) {
+    width: 90vw;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const CardCover = (results) => {
