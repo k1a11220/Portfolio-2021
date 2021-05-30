@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
 import "./App.css";
@@ -38,7 +38,7 @@ function App() {
     <>
       <Global styles={global} />
       <Wrapper>
-        <HashRouter>
+        <BrowserRouter>
           <ScrollToTop />
           {/* <Cursor /> */}
           <Navigation />
@@ -55,7 +55,7 @@ function App() {
           <Route path="/JavaraLight" component={JavaraLight} />
           <Route path="/LiquidHydrogen" component={LiquidHydrogen} /> */}
           <Footer />
-        </HashRouter>
+        </BrowserRouter>
       </Wrapper>
     </>
   );
