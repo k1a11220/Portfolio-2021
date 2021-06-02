@@ -4,22 +4,6 @@ import "./Hamburger.css";
 
 import styled from "@emotion/styled";
 
-const Container = styled.section`
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 2;
-  transition: all 0.5s ease-in-out;
-
-  border-bottom: solid 1px #f3f3f3;
-`;
-
 const SelectArea = styled.div`
   display: flex;
   align-items: center;
@@ -61,15 +45,30 @@ const Navigation = () => {
     setHamburger(!hamburger);
   };
 
+  const Container = styled.section`
+    width: 100vw;
+    height: ${hamburger === false ? "4rem" : "20rem"}; //64px
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+
+    border-bottom: solid 1px #f3f3f3;
+  `;
+
   const Wrapper = styled.nav`
     width: 75rem; // 1200px
-    height: ${hamburger === false ? "4.875rem" : "20rem"}; //78px
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4.875rem;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     transition: all 0.5s ease-in-out;
 
     @media screen and (max-width: 1400px) {
@@ -78,9 +77,8 @@ const Navigation = () => {
 
     @media screen and (max-width: 768px) {
       display: grid;
-      align-items: flex-start;
+      align-items: center;
       position: relative;
-      top: 1.625rem;
       width: 90vw;
     }
   `;
