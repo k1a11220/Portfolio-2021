@@ -11,14 +11,13 @@ import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 
 import ScrollToTop from "./hooks/ScrollToTop";
-// import Cursor from "./components/Cursor";
 
 import Work from "./routes/Work";
-// import About from "./posts/About";
+import About from "./routes/About";
 // import OLED from "./posts/OLED";
 // import Padintosh from "./posts/Padintosh";
 // import FireAlarm from "./posts/FireAlarm";
-import ALD from "./posts/ALD";
+import ALD from "./projects/ALD";
 // import Bokdda from "./posts/Bokdda";
 // import Hydrogen from "./posts/Hydrogen";
 // import Toothbrush from "./posts/Toothbrush";
@@ -44,8 +43,8 @@ function App() {
           <Navigation />
           <Route path="/" exact={true} component={Work} />
           <Route path="/Work" component={Work} />
-          {/* <Route path="/About" component={About} />
-          <Route path="/OLED" component={OLED} />
+          <Route path="/About" component={About} />
+          {/* <Route path="/OLED" component={OLED} />
           <Route path="/Padintosh" component={Padintosh} />
           <Route path="/FireAlarm" component={FireAlarm} /> */}
           <Route path="/ALD" component={ALD} />

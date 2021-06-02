@@ -1,8 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Hamburger.css";
-
 import styled from "@emotion/styled";
+
+const Wrapper = styled.nav`
+  width: 75rem; // 1200px
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+  @media screen and (max-width: 1400px) {
+    width: 90vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+  }
+`;
 
 const SelectArea = styled.div`
   display: flex;
@@ -36,12 +56,7 @@ const HamburgerContainer = styled.div`
 
 const Navigation = () => {
   const [hamburger, setHamburger] = useState(false);
-
-  const showMenu = () => {
-    setHamburger(!hamburger);
-  };
-
-  const hideMenu = () => {
+  const menuStatus = () => {
     setHamburger(!hamburger);
   };
 
@@ -60,27 +75,6 @@ const Navigation = () => {
     transition: all 0.5s ease-in-out;
 
     border-bottom: solid 1px #f3f3f3;
-  `;
-
-  const Wrapper = styled.nav`
-    width: 75rem; // 1200px
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-
-    @media screen and (max-width: 1400px) {
-      width: 90vw;
-    }
-
-    @media screen and (max-width: 768px) {
-      display: grid;
-      align-items: center;
-      position: relative;
-      width: 90vw;
-    }
   `;
 
   const HamburgerMenu = styled.div`
@@ -110,17 +104,17 @@ const Navigation = () => {
         </>
         <HamburgerContainer>
           <label htmlFor="check">
-            <input type="checkbox" id="check" onClick={showMenu} />
+            <input type="checkbox" id="check" onClick={menuStatus} />
             <span className={hamburger ? "bar1_checked" : ""}></span>
             <span className={hamburger ? "bar2_checked" : ""}></span>
             <span className={hamburger ? "bar3_checked" : ""}></span>
           </label>
         </HamburgerContainer>
         <HamburgerMenu>
-          <Link to="/Work" onClick={hideMenu}>
+          <Link to="/Work" onClick={menuStatus}>
             Work
           </Link>
-          <Link to="/About" onClick={hideMenu}>
+          <Link to="/About" onClick={menuStatus}>
             About
           </Link>
           <a href="https://www.beomsoo.me">Blog</a>

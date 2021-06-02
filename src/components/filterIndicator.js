@@ -1,6 +1,6 @@
 import React from "react";
 
-const filterIndicator = () => {
+const FilterIndicator = () => {
   const [tabLocation, setTabLocation] = useState(0);
   const [tabWidth, setTabwidth] = useState(66);
   const allSelected = () => {
@@ -52,4 +52,4 @@ const filterIndicator = () => {
   );
 };
 
-export default filterIndicator;
+export default FilterIndicator;

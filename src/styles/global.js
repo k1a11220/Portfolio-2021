@@ -42,6 +42,11 @@ const GlobalStyle = css`
     font-weight: 400;
   }
 
+  strong {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
   p {
     font-size: 1.125rem; // 18px
     line-height: 1.75rem; // 28px

@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
 import React from "react";
-
 import projectList from "../ProjectList";
-import CardCover from "../components/Work/CardCover";
+import CardList from "../components/CardList";
 
 const Container = styled.section`
   width: 1200px;
@@ -27,7 +26,7 @@ const Work = () => {
           </p>
         </div>
       </div>
-      <CardCover results={projectList} />
+      <CardList results={projectList} />
     </Container>
   );
 };
