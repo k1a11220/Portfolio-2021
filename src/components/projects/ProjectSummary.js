@@ -63,7 +63,7 @@ const ProjectDetail = (props) => {
   const goals = props.goal.split(",");
   const roles = props.role.split(",");
   const squaredData = (DATA) =>
-    DATA.map((element) => <p key={Math.random(100)}>{element}</p>);
+    DATA.map((element) => <p key={Math.random(100)}>- {element}</p>);
   return (
     <>
       <meta itemProp="headline" content={props.title} />

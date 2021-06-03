@@ -15,14 +15,14 @@ import ScrollToTop from "./hooks/ScrollToTop";
 import Work from "./routes/Work";
 import About from "./routes/About";
 import OLED from "./projects/OLED";
-// import Padintosh from "./posts/Padintosh";
-// import FireAlarm from "./posts/FireAlarm";
+import Padintosh from "./projects/Padintosh";
+import FireAlarm from "./projects/FireAlarm";
 import ALD from "./projects/ALD";
-// import Bokdda from "./posts/Bokdda";
-// import Hydrogen from "./posts/Hydrogen";
-// import Toothbrush from "./posts/Toothbrush";
-// import JavaraLight from "./posts/JavaraLight";
-// import LiquidHydrogen from "./posts/LiquidHydrogen";
+import Bokdda from "./projects/Bokdda";
+import Hydrogen from "./projects/Hydrogen";
+import Toothbrush from "./projects/Toothbrush";
+import JavaraLight from "./projects/JavaraLight";
+import LiquidHydrogen from "./projects/LiquidHydrogen";
 
 const Wrapper = styled.section`
   width: 100vw;
@@ -45,14 +45,14 @@ function App() {
           <Route path="/Work" component={Work} />
           <Route path="/About" component={About} />
           <Route path="/OLED" component={OLED} />
-          {/* <Route path="/Padintosh" component={Padintosh} />
-          <Route path="/FireAlarm" component={FireAlarm} /> */}
+          <Route path="/Padintosh" component={Padintosh} />
+          <Route path="/FireAlarm" component={FireAlarm} />
           <Route path="/ALD" component={ALD} />
-          {/* <Route path="/Bokdda" component={Bokdda} />
+          <Route path="/Bokdda" component={Bokdda} />
           <Route path="/Hydrogen" component={Hydrogen} />
           <Route path="/Toothbrush" component={Toothbrush} />
           <Route path="/JavaraLight" component={JavaraLight} />
-          <Route path="/LiquidHydrogen" component={LiquidHydrogen} /> */}
+          <Route path="/LiquidHydrogen" component={LiquidHydrogen} />
           <Footer />
         </BrowserRouter>
       </Wrapper>

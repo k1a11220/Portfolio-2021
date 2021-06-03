@@ -1,48 +1,47 @@
 import React from "react";
-
 import projectList from "../ProjectList";
-
-import ProjectSummary from "../components/Work/WorkItem/ProjectSummary";
-import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
-import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
-import UpMargin from "../components/Assets/UpMargin";
-// import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
+import ProjectSummary from "../components/projects/ProjectSummary";
+import { Article, Hero, Text } from "../styles/Project.styles";
+import LargeBox from "../components/projects/LargeBox";
+import Share from "../components/projects/Share";
 import insertGif from "../media/Padintosh_1.gif";
 
 const Padintosh = () => {
-  const padintosh = projectList[5];
+  const currentProject = 5;
+  const projectInfo = projectList[currentProject];
   return (
-    <section className="container">
-      <LargeBox background="https://i.imgur.com/x47sS54.jpg" />
-      <ProjectSummary
-        title={padintosh.title}
-        company={padintosh.company}
-        year={padintosh.year}
-        summary={padintosh.summary}
-        role={padintosh.role}
-        goal={padintosh.goal}
-      />
-      <UpMargin />
-      <div className="box_area">
-        <MediumBox background="https://i.imgur.com/A2VBZ87.jpg" />
-        <MediumBox background="https://i.imgur.com/qRsQy6G.jpg" />
-      </div>
-      <LargeBox background={insertGif} />
-      <LargeBox background="https://i.imgur.com/qBeo6b5.png" />
-      <div className="box_area">
-        <MediumBox background="https://i.imgur.com/M8uZ7OE.jpg" />
-        <MediumBox background="https://i.imgur.com/4i9lnGb.jpg" />
-        <MediumBox background="https://i.imgur.com/rCGajsS.jpg" />
-        <MediumBox background="https://i.imgur.com/kERO0EE.jpg" />
-      </div>
-      <LargeBox background="https://i.imgur.com/x6QGGmC.jpg" />
-      <div className="box_area">
-        <MediumBox background="https://i.imgur.com/3ljGKE1.png" />
-        <MediumBox background="https://i.imgur.com/7rUezBD.png" />
-        <MediumBox background="https://i.imgur.com/5nrrDAr.png" />
-        <MediumBox background="https://i.imgur.com/m2iVOEK.png" />
-      </div>
-    </section>
+    <>
+      <Hero background={projectInfo.background} />
+      <Article>
+        <ProjectSummary
+          title={projectInfo.title}
+          company={projectInfo.company}
+          year={projectInfo.year}
+          summary={projectInfo.summary}
+          role={projectInfo.role}
+          goal={projectInfo.goal}
+          thumbnail={projectInfo.background}
+        />
+        <LargeBox background="https://i.imgur.com/x47sS54.jpg" />
+        <LargeBox background="https://i.imgur.com/A2VBZ87.jpg" />
+        <LargeBox background="https://i.imgur.com/qRsQy6G.jpg" />
+        <LargeBox background={insertGif} />
+        <LargeBox background="https://i.imgur.com/qBeo6b5.png" />
+        <LargeBox background="https://i.imgur.com/M8uZ7OE.jpg" />
+        <LargeBox background="https://i.imgur.com/4i9lnGb.jpg" />
+        <LargeBox background="https://i.imgur.com/rCGajsS.jpg" />
+        <LargeBox background="https://i.imgur.com/kERO0EE.jpg" />
+        <LargeBox background="https://i.imgur.com/x6QGGmC.jpg" />
+        <LargeBox background="https://i.imgur.com/3ljGKE1.png" />
+        <LargeBox background="https://i.imgur.com/7rUezBD.png" />
+        <LargeBox background="https://i.imgur.com/5nrrDAr.png" />
+        <LargeBox background="https://i.imgur.com/m2iVOEK.png" />
+        <Share
+          prevProject={projectList[currentProject - 1].title}
+          nextProject={projectList[currentProject + 1].title}
+        />
+      </Article>
+    </>
   );
 };
 

@@ -1,43 +1,43 @@
 import React from "react";
-
 import projectList from "../ProjectList";
+import ProjectSummary from "../components/projects/ProjectSummary";
+import { Article, Hero, Text } from "../styles/Project.styles";
+import LargeBox from "../components/projects/LargeBox";
+import Share from "../components/projects/Share";
 
-import ProjectSummary from "../components/Work/WorkItem/ProjectSummary";
-import LargeBox from "../components/Work/WorkItem/ImageBox/LargeBox";
-import MediumBox from "../components/Work/WorkItem/ImageBox/MediumBox";
-import UpMargin from "../components/Assets/UpMargin";
-// import SmallBox from "../components/Work/WorkItem/ImageBox/SmallBox";
-
-const Toothbrush = () => {
-  const toothbrush = projectList[7];
+const Padintosh = () => {
+  const currentProject = 7;
+  const projectInfo = projectList[currentProject];
   return (
-    <section className="container">
-      <LargeBox background="https://i.imgur.com/jtzychE.png" />
-      <ProjectSummary
-        title={toothbrush.title}
-        company={toothbrush.company}
-        year={toothbrush.year}
-        summary={toothbrush.summary}
-        role={toothbrush.role}
-        goal={toothbrush.goal}
-      />
-      <UpMargin />
-      <div className="box_area">
-        <MediumBox background="https://i.imgur.com/8Y0N3RP.png" />
-        <MediumBox background="https://i.imgur.com/GH21oWV.png" />
-        <MediumBox background="https://i.imgur.com/Npev8q1.png" />
-        <MediumBox background="https://i.imgur.com/o2N6z4q.png" />
-      </div>
-      <LargeBox background="https://i.imgur.com/wI27uyq.png" />
-      <LargeBox background="https://i.imgur.com/yKZsLNJ.png" />
-      <div className="box_area">
-        <MediumBox background="https://i.imgur.com/9LJrwMB.png" />
-        <MediumBox background="https://i.imgur.com/54VnpNw.png" />
-      </div>
-      <LargeBox background="https://i.imgur.com/RBP2kxg.png" />
-      <LargeBox background="https://i.imgur.com/mdJNHVC.png" />
-    </section>
+    <>
+      <Hero background={projectInfo.background} />
+      <Article>
+        <ProjectSummary
+          title={projectInfo.title}
+          company={projectInfo.company}
+          year={projectInfo.year}
+          summary={projectInfo.summary}
+          role={projectInfo.role}
+          goal={projectInfo.goal}
+          thumbnail={projectInfo.background}
+        />
+        <LargeBox background="https://i.imgur.com/jtzychE.png" />
+        <LargeBox background="https://i.imgur.com/8Y0N3RP.png" />
+        <LargeBox background="https://i.imgur.com/GH21oWV.png" />
+        <LargeBox background="https://i.imgur.com/Npev8q1.png" />
+        <LargeBox background="https://i.imgur.com/o2N6z4q.png" />
+        <LargeBox background="https://i.imgur.com/wI27uyq.png" />
+        <LargeBox background="https://i.imgur.com/9LJrwMB.png" />
+        <LargeBox background="https://i.imgur.com/54VnpNw.png" />
+        <LargeBox background="https://i.imgur.com/RBP2kxg.png" />
+        <LargeBox background="https://i.imgur.com/mdJNHVC.png" />
+        <Share
+          prevProject={projectList[currentProject - 1].title}
+          nextProject={projectList[currentProject + 1].title}
+        />
+      </Article>
+    </>
   );
 };
 
-export default Toothbrush;
+export default Padintosh;
