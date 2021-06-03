@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
-// import UpMargin from "../components/UpMargin";
+
 const About = () => {
   return (
     <section className="container">

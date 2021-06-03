@@ -1,23 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
-
-const Hero = styled.div`
-  height: 394px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f1f2f4;
-  border-radius: 10px;
-  margin-top: 2.5rem; //40px
-  margin-bottom: 5rem;
-  background-clip: border-box;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-`;
+import theme from "../../styles/theme";
 
 const Header = styled.header`
-  margin-bottom: 2.5rem;
+  margin-bottom: ${theme.margin.laptop};
 
   & h1 {
     font-weight: 600;
@@ -34,10 +20,16 @@ const Header = styled.header`
     color: #a1a1a1;
     font-weight: 500;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: ${theme.margin.mobile};
+  }
 `;
 
 const Line = styled.hr`
-  margin-bottom: 40px;
+  margin-bottom: ${theme.margin.laptop};
+  @media screen and (max-width: 768px) {
+    margin-bottom: ${theme.margin.mobile};
+  }
 `;
 
 const Contents = styled.div`
@@ -45,11 +37,25 @@ const Contents = styled.div`
   grid-template-columns: 1fr 1fr;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: ${theme.margin.mobile};
+  }
+
+  & div {
+    margin-bottom: ${theme.margin.laptop};
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: ${theme.margin.mobile};
+    }
   }
 
   & h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: ${theme.paragraphMargin.mobile};
+    }
   }
 `;
 
@@ -61,7 +67,6 @@ const ProjectDetail = (props) => {
   return (
     <>
       <meta itemProp="headline" content={props.title} />
-      <Hero />
       <Header>
         <p>{props.company}</p>
         <h1>{props.title}</h1>
@@ -77,9 +82,7 @@ const ProjectDetail = (props) => {
           <h3>Roles</h3>
           {squaredData(roles)}
         </div>
-        <div
-          style={{ marginTop: "40px", marginBottom: "40px", gridColumn: "1/3" }}
-        >
+        <div style={{ gridColumn: "1/3" }}>
           <h3>Summary</h3>
           <p>{props.summary}</p>
         </div>

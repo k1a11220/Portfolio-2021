@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import theme from "../../styles/theme";
 
 const Container = styled.div`
   height: 394px;
@@ -14,6 +15,10 @@ const Container = styled.div`
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (max-width: 768px) {
+    height: 60vw;
+    margin-bottom: ${theme.margin.mobile};
+  }
 `;
 
 const LargeBox = ({ background }) => {

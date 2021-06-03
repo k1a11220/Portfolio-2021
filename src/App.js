@@ -14,7 +14,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 
 import Work from "./routes/Work";
 import About from "./routes/About";
-// import OLED from "./posts/OLED";
+import OLED from "./projects/OLED";
 // import Padintosh from "./posts/Padintosh";
 // import FireAlarm from "./posts/FireAlarm";
 import ALD from "./projects/ALD";
@@ -44,8 +44,8 @@ function App() {
           <Route path="/" exact={true} component={Work} />
           <Route path="/Work" component={Work} />
           <Route path="/About" component={About} />
-          {/* <Route path="/OLED" component={OLED} />
-          <Route path="/Padintosh" component={Padintosh} />
+          <Route path="/OLED" component={OLED} />
+          {/* <Route path="/Padintosh" component={Padintosh} />
           <Route path="/FireAlarm" component={FireAlarm} /> */}
           <Route path="/ALD" component={ALD} />
           {/* <Route path="/Bokdda" component={Bokdda} />

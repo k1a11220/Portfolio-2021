@@ -88,6 +88,37 @@ const Navigation = () => {
     }
   `;
 
+  const Label = styled.label`
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+
+    & span {
+      background: #222222;
+      border-radius: 10px;
+      height: 3px;
+      margin: 3px 0;
+      transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    & span:nth-of-type(1) {
+      width: 50%;
+    }
+
+    & span:nth-of-type(2) {
+      width: 100%;
+    }
+
+    & span:nth-of-type(3) {
+      width: 75%;
+    }
+
+    & [type="checkbox"] {
+      display: none;
+    }
+  `;
+
   return (
     <Container>
       <Wrapper>
@@ -103,12 +134,12 @@ const Navigation = () => {
           </SelectArea>
         </>
         <HamburgerContainer>
-          <label htmlFor="check">
+          <Label htmlFor="check">
             <input type="checkbox" id="check" onClick={menuStatus} />
             <span className={hamburger ? "bar1_checked" : ""}></span>
             <span className={hamburger ? "bar2_checked" : ""}></span>
             <span className={hamburger ? "bar3_checked" : ""}></span>
-          </label>
+          </Label>
         </HamburgerContainer>
         <HamburgerMenu>
           <Link to="/Work" onClick={menuStatus}>

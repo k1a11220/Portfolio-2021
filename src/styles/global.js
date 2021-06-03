@@ -65,10 +65,16 @@ const GlobalStyle = css`
   @media screen and (max-width: 1024px) {
   }
   @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.375rem;
+    }
     h3 {
       font-size: 1.25rem;
     }
     h4 {
+      font-size: 1rem;
+    }
+    p {
       font-size: 1rem;
     }
   }
