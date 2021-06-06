@@ -6,37 +6,34 @@ import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
 const Padintosh = () => {
-  const currentProject = 8;
-  const projectInfo = projectList[currentProject];
+  const projectNumber = 8;
+  const currentProject = projectList[projectNumber];
+  const nextProject = projectList[projectNumber + 1];
+  const prevProject = projectList[projectNumber - 1];
   return (
-    <>
-      <Hero background={projectInfo.background} />
+    <main>
+      <Hero src={currentProject.background} />
       <Article>
         <ProjectSummary
-          title={projectInfo.title}
-          company={projectInfo.company}
-          year={projectInfo.year}
-          summary={projectInfo.summary}
-          role={projectInfo.role}
-          goal={projectInfo.goal}
-          thumbnail={projectInfo.background}
+          title={currentProject.title}
+          company={currentProject.company}
+          year={currentProject.year}
+          summary={currentProject.summary}
+          role={currentProject.role}
+          goal={currentProject.goal}
+          thumbnail={currentProject.background}
         />
 
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
         <LargeBox background="https://i.imgur.com/f71RFmr.png" />
 
         <Share
-          prevProject={projectList[currentProject - 1].title}
-          nextProject={projectList[currentProject + 1].title}
+          prevLink={prevProject.links}
+          nextLink={nextProject.links}
+          prevProject={prevProject.title}
+          nextProject={nextProject.title}
         />
       </Article>
-    </>
+    </main>
   );
 };
 

@@ -1,7 +1,6 @@
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 import { Global } from "@emotion/react";
@@ -14,6 +13,7 @@ import ScrollToTop from "./hooks/ScrollToTop";
 
 import Work from "./routes/Work";
 import About from "./routes/About";
+
 import OLED from "./projects/OLED";
 import Padintosh from "./projects/Padintosh";
 import FireAlarm from "./projects/FireAlarm";
@@ -36,26 +36,28 @@ function App() {
   return (
     <>
       <Global styles={global} />
-      <Wrapper>
-        <BrowserRouter>
-          <ScrollToTop />
-          {/* <Cursor /> */}
-          <Navigation />
-          <Route path="/" exact={true} component={Work} />
-          <Route path="/Work" component={Work} />
-          <Route path="/About" component={About} />
-          <Route path="/OLED" component={OLED} />
-          <Route path="/Padintosh" component={Padintosh} />
-          <Route path="/FireAlarm" component={FireAlarm} />
-          <Route path="/ALD" component={ALD} />
-          <Route path="/Bokdda" component={Bokdda} />
-          <Route path="/Hydrogen" component={Hydrogen} />
-          <Route path="/Toothbrush" component={Toothbrush} />
-          <Route path="/JavaraLight" component={JavaraLight} />
-          <Route path="/LiquidHydrogen" component={LiquidHydrogen} />
-          <Footer />
-        </BrowserRouter>
-      </Wrapper>
+      <BrowserRouter>
+        <Switch>
+          <Wrapper>
+            <ScrollToTop />
+            {/* <Cursor /> */}
+            <Navigation />
+            <Route path="/portfolio" exact={true} component={Work} />
+            <Route path="/Work" component={Work} />
+            <Route path="/About" component={About} />
+            <Route path="/OLED" component={OLED} />
+            <Route path="/Padintosh" component={Padintosh} />
+            <Route path="/FireAlarm" component={FireAlarm} />
+            <Route path="/ALD" component={ALD} />
+            <Route path="/Bokdda" component={Bokdda} />
+            <Route path="/Hydrogen" component={Hydrogen} />
+            <Route path="/Toothbrush" component={Toothbrush} />
+            <Route path="/JavaraLight" component={JavaraLight} />
+            <Route path="/LiquidHydrogen" component={LiquidHydrogen} />
+            <Footer />
+          </Wrapper>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }

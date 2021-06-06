@@ -5,21 +5,23 @@ import { Article, Hero, Text } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
-const ALD = () => {
-  const currentProject = 0;
-  const projectInfo = projectList[currentProject];
+const ALD = (project) => {
+  const projectNumber = 0;
+  const currentProject = projectList[projectNumber];
+  const nextProject = projectList[projectNumber + 1];
+  const prevProject = projectList[projectNumber - 1];
   return (
-    <>
-      <Hero background={projectInfo.background} />
+    <main>
+      <Hero src={currentProject.background} />
       <Article>
         <ProjectSummary
-          title={projectInfo.title}
-          company={projectInfo.company}
-          year={projectInfo.year}
-          summary={projectInfo.summary}
-          role={projectInfo.role}
-          goal={projectInfo.goal}
-          thumbnail={projectInfo.background}
+          title={currentProject.title}
+          company={currentProject.company}
+          year={currentProject.year}
+          summary={currentProject.summary}
+          role={currentProject.role}
+          goal={currentProject.goal}
+          thumbnail={currentProject.background}
         />
         <LargeBox background="https://i.imgur.com/pdhw0fS.png" />
         <Text>
@@ -64,11 +66,13 @@ const ALD = () => {
         <LargeBox background="https://i.imgur.com/iR147O4.jpg" />
         <LargeBox background="https://i.imgur.com/O5r1fuA.jpg" />
         <Share
-          prevProject="❤️"
-          nextProject={projectList[currentProject + 1].title}
+          prevLink="/"
+          nextLink={nextProject.links}
+          prevProject="Last Project"
+          nextProject={nextProject.title}
         />
       </Article>
-    </>
+    </main>
   );
 };
 

@@ -16,8 +16,8 @@ const projectList = [
   },
   {
     key: 1,
-    title: "볶다",
-    // links: "/Bokdda",
+    title: "Bokdda",
+    links: "/Bokdda",
     company: "Personal Project",
     year: "2021",
     background: "https://i.imgur.com/QPNqqhO.png",
@@ -28,7 +28,7 @@ const projectList = [
     role: "Product Design, MVP",
     goal: "복지 검색과 신청 개선",
     category: "digital",
-    lock: true,
+    // lock: true,
   },
   {
     key: 2,
@@ -48,7 +48,7 @@ const projectList = [
   {
     key: 3,
     title: "Javara-light",
-    // links: "/JavaraLight",
+    links: "/JavaraLight",
     company: "BE THE LIGHT",
     year: "2021",
     background: "https://i.imgur.com/8fQdX3T.png",
@@ -57,25 +57,25 @@ const projectList = [
     titleColor: "#0a0a0a",
     role: "Industrial Design, Prototyping",
     goal: "Lights for kids",
-    lock: true,
     cursor: "default",
     category: "industrial",
+    // lock: true,
   },
   {
     key: 4,
     title: "Hydrogen compressor",
-    // links: "/Hydrogen",
+    links: "/Hydrogen",
     company: "TNG",
     year: "2021",
-    background: "https://i.imgur.com/FWmJjFY.png",
+    background: "https://i.imgur.com/PiOVJCQ.png",
     tag: "Design Engineering",
     summary:
       "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "#fdfdfd",
+    titleColor: "#1D1D1D",
     role: "Design Engineering",
     goal: "Make high pressure hydrogen",
     category: "industrial",
-    lock: true,
+    // lock: true,
   },
   {
     key: 5,
@@ -101,7 +101,7 @@ const projectList = [
     tag: "Design",
     summary:
       "Fire alarm provided with a fire extinguisher. We produced two types, a press process to bend the steel plate and mass production through an injection mold.",
-    titleColor: "#0a0a0a",
+    titleColor: "#1D1D1D",
     role: "Design Engineering",
     goal: "Improve communication function",
     category: "industrial",
@@ -121,20 +121,20 @@ const projectList = [
     goal: "Replaceable toothbrush",
     category: "industrial",
   },
-  {
-    key: 8,
-    title: "Liquid hydrogen compressor",
-    // links: "/LiquidHydrogen",
-    company: "KIMM",
-    year: "2021",
-    background: "",
-    tag: "Engineering",
-    summary:
-      "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
-    titleColor: "#0a0a0a",
-    category: "industrial",
-    lock: true,
-  },
+  // {
+  //   key: 8,
+  //   title: "Liquid hydrogen compressor",
+  //   links: "/LiquidHydrogen",
+  //   company: "KIMM",
+  //   year: "2021",
+  //   background: "",
+  //   tag: "Engineering",
+  //   summary:
+  //     "Hydrogen compressor development project that does not require additional sealing by applying a magnet type rodless cylinder.",
+  //   titleColor: "#1D1D1D",
+  //   category: "industrial",
+  //   lock: true,
+  // },
 ];
 
 export default projectList;

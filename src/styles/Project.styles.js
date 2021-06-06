@@ -32,7 +32,7 @@ export const Text = styled.div`
   }
 `;
 
-export const Hero = styled.div`
+export const Hero = styled.img`
   height: 720px;
   width: ${theme.width.laptop};
   display: flex;
@@ -42,11 +42,7 @@ export const Hero = styled.div`
   border-radius: 10px;
   margin-top: ${theme.margin.laptop}; //40px
   margin-bottom: calc(${theme.margin.laptop} * 2);
-  background: url(${(props) => props.background});
-  background-clip: border-box;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
 
   @media screen and (max-width: 1400px) {
     width: ${theme.width.mobile};

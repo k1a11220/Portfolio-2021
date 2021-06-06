@@ -82,7 +82,6 @@ const Share = (props) => {
     inputc.parentNode.removeChild(inputc);
     alert("URL Copied.");
   };
-  console.log(props.prevProject);
   return (
     <>
       <h3>🚀 Share this project!</h3>

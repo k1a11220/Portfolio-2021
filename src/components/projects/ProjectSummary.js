@@ -84,7 +84,7 @@ const ProjectDetail = (props) => {
         </div>
         <div style={{ gridColumn: "1/3" }}>
           <h3>Summary</h3>
-          <p>{props.summary}</p>
+          <summary>{props.summary}</summary>
         </div>
       </Contents>
     </>

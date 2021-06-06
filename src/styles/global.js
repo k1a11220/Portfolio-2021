@@ -23,6 +23,11 @@ const GlobalStyle = css`
     font-size: 16px;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
   h1 {
     font-size: 3rem; // 48px
   }
@@ -42,12 +47,15 @@ const GlobalStyle = css`
     font-weight: 400;
   }
 
-  strong {
+  strong,
+  b {
     font-size: 1.125rem;
     font-weight: 500;
+    word-break: keep-all;
   }
 
-  p {
+  p,
+  summary {
     font-size: 1.125rem; // 18px
     line-height: 1.75rem; // 28px
     word-break: keep-all;
@@ -71,10 +79,11 @@ const GlobalStyle = css`
     h3 {
       font-size: 1.25rem;
     }
-    h4 {
-      font-size: 1rem;
-    }
-    p {
+    h4,
+    p,
+    strong,
+    summary,
+    b {
       font-size: 1rem;
     }
   }

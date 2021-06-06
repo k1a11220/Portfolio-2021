@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import theme from "../../styles/theme";
 
-const Container = styled.div`
+const Container = styled.img`
   height: 394px;
   display: flex;
   flex-direction: column;
@@ -10,11 +10,7 @@ const Container = styled.div`
   background-color: #f1f2f4;
   border-radius: 10px;
   margin-bottom: 2.5rem; //40px
-  background: url(${(props) => props.background});
-  background-clip: border-box;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
   @media screen and (max-width: 768px) {
     height: 60vw;
     margin-bottom: ${theme.margin.mobile};
@@ -22,7 +18,7 @@ const Container = styled.div`
 `;
 
 const LargeBox = ({ background }) => {
-  return <Container background={background}></Container>;
+  return <Container src={background}></Container>;
 };
 
 export default LargeBox;

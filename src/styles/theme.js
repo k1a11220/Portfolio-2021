@@ -1,6 +1,6 @@
 export const size = {
   laptop: "75rem", // 1200px
-  tablet: "43.75rem", // 900px
+  tablet: "43.75rem", // 700px
   mobile: "90vw", // 700px
   small: "31.25rem", // 500px
   smallest: "25rem", // 400px

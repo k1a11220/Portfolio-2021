@@ -1,73 +1,98 @@
 import React from "react";
-import styles from "./About.module.css";
+import styled from "@emotion/styled";
+import theme from "../styles/theme";
+
+const Profile = styled.img`
+  width: ${theme.width.laptop};
+  border-radius: 10px;
+  margin-top: ${theme.margin.laptop};
+  margin-bottom: ${theme.margin.laptop};
+  @media screen and (max-width: 1400px) {
+    width: ${theme.width.tablet};
+  }
+  @media screen and (max-width: 768px) {
+    width: ${theme.width.mobile};
+    margin-top: ${theme.margin.mobile};
+    margin-bottom: ${theme.margin.mobile};
+  }
+`;
+
+const Container = styled.article`
+  width: ${theme.width.tablet};
+  /* background-color: #f1f2f4; */
+  align-self: center;
+
+  @media screen and (max-width: 768px) {
+    width: ${theme.width.mobile};
+  }
+`;
 
 const About = () => {
   return (
-    <section className="container">
-      <div className={styles.me_img}></div>
-      <div className={styles.title_wrapper}>
-        <p className="font-md font-regular font-gradient">
-          I love to make impact with awesome products.
-        </p>
-        <p className="font-md font-regular font-gradient">
-          I’m currently working as a design engineer at TNG and Product Designer
-          at BE THE LIGHT
-        </p>
-      </div>
-      <div className={styles.up_margin}></div>
-      <div className={styles.work_wrapper}>
-        <div className={styles.work}>
-          <h2 className="font-xl font-gray font-bold">Work Experience</h2>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">May KING</p>
-            <p className="font-light">
-              Founder, Design Instructor · Jan 2018 ~ Dec 2019
-            </p>
-          </div>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">TNG</p>
-            <p className="font-light">Design Engineer · Jan 2020 ~ Present</p>
-          </div>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">BE THE LIGHT</p>
-            <p className="font-light">Product Designer · Mar 2021 ~ Present</p>
-          </div>
-        </div>
-        <div className={styles.work}>
-          <h2 className="font-xl font-gray font-bold">Skills</h2>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">Design Engineering</p>
-            <button className={styles.roleBtnText}>Fusion 360</button>
-            <button className={styles.roleBtnText}>Solidworks</button>
-            <button className={styles.roleBtnText}>Ansys Maxwell</button>
-            <button className={styles.roleBtnText}>Keyshot</button>
-          </div>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">Coding</p>
-            <button className={styles.roleBtnText}>Javascript</button>
-            <button className={styles.roleBtnText}>Python</button>
-            <button className={styles.roleBtnText}>SwiftUI</button>
-          </div>
-          <div className={styles.details_wrapper}>
-            <p className="font-md font-regular">Digital Product Design</p>
-            <button className={styles.roleBtnText}>Adobe XD</button>
-            <button className={styles.roleBtnText}>Figma</button>
-            <button className={styles.roleBtnText}>Adobe After Effets</button>
-            <button className={styles.roleBtnText}>ProtoPie</button>
-          </div>
-        </div>
-      </div>
-      <div className={styles.up_margin}></div>
-      <div className={styles.work}>
-        <h2 className="font-xl font-gray font-bold">Clients worked with</h2>
-        <div className={styles.details_wrapper}>
-          <p className="font-md font-regular">Suwon Hi-tech Highschool</p>
-          <p className="font-light">
-            Mechatronics, Mechanical Engineering · Mar 2017 ~ Jan 2020
+    <main>
+      <Profile src="https://i.imgur.com/4xmnZLI.png" />
+      <Container>
+        <header>
+          <p className="font-md font-regular font-gradient">
+            I love to make impact with awesome products.
           </p>
-        </div>
-      </div>
-    </section>
+          <p className="font-md font-regular font-gradient">
+            I’m currently working as a design engineer at TNG and Product
+            Designer at BE THE LIGHT
+          </p>
+        </header>
+
+        <section>
+          <h3>Work Experience</h3>
+
+          <b>May KING</b>
+          <p>Founder, Design Instructor · Jan 2018 ~ Dec 2019</p>
+
+          <b>TNG</b>
+          <p>Design Engineer · Jan 2020 ~ Present</p>
+
+          <b>BE THE LIGHT</b>
+          <p>Product Designer · Mar 2021 ~ Present</p>
+        </section>
+
+        <section>
+          <h3>Skills</h3>
+          <div>
+            <b>Design Engineering</b>
+            <button>Fusion 360</button>
+            <button>Solidworks</button>
+            <button>Ansys Maxwell</button>
+            <button>Keyshot</button>
+          </div>
+          <div>
+            <b>Coding</b>
+            <button>Javascript</button>
+            <button>Python</button>
+            <button>SwiftUI</button>
+          </div>
+          <div>
+            <b>Digital Product Design</b>
+            <button>Adobe XD</button>
+            <button>Figma</button>
+            <button>Adobe After Effets</button>
+            <button>ProtoPie</button>
+          </div>
+        </section>
+
+        <section>
+          <h3>Clients worked with</h3>
+
+          <b>KITECH</b>
+          <p>ALD Equipments design engineering, Patent</p>
+
+          <b>Gaon Tech</b>
+          <p>Fire Alarm design</p>
+
+          <b>ADM Tech</b>
+          <p>Mask design</p>
+        </section>
+      </Container>
+    </main>
   );
 };
 
