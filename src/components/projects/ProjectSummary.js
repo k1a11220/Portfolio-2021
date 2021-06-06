@@ -62,11 +62,18 @@ const Contents = styled.div`
 const ProjectDetail = (props) => {
   const goals = props.goal.split(",");
   const roles = props.role.split(",");
+  const url = `https://www.works.beomsoo.me${props.url}`;
+  console.log(url);
   const squaredData = (DATA) =>
     DATA.map((element) => <p key={Math.random(100)}>- {element}</p>);
   return (
     <>
       <meta itemProp="headline" content={props.title} />
+      <meta property="og:url" content={props.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={props.title} />
+      <meta property="og:description" content={props.summary} />
+      <meta property="og:image" content={props.thumbnail} />
       <Header>
         <p>{props.company}</p>
         <h1>{props.title}</h1>

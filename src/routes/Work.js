@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import React from "react";
 import projectList from "../ProjectList";
 import CardList from "../components/CardList";
 
@@ -14,10 +13,47 @@ const Container = styled.section`
   }
 `;
 
+const Title = styled.div`
+  position: relative;
+  width: 80%;
+  height: 322px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & div h1 h2 {
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  & h2 {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  & h3 {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90vw;
+    height: 200px;
+  }
+`;
+
 const Work = () => {
   return (
     <Container>
-      <div className="title_wrapper">
+      <Title className="title_wrapper">
         <div>
           <p className="font-md font-regular font-gradient">
             I'm Beomsoo Son, an Engineer and Designer based in Suwon, South
@@ -25,7 +61,7 @@ const Work = () => {
             design.
           </p>
         </div>
-      </div>
+      </Title>
       <CardList results={projectList} />
     </Container>
   );

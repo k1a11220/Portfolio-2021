@@ -83,34 +83,6 @@
   margin-bottom: 20px;
 }
 
-/*Home (Work) Page*/
-.title_wrapper {
-  position: relative;
-  width: 80%;
-  height: 322px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.title_wrapper div h1,
-h2 {
-  position: relative;
-  transition: all 0.2s ease-in;
-}
-
-.title_wrapper h2 {
-  width: 80%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.title_wrapper h3 {
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 /*Project Detail*/
 .box_area {
   display: flex;
@@ -148,11 +120,7 @@ h2 {
     width: 90vw;
     height: 200px;
   }
-  .title_wrapper h2 {
-    width: 100%;
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
+
   .container_article {
     width: 100%;
   }

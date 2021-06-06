@@ -123,11 +123,11 @@ const Navigation = () => {
     <Container>
       <Wrapper>
         <>
-          <Link to="/Work" style={{ fontSize: "1.25rem", fontWeight: "600" }}>
+          <Link to="/" style={{ fontSize: "1.25rem", fontWeight: "600" }}>
             Beomsoo Son
           </Link>
           <SelectArea>
-            <Link to="/Work">Work</Link>
+            <Link to="/">Work</Link>
             <Link to="/About">About</Link>
             <a href="https://www.beomsoo.me">Blog</a>
             <a href="mailto: beskar.son@gmail.com">Contact</a>
@@ -142,7 +142,7 @@ const Navigation = () => {
           </Label>
         </HamburgerContainer>
         <HamburgerMenu>
-          <Link to="/Work" onClick={menuStatus}>
+          <Link to="/" onClick={menuStatus}>
             Work
           </Link>
           <Link to="/About" onClick={menuStatus}>

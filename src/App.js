@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 import { Global } from "@emotion/react";
@@ -53,7 +53,9 @@ function App() {
             <Route path="/Toothbrush" component={Toothbrush} />
             <Route path="/JavaraLight" component={JavaraLight} />
             <Route path="/LiquidHydrogen" component={LiquidHydrogen} />
-            <Route path="/portfolio" component={Work} />
+            <Route>
+              <Redirect to="/" component={Work} />
+            </Route>
             <Footer />
           </Wrapper>
         </Switch>

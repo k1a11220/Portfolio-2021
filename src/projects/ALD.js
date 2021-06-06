@@ -22,6 +22,7 @@ const ALD = () => {
           role={currentProject.role}
           goal={currentProject.goal}
           thumbnail={currentProject.background}
+          url={currentProject.links}
         />
         <LargeBox background="https://i.imgur.com/pdhw0fS.png" />
         <Text>
