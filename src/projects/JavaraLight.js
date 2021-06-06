@@ -1,7 +1,7 @@
 import React from "react";
 import projectList from "../ProjectList";
 import ProjectSummary from "../components/projects/ProjectSummary";
-import { Article, Hero, Text } from "../styles/Project.styles";
+import { Article, Hero } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
@@ -23,7 +23,7 @@ const Padintosh = () => {
           goal={currentProject.goal}
           thumbnail={currentProject.background}
         />
-        <LargeBox background="https://i.imgur.com/f71RFmr.png" />
+        <LargeBox background="https://i.imgur.com/GH9RSdm.png" />
         <Share
           prevLink={prevProject.links}
           nextLink={nextProject.links}

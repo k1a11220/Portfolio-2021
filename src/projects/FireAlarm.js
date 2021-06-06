@@ -1,7 +1,7 @@
 import React from "react";
 import projectList from "../ProjectList";
 import ProjectSummary from "../components/projects/ProjectSummary";
-import { Article, Hero, Text } from "../styles/Project.styles";
+import { Article, Hero } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 

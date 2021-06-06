@@ -25,6 +25,55 @@ const Container = styled.article`
   @media screen and (max-width: 768px) {
     width: ${theme.width.mobile};
   }
+
+  & header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    & h3 {
+      margin-bottom: ${theme.margin.mobile};
+    }
+  }
+
+  & section {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    & p {
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+    & h3 {
+      margin-bottom: ${theme.margin.mobile};
+    }
+  }
+`;
+
+const Button = styled.button`
+  border: none;
+  background-color: #444444;
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 16px;
+  margin-right: 12px;
+  margin-top: 14px;
+`;
+
+const ImageContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    & img {
+      margin-bottom: 24px;
+    }
+  }
+
+  & img {
+    height: 52px;
+  }
 `;
 
 const About = () => {
@@ -33,10 +82,9 @@ const About = () => {
       <Profile src="https://i.imgur.com/4xmnZLI.png" />
       <Container>
         <header>
-          <p className="font-md font-regular font-gradient">
-            I love to make impact with awesome products.
-          </p>
-          <p className="font-md font-regular font-gradient">
+          <h3 className="font-gradient">"Young and be ambitious!"</h3>
+          <p>I love to make impact with awesome products.</p>
+          <p>
             I’m currently working as a design engineer at TNG and Product
             Designer at BE THE LIGHT
           </p>
@@ -45,51 +93,46 @@ const About = () => {
         <section>
           <h3>Work Experience</h3>
 
-          <b>May KING</b>
+          <strong>May KING</strong>
           <p>Founder, Design Instructor · Jan 2018 ~ Dec 2019</p>
 
-          <b>TNG</b>
+          <strong>TNG</strong>
           <p>Design Engineer · Jan 2020 ~ Present</p>
 
-          <b>BE THE LIGHT</b>
+          <strong>BE THE LIGHT</strong>
           <p>Product Designer · Mar 2021 ~ Present</p>
         </section>
 
         <section>
           <h3>Skills</h3>
+          <strong>Design Engineering</strong>
           <div>
-            <b>Design Engineering</b>
-            <button>Fusion 360</button>
-            <button>Solidworks</button>
-            <button>Ansys Maxwell</button>
-            <button>Keyshot</button>
+            <Button>Solidworks</Button>
+            <Button>Fusion 360</Button>
+            <Button>Ansys Maxwell</Button>
+            <Button style={{ marginBottom: "24px" }}>Keyshot</Button>
           </div>
+          <strong>Coding</strong>
           <div>
-            <b>Coding</b>
-            <button>Javascript</button>
-            <button>Python</button>
-            <button>SwiftUI</button>
+            <Button>Javascript</Button>
+            <Button>Python</Button>
+            <Button style={{ marginBottom: "24px" }}>SwiftUI</Button>
           </div>
+          <strong>Digital Product Design</strong>
           <div>
-            <b>Digital Product Design</b>
-            <button>Adobe XD</button>
-            <button>Figma</button>
-            <button>Adobe After Effets</button>
-            <button>ProtoPie</button>
+            <Button>Adobe XD</Button>
+            <Button>Figma</Button>
+            <Button>Adobe After Effets</Button>
+            <Button style={{ marginBottom: "24px" }}>ProtoPie</Button>
           </div>
         </section>
 
         <section>
           <h3>Clients worked with</h3>
-
-          <b>KITECH</b>
-          <p>ALD Equipments design engineering, Patent</p>
-
-          <b>Gaon Tech</b>
-          <p>Fire Alarm design</p>
-
-          <b>ADM Tech</b>
-          <p>Mask design</p>
+          <ImageContainer>
+            <img src="https://i.imgur.com/OHOhz0y.png" alt="kitech" />
+            <img src="https://i.imgur.com/klmEfrQ.png" alt="gaontech" />
+          </ImageContainer>
         </section>
       </Container>
     </main>

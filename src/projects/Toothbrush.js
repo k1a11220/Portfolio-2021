@@ -1,14 +1,14 @@
 import React from "react";
 import projectList from "../ProjectList";
 import ProjectSummary from "../components/projects/ProjectSummary";
-import { Article, Hero, Text } from "../styles/Project.styles";
+import { Article, Hero } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
 const Padintosh = () => {
   const projectNumber = 7;
   const currentProject = projectList[projectNumber];
-  const nextProject = projectList[projectNumber + 1];
+  // const nextProject = projectList[projectNumber + 1];
   const prevProject = projectList[projectNumber - 1];
   return (
     <main>
@@ -23,7 +23,6 @@ const Padintosh = () => {
           goal={currentProject.goal}
           thumbnail={currentProject.background}
         />
-        <LargeBox background="https://i.imgur.com/jtzychE.png" />
         <LargeBox background="https://i.imgur.com/8Y0N3RP.png" />
         <LargeBox background="https://i.imgur.com/GH21oWV.png" />
         <LargeBox background="https://i.imgur.com/Npev8q1.png" />
@@ -35,9 +34,9 @@ const Padintosh = () => {
         <LargeBox background="https://i.imgur.com/mdJNHVC.png" />
         <Share
           prevLink={prevProject.links}
-          nextLink={nextProject.links}
+          nextLink="/"
           prevProject={prevProject.title}
-          nextProject={nextProject.title}
+          nextProject="Last Project"
         />
       </Article>
     </main>

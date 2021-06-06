@@ -1,7 +1,7 @@
 import React from "react";
 import projectList from "../ProjectList";
 import ProjectSummary from "../components/projects/ProjectSummary";
-import { Article, Hero, Text } from "../styles/Project.styles";
+import { Article, Hero } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
@@ -23,10 +23,10 @@ const Bokdda = () => {
           goal={currentProject.goal}
           thumbnail={currentProject.background}
         />
-        <LargeBox background="https://i.imgur.com/QPNqqhO.png" />
+        <LargeBox background="https://i.imgur.com/GH9RSdm.png" />
 
-        <Text>
-          <h3 className="font-md font-regular">Problem</h3>
+        {/* <Text>
+          <h3>Problem</h3>
           <p>
             It is very hard to find social sevices that we can apply. Social
             service must be easy but many people still feeling difficult. To
@@ -55,7 +55,7 @@ const Bokdda = () => {
             프로토타입 사용성 테스트 결과 복지 검색 후 실제 신청 전환율이 30 →
             45%가량 증가했습니다.
           </p>
-        </Text>
+        </Text> */}
         <Share
           prevLink={prevProject.links}
           nextLink={nextProject.links}

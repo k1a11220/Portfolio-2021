@@ -5,11 +5,11 @@ import { Article, Hero, Text } from "../styles/Project.styles";
 import LargeBox from "../components/projects/LargeBox";
 import Share from "../components/projects/Share";
 
-const ALD = (project) => {
+const ALD = () => {
   const projectNumber = 0;
   const currentProject = projectList[projectNumber];
   const nextProject = projectList[projectNumber + 1];
-  const prevProject = projectList[projectNumber - 1];
+  // const prevProject = projectList[projectNumber - 1];
   return (
     <main>
       <Hero src={currentProject.background} />
