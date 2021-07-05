@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 import { Global } from "@emotion/react";
@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Global styles={global} />
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Wrapper>
             <ScrollToTop />
@@ -59,7 +59,7 @@ function App() {
             <Footer />
           </Wrapper>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
