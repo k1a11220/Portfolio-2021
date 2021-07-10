@@ -6,7 +6,6 @@ const Navbar = styled.nav`
   position: sticky;
   top: 0;
   z-index: 50;
-  width: 100vw;
   height: 64px;
   border-bottom: 1px solid transparent;
   background-color: #ffffff;
