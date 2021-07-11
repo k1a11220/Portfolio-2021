@@ -5,8 +5,9 @@ import styled from "@emotion/styled";
 const Navbar = styled.nav`
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 50;
-  height: 64px;
+  height: 54px;
   border-bottom: 1px solid transparent;
   background-color: #ffffff;
   left: 0;
@@ -38,11 +39,11 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.div`
-  font-size: 20px;
   font-weight: 500;
   display: flex;
   align-items: center;
   & a {
+    font-size: 1.25rem;
     color: #1d1d1f;
   }
 `;
@@ -60,7 +61,7 @@ const ItemContainer = styled.div`
     width: 100%;
     flex-direction: column;
     position: absolute;
-    top: 64px;
+    top: 54px;
     left: 0;
     max-height: 0;
     border-bottom: solid 1px #ebebeb;
