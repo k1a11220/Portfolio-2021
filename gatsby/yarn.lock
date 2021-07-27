@@ -2171,9 +2171,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "16.4.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.2.tgz#0a95d7fd950cb1eaca0ce11031d72e8f680b775a"
-  integrity sha512-vxyhOzFCm+jC/T5KugbVsYy1DbQM0h3NCFUrVbu0+pYa/nr+heeucpqxpa8j4pUmIGLPYzboY9zIdOF0niFAjQ==
+  version "16.4.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.3.tgz#c01c1a215721f6dec71b47d88b4687463601ba48"
+  integrity sha512-GKM4FLMkWDc0sfx7tXqPWkM6NBow1kge0fgQh0bOnlqo4iT1kvTvMEKE0c1RtUGnbLlGRXiAA8SumE//90uKAg==
 
 "@types/node@^14.14.10":
   version "14.17.6"
@@ -4534,9 +4534,9 @@ content-type@^1.0.4, content-type@~1.0.4:
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 contentful-management@^7.5.1:
-  version "7.30.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.30.0.tgz#2df5fbd444b86d495150c708eaa031e88513b721"
-  integrity sha512-2aAIqLrxxCJt2bWg1LN+wxjYaevAHTsfZGkIPA5QRKK11WhpffrUMkTthbED6UWaY58BAM0TYXT3Z0s7nFu5zg==
+  version "7.31.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.31.0.tgz#725c99dd2e0d0919fbfa1e7383755b1aa5b77e32"
+  integrity sha512-YhPikvkO/ckRTO400I+iHYpVLuHwPyMzTQcMwBWpUluXYCF45I/RpWw7cyNQciQ19Q0NpjgEfUTQnhFhIqHtwA==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.0"
@@ -7458,9 +7458,9 @@ gatsby-worker@^0.1.0:
     "@babel/core" "^7.14.6"
 
 gatsby@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.10.1.tgz#7550c8e91c1135c88ee889efe03e4e22a877c263"
-  integrity sha512-LFO5czWy+mgHv/8GwSYqflKukYKFYwe61wdi4qwNcvnJPeB24w8FrxWKh2RwWkaJuIhB7hzPi45uwDoUrvkbFA==
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.10.2.tgz#596916c3f29b23ce999115b52f23e18d0f87af30"
+  integrity sha512-O4Pp1wA20Opkv4OxFkc7asjh9FB/yZxkQcI1FIeDZSUxjPV6PN9smgAy13aVM3dFNp6fMSZkN8pyWQoKc2q1sg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.14.6"
@@ -9230,9 +9230,9 @@ is-stream@^1.0.0, is-stream@^1.1.0:
   integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
 
 is-stream@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-2.0.0.tgz#bde9c32680d6fae04129d6ac9d921ce7815f78e3"
-  integrity sha512-XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-2.0.1.tgz#fac1e3d53b97ad5a9d0ae9cef2389f5810a5c077"
+  integrity sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==
 
 is-string@^1.0.5, is-string@^1.0.6:
   version "1.0.6"
@@ -15947,9 +15947,9 @@ url-parse-lax@^3.0.0:
     prepend-http "^2.0.0"
 
 url-parse@^1.4.3, url-parse@^1.5.1:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.2.tgz#a4eff6fd5ff9fe6ab98ac1f79641819d13247cda"
-  integrity sha512-6bTUPERy1muxxYClbzoRo5qtQuyoGEbzbQvi0SW4/8U8UyVkAQhWFBlnigqJkRm4su4x1zDQfNbEzWkt+vchcg==
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.3.tgz#71c1303d38fb6639ade183c2992c8cc0686df862"
+  integrity sha512-IIORyIQD9rvj0A4CLWsHkBBJuNqWpFQe224b6j9t/ABmquIS0qDU2pY6kl6AuOrL5OkCXHMCFNe1jBcuAggjvQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"

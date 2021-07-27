@@ -3,7 +3,7 @@ module.exports = {
     title: `Portfolio`,
     author: {
       name: `Beomsoo Son`,
-      summary: `Let's make something awesome`,
+      summary: `an Engineer and Designer based in Suwon, South Korea focused on Industrial Design engineering and Digital product design.`,
     },
     description: `Portfolio page with Gatsby`,
     siteUrl: `https://works.beomsoo.me`,
