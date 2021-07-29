@@ -1,0 +1,158 @@
+.font-xs {
+  font-size: 0.75rem; /*12px*/
+}
+.font-sm {
+  font-size: 0.875rem; /*14px*/
+}
+.font-base {
+  font-size: 1rem; /*16px*/
+}
+.font-md {
+  font-size: 1.375rem; /*22px*/
+}
+.font-lg {
+  font-size: 1.5rem; /*24px*/
+}
+.font-xl {
+  font-size: 2rem; /*32px*/
+}
+
+.title_h1 {
+  font-size: 32px;
+}
+
+.font_extraBold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 500;
+}
+
+.font-regular {
+  font-weight: 500;
+}
+
+.font-light {
+  font-weight: 400;
+}
+
+.font-gray {
+  color: #4a4a4a;
+}
+
+.font-dark__gray {
+  color: #4a4a4a;
+}
+
+.font-black {
+  color: #0a0a0a;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-gradient {
+  background: linear-gradient(
+      67.2deg,
+      rgba(37, 208, 199, 1) -7.5%,
+      rgba(165, 90, 240, 1) 62.7%
+    )
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-gradient_2 {
+  background: linear-gradient(
+      69.7deg,
+      rgba(244, 37, 243, 1) 1.4%,
+      rgba(244, 87, 1, 1) 36.2%,
+      rgba(255, 204, 37, 1) 72.2%,
+      rgba(20, 196, 6, 1) 113%
+    )
+    no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container_article {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Project Detail*/
+.box_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 90vw;
+  }
+  .title_h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .title_h1 {
+    font-size: 24px;
+  }
+  .title_wrapper {
+    width: 90vw;
+    height: 200px;
+  }
+
+  .container_article {
+    width: 100%;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+  .font-xs {
+    font-size: 0.75rem; /*12px*/
+  }
+  .font-sm {
+    font-size: 0.875rem; /*14px*/
+  }
+  .font-base {
+    font-size: 1rem; /*16px*/
+  }
+  .font-md {
+    font-size: 1.25rem; /*20px*/
+  }
+  .font-lg {
+    font-size: 1.375rem; /*22px*/
+  }
+  .font-xl {
+    font-size: 1.5rem; /*32px*/
+  }
+}
+
+@media screen and (max-width: 589px) {
+  h1 {
+    font-size: 32px;
+  }
+  .me {
+    top: -8%;
+  }
+}
