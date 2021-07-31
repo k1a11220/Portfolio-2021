@@ -3,8 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.default = staticPage;
-exports.sanitizeComponents = void 0;
+exports.default = exports.sanitizeComponents = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -14,8 +13,7 @@ const path = require(`path`);
 
 const {
   renderToString,
-  renderToStaticMarkup,
-  pipeToNodeWritable
+  renderToStaticMarkup
 } = require(`react-dom/server`);
 
 const {
@@ -40,10 +38,7 @@ const {
   RouteAnnouncerProps
 } = require(`./route-announcer-props`);
 
-const {
-  apiRunner,
-  apiRunnerAsync
-} = require(`./api-runner-ssr`);
+const apiRunner = require(`./api-runner-ssr`);
 
 const syncRequires = require(`$virtual/sync-requires`);
 
@@ -130,7 +125,7 @@ const ensureArray = components => {
   }
 };
 
-async function staticPage({
+var _default = ({
   pagePath,
   pageData,
   staticQueryContext,
@@ -138,7 +133,7 @@ async function staticPage({
   scripts,
   reversedStyles,
   reversedScripts
-}) {
+}) => {
   // for this to work we need this function to be sync or at least ensure there is single execution of it at a time
   global.unsafeBuiltinUsage = [];
 
@@ -281,7 +276,7 @@ async function staticPage({
       };
     }).pop()); // Let the site or plugin render the page component.
 
-    await apiRunnerAsync(`replaceRenderer`, {
+    apiRunner(`replaceRenderer`, {
       bodyComponent,
       replaceBodyHTMLString,
       setHeadComponents,
@@ -296,27 +291,7 @@ async function staticPage({
 
     if (!bodyHtml) {
       try {
-        // react 18 enabled
-        if (pipeToNodeWritable) {
-          const {
-            WritableAsPromise
-          } = require(`./server-utils/writable-as-promise`);
-
-          const writableStream = new WritableAsPromise();
-          const {
-            startWriting
-          } = pipeToNodeWritable(bodyComponent, writableStream, {
-            onCompleteAll() {
-              startWriting();
-            },
-
-            onError() {}
-
-          });
-          bodyHtml = await writableStream;
-        } else {
-          bodyHtml = renderToString(bodyComponent);
-        }
+        bodyHtml = renderToString(bodyComponent);
       } catch (e) {
         // ignore @reach/router redirect errors
         if (!isRedirect(e)) throw e;
@@ -389,7 +364,7 @@ async function staticPage({
       } else {
         headComponents.unshift( /*#__PURE__*/React.createElement("style", {
           "data-href": `${__PATH_PREFIX__}/${style.name}`,
-          "data-identity": `gatsby-global-css`,
+          id: `gatsby-global-css`,
           dangerouslySetInnerHTML: {
             __html: style.content
           }
@@ -465,4 +440,6 @@ async function staticPage({
     e.unsafeBuiltinsUsage = global.unsafeBuiltinUsage;
     throw e;
   }
-}
+};
+
+exports.default = _default;

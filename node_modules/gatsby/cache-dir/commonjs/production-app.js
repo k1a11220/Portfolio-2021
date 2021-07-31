@@ -14,6 +14,8 @@ var _reachRouter = require("@gatsbyjs/reach-router");
 
 var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
 
+var _domready = _interopRequireDefault(require("@mikaelkristiansson/domready"));
+
 var _gatsby = require("gatsby");
 
 var _navigation = require("./navigation");
@@ -156,49 +158,13 @@ window.___loader = _loader.publicLoader;
       };
     }).pop();
 
-    const App = function App() {
-      const onClientEntryRanRef = _react.default.useRef(false);
+    const App = () => /*#__PURE__*/_react.default.createElement(GatsbyRoot, null, SiteRoot);
 
-      _react.default.useEffect(() => {
-        if (!onClientEntryRanRef.current) {
-          onClientEntryRanRef.current = true;
-          performance.mark(`onInitialClientRender`);
-          (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
-        }
-      }, []);
-
-      return /*#__PURE__*/_react.default.createElement(GatsbyRoot, null, SiteRoot);
-    };
-
-    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, _reactDom.default.hydrateRoot ? _reactDom.default.hydrateRoot : _reactDom.default.hydrate)[0];
-
-    function runRender() {
-      const rootElement = typeof window !== `undefined` ? document.getElementById(`___gatsby`) : null;
-
-      if (renderer === _reactDom.default.hydrateRoot) {
-        renderer(rootElement, /*#__PURE__*/_react.default.createElement(App, null));
-      } else {
-        renderer( /*#__PURE__*/_react.default.createElement(App, null), rootElement);
-      }
-    } // https://github.com/madrobby/zepto/blob/b5ed8d607f67724788ec9ff492be297f64d47dfc/src/zepto.js#L439-L450
-    // TODO remove IE 10 support
-
-
-    const doc = document;
-
-    if (doc.readyState === `complete` || doc.readyState !== `loading` && !doc.documentElement.doScroll) {
-      setTimeout(function () {
-        runRender();
-      }, 0);
-    } else {
-      const handler = function () {
-        doc.removeEventListener(`DOMContentLoaded`, handler, false);
-        window.removeEventListener(`load`, handler, false);
-        runRender();
-      };
-
-      doc.addEventListener(`DOMContentLoaded`, handler, false);
-      window.addEventListener(`load`, handler, false);
-    }
+    const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, _reactDom.default.hydrate)[0];
+    (0, _domready.default)(() => {
+      renderer( /*#__PURE__*/_react.default.createElement(App, null), typeof window !== `undefined` ? document.getElementById(`___gatsby`) : void 0, () => {
+        (0, _apiRunnerBrowser.apiRunner)(`onInitialClientRender`);
+      });
+    });
   });
 });

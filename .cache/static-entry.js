@@ -1,17 +1,13 @@
 const React = require(`react`)
 const path = require(`path`)
-const {
-  renderToString,
-  renderToStaticMarkup,
-  pipeToNodeWritable,
-} = require(`react-dom/server`)
+const { renderToString, renderToStaticMarkup } = require(`react-dom/server`)
 const { ServerLocation, Router, isRedirect } = require(`@gatsbyjs/reach-router`)
 const { merge, flattenDeep, replace } = require(`lodash`)
 const { StaticQueryContext } = require(`gatsby`)
 const fs = require(`fs`)
 
 const { RouteAnnouncerProps } = require(`./route-announcer-props`)
-const { apiRunner, apiRunnerAsync } = require(`./api-runner-ssr`)
+const apiRunner = require(`./api-runner-ssr`)
 const syncRequires = require(`$virtual/sync-requires`)
 const { version: gatsbyVersion } = require(`gatsby/package.json`)
 const { grabMatchParams } = require(`./find-path`)
@@ -90,7 +86,7 @@ const ensureArray = components => {
   }
 }
 
-export default async function staticPage({
+export default ({
   pagePath,
   pageData,
   staticQueryContext,
@@ -98,7 +94,7 @@ export default async function staticPage({
   scripts,
   reversedStyles,
   reversedScripts,
-}) {
+}) => {
   // for this to work we need this function to be sync or at least ensure there is single execution of it at a time
   global.unsafeBuiltinUsage = []
 
@@ -248,7 +244,7 @@ export default async function staticPage({
     )
 
     // Let the site or plugin render the page component.
-    await apiRunnerAsync(`replaceRenderer`, {
+    apiRunner(`replaceRenderer`, {
       bodyComponent,
       replaceBodyHTMLString,
       setHeadComponents,
@@ -264,27 +260,7 @@ export default async function staticPage({
     // If no one stepped up, we'll handle it.
     if (!bodyHtml) {
       try {
-        // react 18 enabled
-        if (pipeToNodeWritable) {
-          const {
-            WritableAsPromise,
-          } = require(`./server-utils/writable-as-promise`)
-          const writableStream = new WritableAsPromise()
-          const { startWriting } = pipeToNodeWritable(
-            bodyComponent,
-            writableStream,
-            {
-              onCompleteAll() {
-                startWriting()
-              },
-              onError() {},
-            }
-          )
-
-          bodyHtml = await writableStream
-        } else {
-          bodyHtml = renderToString(bodyComponent)
-        }
+        bodyHtml = renderToString(bodyComponent)
       } catch (e) {
         // ignore @reach/router redirect errors
         if (!isRedirect(e)) throw e
@@ -371,7 +347,7 @@ export default async function staticPage({
         headComponents.unshift(
           <style
             data-href={`${__PATH_PREFIX__}/${style.name}`}
-            data-identity={`gatsby-global-css`}
+            id={`gatsby-global-css`}
             dangerouslySetInnerHTML={{
               __html: style.content,
             }}
