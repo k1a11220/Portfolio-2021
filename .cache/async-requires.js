@@ -2,11 +2,10 @@
 const preferDefault = m => (m && m.default) || m
 
 exports.components = {
-  "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
-  "component---src-pages-404-tsx": () => import("./../../../src/pages/404.tsx" /* webpackChunkName: "component---src-pages-404-tsx" */),
-  "component---src-pages-about-tsx": () => import("./../../../src/pages/about.tsx" /* webpackChunkName: "component---src-pages-about-tsx" */),
-  "component---src-pages-categories-tsx": () => import("./../../../src/pages/categories.tsx" /* webpackChunkName: "component---src-pages-categories-tsx" */),
-  "component---src-pages-index-tsx": () => import("./../../../src/pages/index.tsx" /* webpackChunkName: "component---src-pages-index-tsx" */),
-  "component---src-templates-post-template-tsx": () => import("./../../../src/templates/post_template.tsx" /* webpackChunkName: "component---src-templates-post-template-tsx" */)
+  "component---cache-caches-gatsby-plugin-offline-app-shell-js": () => import("./../../caches/gatsby-plugin-offline/app-shell.js" /* webpackChunkName: "component---cache-caches-gatsby-plugin-offline-app-shell-js" */),
+  "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-about-js": () => import("./../../../src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
+  "component---src-templates-blog-post-js": () => import("./../../../src/templates/blogPost.js" /* webpackChunkName: "component---src-templates-blog-post-js" */)
 }
 

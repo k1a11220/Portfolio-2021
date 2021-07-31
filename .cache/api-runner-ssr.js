@@ -1,19 +1,21 @@
 var plugins = [{
-      name: 'gatsby-plugin-react-helmet',
+      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-typography/gatsby-ssr'),
+      options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"Beomsoo Son","short_name":"Beomsoo Son","description":"I'm Beomsoo Son, an Engineer and Designer based in Suwon, South Korea focused on Industrial design engineering and Digital product design.","lang":"ko","start_url":"/","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","icon":"src/images/icon.png","icon_options":{"purpose":"any maskable"},"cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"abfded2d68398b0949c75a0894fbf871"},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-canonical-urls',
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
-      options: {"plugins":[],"siteUrl":"https://works.beomsoo.me","stripQueryString":true},
-    },{
-      name: 'gatsby-plugin-use-dark-mode',
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-use-dark-mode/gatsby-ssr'),
-      options: {"plugins":[],"classNameDark":"dark-mode","classNameLight":"light-mode","storageKey":"darkMode","minify":true},
-    },{
-      name: 'gatsby-plugin-sitemap',
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
-      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
+      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -41,21 +43,11 @@ module.exports = (api, args, defaultReturn, argTransform) => {
     if (!plugin.plugin[api]) {
       return undefined
     }
-    try {
-      const result = plugin.plugin[api](args, plugin.options)
-      if (result && argTransform) {
-        args = argTransform({ args, result })
-      }
-      return result
-    } catch (e) {
-      if (plugin.name !== `default-site-plugin`) {
-        // default-site-plugin is user code and will print proper stack trace,
-        // so no point in annotating error message pointing out which plugin is root of the problem
-        e.message += ` (from plugin: ${plugin.name})`
-      }
-
-      throw e
+    const result = plugin.plugin[api](args, plugin.options)
+    if (result && argTransform) {
+      args = argTransform({ args, result })
     }
+    return result
   })
 
   // Filter out undefined results.

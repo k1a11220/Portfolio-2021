@@ -7,6 +7,14 @@
           "options": {}
         },
         {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop",
+          "options": {
+            "plugins": [],
+            "ssr": false
+          }
+        },
+        {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -23,10 +31,7 @@
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": [],
-            "isTSX": true,
-            "allExtensions": true,
-            "jsxPragma": "React"
+            "plugins": []
           }
         }
       ],
@@ -52,16 +57,21 @@
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop-html",
+          "options": {
+            "plugins": [],
+            "ssr": false
+          }
         }
       ],
       "presets": [
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": [],
-            "isTSX": true,
-            "allExtensions": true,
-            "jsxPragma": "React"
+            "plugins": []
           }
         }
       ],
@@ -87,16 +97,21 @@
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-html",
+          "options": {
+            "plugins": [],
+            "ssr": true
+          }
         }
       ],
       "presets": [
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": [],
-            "isTSX": true,
-            "allExtensions": true,
-            "jsxPragma": "React"
+            "plugins": []
           }
         }
       ],
@@ -122,16 +137,21 @@
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-javascript",
+          "options": {
+            "plugins": [],
+            "ssr": true
+          }
         }
       ],
       "presets": [
         {
           "name": "/Users/beomsoo/Documents/GitHub/portfolio/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": [],
-            "isTSX": true,
-            "allExtensions": true,
-            "jsxPragma": "React"
+            "plugins": []
           }
         }
       ],

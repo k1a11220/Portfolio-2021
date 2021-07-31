@@ -1,105 +1,72 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: <https://www.gatsbyjs.com/docs/node-apis/>
- */
-
-// You can delete this file if you're not using it
-
-const path = require("path");
+const path = require(`path`);
+const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// Setup Import Alias
-exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
-  const output = getConfig().output || {};
-
-  actions.setWebpackConfig({
-    output,
-    resolve: {
-      alias: {
-        components: path.resolve(__dirname, "src/components"),
-        utils: path.resolve(__dirname, "src/utils"),
-        hooks: path.resolve(__dirname, "src/hooks"),
-      },
-    },
-  });
-};
-
-// Generate a Slug Each Post Data
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode });
-
-    createNodeField({ node, name: "slug", value: slug });
+    const slug = createFilePath({ node, getNode, basePath: `posts/blog` });
+    // NNNN-NN-NN가 등장하는 첫 패턴을 찾은 후, NNNN/NN/NN으로 변경한다.
+    const value = slug.replace(/\/(\d{4})-(\d{2})-(\d{2})\//, "/$1/$2/$3/");
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
   }
 };
-// Generate Post Page Through Markdown Data
-exports.createPages = async ({ actions, graphql, reporter }) => {
+
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  // Get All Markdown File For Paging
-  const queryAllMarkdownData = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: {
-            order: DESC
-            fields: [frontmatter___date, frontmatter___title]
-          }
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-            }
-            next {
-              frontmatter {
-                title
-              }
-            }
-            previous {
-              frontmatter {
-                title
-              }
+  const mainTemplate = path.resolve(`./src/pages/index.js`);
+  const blogPostTemplate = path.resolve(`./src/templates/blogPost.js`);
+
+  const result = await graphql(`
+    {
+      postsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/(posts/blog)/" } }
+        sort: { fields: frontmatter___date, order: DESC }
+        limit: 2000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
             }
           }
         }
       }
-    `
-  );
+      categoriesGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___category) {
+          fieldValue
+          totalCount
+        }
+      }
+    }
+  `);
 
-  // Handling GraphQL Query Error
-  if (queryAllMarkdownData.errors) {
-    reporter.panicOnBuild(`Error while running query`);
-    return;
-  }
+  const posts = result.data.postsRemark.edges;
 
-  // Import Post Template Component
-  const PostTemplateComponent = path.resolve(
-    __dirname,
-    "src/templates/post_template.tsx"
-  );
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: blogPostTemplate,
+      context: {
+        slug: node.fields.slug,
+      },
+    });
+  });
 
-  // Page Generating Function
-  const generatePostPage = ({
-    node: {
-      fields: { slug },
-    },
-    next,
-    previous,
-  }) => {
-    const pageOptions = {
-      path: slug,
-      component: PostTemplateComponent,
-      context: { slug, next, previous },
-    };
+  const categories = result.data.categoriesGroup.group;
 
-    createPage(pageOptions);
-  };
-
-  // Generate Post Page And Passing Slug Props for Query
-  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage);
+  categories.forEach((category) => {
+    createPage({
+      path: `/category/${_.kebabCase(category.fieldValue)}/`,
+      component: mainTemplate,
+      context: {
+        category: category.fieldValue,
+      },
+    });
+  });
 };
