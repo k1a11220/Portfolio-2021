@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { useReactiveVar } from "@apollo/client";
+// import { useReactiveVar } from "@apollo/client";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import {
-  darkModeVar,
-  disableDarkMode,
-  enableDarkMode,
-} from "../../hooks/useTheme";
+// import {
+//   darkModeVar,
+//   disableDarkMode,
+//   enableDarkMode,
+// } from "../../hooks/useTheme";
 
 const Navbar = styled.nav`
   position: sticky;
@@ -167,7 +167,7 @@ const Navigation = () => {
     setClicked(!clicked);
   };
 
-  const darkMode = useReactiveVar(darkModeVar);
+  // const darkMode = useReactiveVar(darkModeVar);
   return (
     <Navbar>
       <Container>

@@ -4,8 +4,8 @@ import { GlobalStyles } from "components/Common/GlobalStyle";
 import Footer from "components/Common/Footer";
 import { Helmet } from "react-helmet";
 import Navigation from "./Navigation";
-import { useReactiveVar } from "@apollo/client";
-import { darkModeVar } from "hooks/useTheme";
+// import { useReactiveVar } from "@apollo/client";
+// import { darkModeVar } from "hooks/useTheme";
 import { darkTheme, lightTheme } from "./theme";
 
 interface TemplateProps {
@@ -46,7 +46,8 @@ const Template: FunctionComponent<TemplateProps> = function ({
   image,
   children,
 }) {
-  const theme = useReactiveVar(darkModeVar);
+  // const theme = useReactiveVar(darkModeVar);
+  const theme = false;
   return (
     <ThemeProvider theme={theme ? darkTheme : lightTheme}>
       <GlobalStyles />
