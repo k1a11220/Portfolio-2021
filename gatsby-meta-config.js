@@ -9,6 +9,7 @@ module.exports = {
     github: "https://github.com/k1a11220",
     works: "https://works.beomsoo.me", // Your github repository
     email: "beskar.son@gmail.com",
+    blog: "https://blog.beomsoo.me",
   },
   icon: "src/images/icon.png", //  Favicon Path
 };

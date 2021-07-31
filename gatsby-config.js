@@ -17,7 +17,7 @@ module.exports = {
         name: "About",
       },
       {
-        link: meta.links.works,
+        link: meta.links.blog,
         name: "Blog",
       },
       {
