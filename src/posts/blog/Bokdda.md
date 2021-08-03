@@ -1,8 +1,8 @@
 ---
 title: "Bokdda"
-date: "2020-04-01"
+date: "2021-01-01"
 category: "Digital"
-client: "personal"
+client: "Personal"
 thumbnail: "./images/Bokdda/thumbnail.png"
 alt: "ALD"
 ---

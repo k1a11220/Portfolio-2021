@@ -11,7 +11,7 @@ import PostHead from "../components/postHead";
 const BlogPost = ({ data }) => {
   const {
     markdownRemark: {
-      frontmatter: { title, desc, thumbnail, alt, client },
+      frontmatter: { title, desc, thumbnail, alt, client, date },
       html,
     },
   } = data;
@@ -29,6 +29,7 @@ const BlogPost = ({ data }) => {
             client={client}
             thumbnail={featuredImgFluid}
             alt={alt}
+            date={date}
           />
           <OuterWrapper>
             <InnerWrapper>
