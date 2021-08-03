@@ -3,7 +3,9 @@ import styled from "styled-components";
 import Category from "styles/category";
 import Img from "gatsby-image";
 
-const Container = styled.header``;
+const Container = styled.header`
+  padding-top: 40px;
+`;
 
 const PostCategory = styled(Category)`
   font-size: 0.875rem;
@@ -14,6 +16,7 @@ const Info = styled.div`
   margin: 0 auto;
   margin-bottom: var(--sizing-md);
   width: var(--post-width);
+  padding-top: 80px;
 `;
 
 const Divider = styled.div`
@@ -43,23 +46,22 @@ const ThumbnailContainer = styled.div`
   width: var(--width);
   height: 720px;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   margin: 0 auto;
 `;
 
-const ThumbnailImg = styled.img`
-  width: 3840px;
+const ThumbnailImg = styled(Img)`
+  border-radius: 10px;
+  width: var(--width);
+  height: 720px;
+  margin: 0 auto;
 `;
 
 const PostHead = ({ thumbnail, alt, title, client }) => {
   return (
     <Container>
-      <ThumbnailContainer>
-        <Img fluid={thumbnail} alt={alt} />
-      </ThumbnailContainer>
+      {/* <ThumbnailContainer> */}
+      <ThumbnailImg fluid={thumbnail} alt={alt} />
+      {/* </ThumbnailContainer> */}
       <Info>
         <PostCategory>{client}</PostCategory>
         <Title>{title}</Title>

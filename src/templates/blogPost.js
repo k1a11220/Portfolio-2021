@@ -16,8 +16,8 @@ const BlogPost = ({ data }) => {
     },
   } = data;
 
+  let featuredImgFluid = thumbnail.childImageSharp.fluid;
   const ogImagePath = thumbnail && thumbnail.childImageSharp.fixed.src;
-  const thumbnailPath = thumbnail && thumbnail.childImageSharp.fluid.src;
 
   return (
     <Layout>
@@ -27,7 +27,7 @@ const BlogPost = ({ data }) => {
           <PostHead
             title={title}
             client={client}
-            thumbnail={thumbnailPath}
+            thumbnail={featuredImgFluid}
             alt={alt}
           />
           <OuterWrapper>
@@ -89,7 +89,7 @@ export const query = graphql`
         thumbnail {
           childImageSharp {
             fluid(quality: 100, sizes: "maxWidth: 3840") {
-              src
+              ...GatsbyImageSharpFluid
             }
             fixed(quality: 100) {
               src
