@@ -44,6 +44,8 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        quality: 100,
+        maxWidth: 3840,
       },
     },
     {
@@ -73,6 +75,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               linkImagesToOriginal: false,
+              maxWidth: 3840,
+              quality: 100,
             },
           },
         ],
@@ -95,7 +99,13 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        maxWidth: 3840,
+        defaultQuality: 100,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-alias-imports`,

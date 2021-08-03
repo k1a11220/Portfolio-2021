@@ -5,38 +5,34 @@ import Layout from "layout/layout";
 import SEO from "components/seo";
 import Comment from "components/comment";
 import { rhythm } from "styles/typography";
-import Category from "styles/category";
-import DateTime from "styles/dateTime";
 import Markdown from "styles/markdown";
-import Img from "gatsby-image";
+import PostHead from "../components/postHead";
 
 const BlogPost = ({ data }) => {
   const {
     markdownRemark: {
-      frontmatter: { title, desc, thumbnail, date, category },
+      frontmatter: { title, desc, thumbnail, alt, client },
       html,
     },
   } = data;
 
   const ogImagePath = thumbnail && thumbnail.childImageSharp.fixed.src;
+  const thumbnailPath = thumbnail && thumbnail.childImageSharp.fluid.src;
 
   return (
     <Layout>
       <SEO title={title} description={desc} image={ogImagePath} />
       <main>
         <article>
+          <PostHead
+            title={title}
+            client={client}
+            thumbnail={thumbnailPath}
+            alt={alt}
+          />
           <OuterWrapper>
             <InnerWrapper>
               <div>
-                <header>
-                  <Info>
-                    <PostCategory>{category}</PostCategory>
-                    {/* <Time dateTime={date}>{date}</Time> */}
-                  </Info>
-                  <Title>{title}</Title>
-                  {/* <Desc>{desc}</Desc> */}
-                </header>
-                <Divider />
                 <Markdown
                   dangerouslySetInnerHTML={{ __html: html }}
                   rhythm={rhythm}
@@ -52,11 +48,6 @@ const BlogPost = ({ data }) => {
     </Layout>
   );
 };
-
-const ThumbnailImg = styled.img`
-  width: 100%;
-  height: 400px;
-`;
 
 const OuterWrapper = styled.div`
   margin-top: var(--sizing-xl);
@@ -87,55 +78,6 @@ const CommentWrap = styled.section`
   }
 `;
 
-const PostCategory = styled(Category)`
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-semi-bold);
-`;
-
-const Info = styled.div`
-  margin-bottom: var(--sizing-md);
-`;
-
-const Time = styled(DateTime)`
-  display: block;
-  margin-top: var(--sizing-xs);
-`;
-
-const Desc = styled.p`
-  margin-top: var(--sizing-lg);
-  line-height: 1.5;
-  font-size: var(--text-lg);
-
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    line-height: 1.31579;
-    font-size: 1.1875rem;
-  }
-`;
-
-const Divider = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-gray-3);
-  margin-top: var(--sizing-lg);
-  margin-bottom: var(--sizing-lg);
-`;
-
-const Title = styled.h1`
-  font-weight: var(--font-weight-bold);
-  line-height: 1.1875;
-  font-size: var(--text-xl);
-
-  @media (max-width: ${({ theme }) => theme.device.md}) {
-    line-height: 1.21875;
-    font-size: 2.5rem;
-  }
-
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    line-height: 1.21875;
-    font-size: 2rem;
-  }
-`;
-
 export const query = graphql`
   query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -143,14 +85,18 @@ export const query = graphql`
       frontmatter {
         title
         desc
+        client
         thumbnail {
           childImageSharp {
-            fixed {
+            fluid(quality: 100, sizes: "maxWidth: 3840") {
+              src
+            }
+            fixed(quality: 100) {
               src
             }
           }
         }
-        date(formatString: "YYYY-MM-DD")
+        date(formatString: "YYYY")
         category
       }
     }

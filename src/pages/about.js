@@ -1,29 +1,26 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import SEO from "components/seo";
 import Layout from "layout/layout";
-import Markdown from "styles/markdown";
-import { rhythm } from "styles/typography";
 
 const Wrapper = styled.main`
   margin: 0 auto;
 `;
 
-const Profile = styled.img`
-  width: 75rem;
-  border-radius: 10px;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  @media screen and (max-width: 1400px) {
-    width: 700px;
-  }
-  @media screen and (max-width: 768px) {
-    width: 92%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-`;
+// const Profile = styled.img`
+//   width: 75rem;
+//   border-radius: 10px;
+//   margin-top: 2.5rem;
+//   margin-bottom: 2.5rem;
+//   @media screen and (max-width: 1400px) {
+//     width: 700px;
+//   }
+//   @media screen and (max-width: 768px) {
+//     width: 92%;
+//     margin-top: 1.5rem;
+//     margin-bottom: 1.5rem;
+//   }
+// `;
 
 const Container = styled.article`
   width: 700px;
@@ -86,20 +83,6 @@ const ImageContainer = styled.div`
 `;
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
-        edges {
-          node {
-            html
-          }
-        }
-      }
-    }
-  `);
-
-  const md = data.allMarkdownRemark.edges[0].node.html;
-
   return (
     <Layout>
       <SEO title="About" />

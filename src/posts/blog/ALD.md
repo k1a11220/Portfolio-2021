@@ -2,12 +2,12 @@
 title: "ALD equipments"
 date: "2020-04-01"
 category: "Industrial"
-desc: ""
+client: "KITECH"
 thumbnail: "./images/ALD/thumbnail.jpg"
 alt: "ALD"
 ---
 
-![https://i.imgur.com/G6fuleq.png](https://i.imgur.com/G6fuleq.png)
+![ALD Image](https://i.imgur.com/G6fuleq.png)
 
 ## Summary
 
@@ -21,7 +21,7 @@ In the ALD process, wafer can't move to another space. Because wafers can be pol
 
 ---
 
-![https://i.imgur.com/pdhw0fS.png](https://i.imgur.com/pdhw0fS.png)
+![ALD Image](https://i.imgur.com/pdhw0fS.png)
 
 ## The Challenge
 
@@ -34,9 +34,9 @@ First, **'How to rotate chamber'**. Second, **'Sealing chamber in rotating proce
 
 To rotate the chamber, our team determined to use a servo motor and internal gears. So we calculated the gear ratio by those formulas. Based on the result data we selected internal gears and servo motor type.
 
-![https://i.imgur.com/DVwd0yg.jpg](https://i.imgur.com/DVwd0yg.jpg)
+![ALD Image](https://i.imgur.com/DVwd0yg.jpg)
 
-![https://i.imgur.com/ndH1BGy.jpg](https://i.imgur.com/ndH1BGy.jpg)
+![ALD Image](https://i.imgur.com/ndH1BGy.jpg)
 
 ### Sealing with O-ring & Magnetic fluid
 
@@ -50,9 +50,9 @@ So we have to find material that meet two criteria.
 
 Finally we found magnetic fluid with magnet.
 
-![https://i.imgur.com/PWrC0pF.png](https://i.imgur.com/PWrC0pF.png)
+![ALD Image](https://i.imgur.com/PWrC0pF.png)
 
-![https://i.imgur.com/qXSVH8A.png](https://i.imgur.com/qXSVH8A.png)
+![ALD Image](https://i.imgur.com/qXSVH8A.png)
 
 ## Final Solution
 
@@ -68,11 +68,11 @@ I considered using three types of machines.
 
 Optimized design for manufacturing machine.
 
-![https://i.imgur.com/qXSVH8A.png](https://i.imgur.com/E0B7RR3.jpg)
+![ALD Image](https://i.imgur.com/E0B7RR3.jpg)
 
-![ALD](https://i.imgur.com/iR147O4.jpg)
+![ALD Image](https://i.imgur.com/iR147O4.jpg)
 
-![ALD](https://i.imgur.com/O5r1fuA.jpg)
+![ALD Image](https://i.imgur.com/O5r1fuA.jpg)
 
 ---
 

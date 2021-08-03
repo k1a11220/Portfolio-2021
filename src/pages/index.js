@@ -5,7 +5,6 @@ import Layout from "layout/layout";
 import SEO from "components/seo";
 import PostGrid from "components/postGrid/postGrid";
 import CategoryFilter from "components/categoryFilter";
-import useSiteMetadata from "hooks/useSiteMetadata";
 
 const Home = ({ pageContext, data }) => {
   const [posts, setPosts] = useState([]);
@@ -48,9 +47,6 @@ const Home = ({ pageContext, data }) => {
       ]);
     });
   }, [currentCategory, postData]);
-
-  const site = useSiteMetadata();
-  // const postTitle = currentCategory || site.siteMetadata.postTitle;
 
   return (
     <Layout>
@@ -111,17 +107,6 @@ const HeroText = styled.div`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     width: 100%;
     font-size: 1.5rem;
-  }
-`;
-
-const PostTitle = styled.h2`
-  font-size: 2rem;
-  font-weight: var(--font-weight-extra-bold);
-  margin-bottom: var(--sizing-md);
-  line-height: 1.21875;
-
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    font-size: 1.75rem;
   }
 `;
 

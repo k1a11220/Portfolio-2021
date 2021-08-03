@@ -2,7 +2,7 @@
 title: "Bokdda"
 date: "2020-04-01"
 category: "Digital"
-desc: ""
+client: "personal"
 thumbnail: "./images/Bokdda/thumbnail.png"
 alt: "ALD"
 ---

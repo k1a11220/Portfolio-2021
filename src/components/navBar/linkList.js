@@ -1,13 +1,18 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
 const LinkList = ({ links, setToggle }) => {
   const generateLink = (link, name) => {
-    const expression = /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi;
+    const expression =
+      /(https?:\/\/)?[\w\-~]+(\.[\w\-~]+)+(\/[\w\-~@:%]*)*(#[\w-]*)?(\?[^\s]*)?/gi;
     const isExternalLink = expression.test(link);
-    if (link === '/') {
+    if (link === "/") {
       return (
-        <li key={name} onClick={() => setToggle(false)}>
+        <li
+          key={name}
+          onClick={() => setToggle(false)}
+          onKeyDown={() => setToggle(false)}
+        >
           <Link to={link}>{name}</Link>
         </li>
       );

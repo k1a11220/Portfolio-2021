@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Markdown = styled.article`
   h1,
@@ -131,6 +131,7 @@ const Markdown = styled.article`
 
   img {
     display: block;
+    border-radius: 10px;
   }
 
   pre,

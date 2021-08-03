@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import CenteredImg from "./centeredImg";
-import DateTime from "styles/dateTime";
 
-const Card = ({ thumbnail, alt, category, title, desc, date }) => {
+const Card = ({ thumbnail, alt, category, title }) => {
   return (
     <Wrapper>
       <CenteredImg src={thumbnail} alt={alt} />
@@ -86,19 +85,6 @@ const Title = styled.h3`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     font-size: var(--text-md);
   }
-`;
-
-const Desc = styled.p`
-  line-height: 1.5;
-  margin-top: 8px;
-  padding-bottom: var(--sizing-sm);
-  color: var(--color-text-2);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
 `;
 
 export default Card;
