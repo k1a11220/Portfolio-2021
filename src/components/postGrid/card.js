@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import CenteredImg from "./centeredImg";
 
-const Card = ({ thumbnail, alt, category, title }) => {
+const Card = ({ thumbnail, alt, client, title }) => {
   return (
     <Wrapper>
       <CenteredImg src={thumbnail} alt={alt} />
       <Text>
         <div>
-          <Client>{category}</Client>
+          <Client>{client}</Client>
           <Title>{title}</Title>
           {/* <Desc>{desc}</Desc> */}
         </div>

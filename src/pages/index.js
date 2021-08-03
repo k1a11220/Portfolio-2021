@@ -27,6 +27,7 @@ const Home = ({ pageContext, data }) => {
           desc,
           date,
           category,
+          client,
           thumbnail: { childImageSharp },
           alt,
         },
@@ -41,6 +42,7 @@ const Home = ({ pageContext, data }) => {
           desc,
           date,
           category,
+          client,
           thumbnail: childImageSharp.id,
           alt,
         },
@@ -128,6 +130,7 @@ export const query = graphql`
           frontmatter {
             title
             category
+            client
             date(formatString: "YYYY-MM-DD")
             desc
             thumbnail {
