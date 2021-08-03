@@ -2,6 +2,7 @@ const meta = require("./gatsby-meta-config");
 
 module.exports = {
   siteMetadata: {
+    siteUrl: "https://works.beomsoo.me",
     title: meta.title,
     description: meta.description,
     author: meta.author,
@@ -32,6 +33,37 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+                context {
+                  updatedAt
+                }
+              }
+            }
+          }
+      }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map((edge) => ({
+            url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
+            changefreq: "daily",
+            priority: 0.7,
+            lastmodISO: edge.node.context.updatedAt,
+          })),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
