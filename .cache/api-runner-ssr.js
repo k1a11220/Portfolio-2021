@@ -1,7 +1,4 @@
 var plugins = [{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
-      options: {"plugins":[],"query":"\n        {\n          site {\n            siteMetadata {\n              siteUrl\n            }\n          }\n\n          allSitePage {\n            edges {\n              node {\n                path\n                context {\n                  updatedAt\n                }\n              }\n            }\n          }\n      }","output":"/sitemap.xml","createLinkInHead":true},
-    },{
       plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
     },{

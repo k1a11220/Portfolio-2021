@@ -33,37 +33,36 @@ module.exports = {
     ],
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    //   options: {
+    //     query: `
+    //     {
+    //       site {
+    //         siteMetadata {
+    //           siteUrl
+    //         }
+    //       }
 
-          allSitePage {
-            edges {
-              node {
-                path
-                context {
-                  updatedAt
-                }
-              }
-            }
-          }
-      }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => ({
-            url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
-            changefreq: "daily",
-            priority: 0.7,
-            lastmodISO: edge.node.context.updatedAt,
-          })),
-      },
-    },
+    //       allSitePage {
+    //         edges {
+    //           node {
+    //             path
+    //             context {
+    //             }
+    //           }
+    //         }
+    //       }
+    //   }`,
+    //     serialize: ({ site, allSitePage }) =>
+    //       allSitePage.edges.map((edge) => ({
+    //         url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
+    //         changefreq: "daily",
+    //         priority: 0.7,
+    //         lastmodISO: edge.node.context.updatedAt,
+    //       })),
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
