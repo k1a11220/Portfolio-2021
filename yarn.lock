@@ -14622,10 +14622,6 @@ vscode-textmate@^5.2.0:
   resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.4.0.tgz#4b25ffc1f14ac3a90faf9a388c67a01d24257cd7"
   integrity sha512-c0Q4zYZkcLizeYJ3hNyaVUM2AA8KDhNCA3JvXY8CeZSJuBdAy3bAvSbv46RClC4P3dSO9BdwhnKEx2zOo6vP/w==
 
-"vscode-theme-github-light@github:chuling/vscode-theme-github-light":
-  version "7.14.2"
-  resolved "https://codeload.github.com/chuling/vscode-theme-github-light/tar.gz/e3e18fc874fe31062c5cd1f0d255d20e5b22526c"
-
 warning@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"

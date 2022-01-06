@@ -1,20 +1,20 @@
 var plugins = [{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-typography/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
     },{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Beomsoo Son","short_name":"Beomsoo Son","description":"I'm Beomsoo Son, an Engineer and Designer based in Suwon, South Korea focused on Industrial design engineering and Digital product design.","lang":"ko","start_url":"/","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","icon":"src/images/icon.png","icon_options":{"purpose":"any maskable"},"legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"abfded2d68398b0949c75a0894fbf871"},
     },{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"pure":false},
     },{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/beomsoo/Documents/GitHub/portfolio/gatsby-ssr'),
+      plugin: require('/Users/son/Documents/GitHub/portfolio/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
