@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-gtag/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"G-G1XN48781B","head":true,"anonymize":true},
+    },{
       plugin: require('/Users/son/Documents/GitHub/portfolio/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
     },{

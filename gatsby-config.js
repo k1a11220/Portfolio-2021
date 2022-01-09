@@ -33,36 +33,14 @@ module.exports = {
     ],
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-plugin-sitemap",
-    //   options: {
-    //     query: `
-    //     {
-    //       site {
-    //         siteMetadata {
-    //           siteUrl
-    //         }
-    //       }
-
-    //       allSitePage {
-    //         edges {
-    //           node {
-    //             path
-    //             context {
-    //             }
-    //           }
-    //         }
-    //       }
-    //   }`,
-    //     serialize: ({ site, allSitePage }) =>
-    //       allSitePage.edges.map((edge) => ({
-    //         url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
-    //         changefreq: "daily",
-    //         priority: 0.7,
-    //         lastmodISO: edge.node.context.updatedAt,
-    //       })),
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-G1XN48781B`, // 측정 ID
+        head: true, // head에 tracking script를 넣고 싶다면 true로 변경
+        anonymize: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

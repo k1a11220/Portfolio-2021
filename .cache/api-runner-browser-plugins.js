@@ -1,4 +1,7 @@
 module.exports = [{
+      plugin: require('../node_modules/gatsby-plugin-gtag/gatsby-browser.js'),
+      options: {"plugins":[],"trackingId":"G-G1XN48781B","head":true,"anonymize":true},
+    },{
       plugin: require('../node_modules/gatsby-plugin-typography/gatsby-browser.js'),
       options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
     },{
