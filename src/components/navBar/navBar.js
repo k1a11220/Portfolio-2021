@@ -1,17 +1,17 @@
-import React, { useRef, useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
-import { Link } from 'gatsby';
-import LinkList from './linkList';
-import ThemeToggleButton from './themeToggleButton/themeToggleButton';
-import MenuIcon from './menuIcon';
-import Background from 'styles/background';
+import React, { useRef, useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
+import { Link } from "gatsby";
+import LinkList from "./linkList";
+import ThemeToggleButton from "./themeToggleButton/themeToggleButton";
+import MenuIcon from "./menuIcon";
+import Background from "styles/background";
 import {
   listAnimationCSS,
   navBackgroundAnimationCSS,
   curtainAnimationCSS,
-} from 'styles/navBarAnimation';
-import useSiteMetadata from 'hooks/useSiteMetadata';
-import useMenu from 'hooks/useMenu';
+} from "styles/navBarAnimation";
+import useSiteMetadata from "hooks/useSiteMetadata";
+import useMenu from "hooks/useMenu";
 
 const NavBar = ({ title, themeToggler }) => {
   const site = useSiteMetadata();
@@ -130,7 +130,7 @@ const LinkUl = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     ${({ toggle }) => listAnimationCSS(toggle)}
-    pointer-events: ${({ toggle }) => (toggle ? 'auto' : 'none')};
+    pointer-events: ${({ toggle }) => (toggle ? "auto" : "none")};
     flex-direction: column;
     padding: 0 var(--sizing-lg);
 
@@ -140,7 +140,7 @@ const LinkUl = styled.ul`
       font-size: var(--text-md);
       transform: ${({ toggle }) =>
         toggle ? `translateY(var(--sizing-lg))` : `translateY(0)`};
-      opacity: ${({ toggle }) => (toggle ? '1' : '0')};
+      opacity: ${({ toggle }) => (toggle ? "1" : "0")};
     }
 
     a {
@@ -166,7 +166,7 @@ const NavBackground = styled(Background)`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     &::after {
       ${({ toggle }) => navBackgroundAnimationCSS(toggle)};
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;

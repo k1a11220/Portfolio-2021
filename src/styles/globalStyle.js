@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     body.light {
       --color-text: #1d1d1d;
       --color-text-2: #1d1d1d;
-      --color-text-3: #086BCE;
+      --color-text-3: #4191FD;
       --color-white: #ffffff;
       --color-nav-bar: rgba(255, 255, 255, 0.7);
       --color-nav-border: rgba(200, 200, 200, 0.7);
@@ -85,17 +85,17 @@ const GlobalStyle = createGlobalStyle`
       --color-floating-button-text-hover: #f2f2f2;
       --color-floating-button-shadow: rgba(0, 0, 0, 0.2);
       --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
-      --color-blue: #0066cc;
+      --color-blue: #4191FD;
       --color-icon: #2c2c2c;
       --color-footer-background: #FAFAFA;
-      --color-footer-button-background: #086BCE;
+      --color-footer-button-background: #4191FD;
       --color-footer-button-color: #F3F3F3;
     }
 
     body.dark {
       --color-text: #e6e6e6;
       --color-text-2: #d1d1d1;
-      --color-text-3: #086BCE;
+      --color-text-3: #4191FD;
       --color-white: #e6e6e6;
       --color-nav-bar: rgba(29, 29, 29, 0.7);
       --color-nav-border: rgba(255, 255, 255, 0.2);
@@ -123,7 +123,7 @@ const GlobalStyle = createGlobalStyle`
       --color-floating-button-text-hover: #202020;
       --color-floating-button-shadow: rgba(0, 0, 0, 0.4);
       --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
-      --color-blue: #0a84ff;
+      --color-blue: #4191FD;
       --color-icon: #d1d1d1;
       --color-footer-background: #2B2B2B;
       --color-footer-button-background: #203E5C; 
