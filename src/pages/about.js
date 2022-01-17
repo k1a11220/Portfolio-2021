@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SEO from "components/seo";
 import Layout from "layout/layout";
+import InfoList from "../components/about/infoList";
 
 const Wrapper = styled.main`
   margin: 0 auto;
@@ -40,28 +41,12 @@ const Container = styled.article`
 
     & p {
       font-size: var(--text-title);
-      color: var(--color-gray-4);
+      color: var(--color-gray-6);
     }
 
     & p:last-of-type {
       margin-top: 1rem;
       font-size: var(--text-md);
-    }
-  }
-
-  & section {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    & p {
-      margin-top: 4px;
-      margin-bottom: 24px;
-    }
-    & h3 {
-      color: var(--color-text-3);
-      margin-bottom: 1.5rem;
-    }
-    & div {
-      display: flex;
     }
   }
 `;
@@ -81,6 +66,59 @@ const ImageContainer = styled.div`
     height: 52px;
   }
 `;
+
+const WorkList = [
+  {
+    label: "May KING",
+    detail: "Founder, Design Instructor · Jan 2018 ~ Dec 2019",
+  },
+  {
+    label: "TNG",
+    detail: "Design Engineer · Jan 2020 ~ Aug 2021",
+  },
+  {
+    label: "BE THE LIGHT",
+    detail: "Product Designer · Mar 2021 ~ Aug 2021",
+  },
+  {
+    label: "Korean National Police Agency",
+    detail: "Auxiliary Police · Aug 2021 ~ Present",
+  },
+];
+
+const ResearchList = [
+  {
+    label: "원자층 복합 증착 챔버 (atomic layer deposition chamber)",
+    detail: "KITECH · 10-2021-009228",
+  },
+  {
+    label: "원자층 복합 증착 장치 (Atomic layer deposition apparatus)",
+    detail: "KITECH · 10-2021-0157694",
+  },
+  {
+    label: "지속가능한 ALD 공정챔버 개발을 위한 공정갭에 따른 가스유동 평가",
+    detail: "제 29회 한국반도체학술대회(이하, KCS 2022) · D_0041 / TP1-085",
+  },
+  {
+    label: "전기클린룸 개발을 위한 수분무 가습노즐 평가",
+    detail: "대한설비공학회 2021 동계학술발표대회 · 21-W-160",
+  },
+];
+
+const SkillList = [
+  {
+    label: "Design Engineering",
+    detail: "#Solidworks #Fusion 360 #Ansys Maxwell #Keyshot",
+  },
+  {
+    label: "Coding",
+    detail: "#JavaScript #React #Next js #Gatsby #GraphQL",
+  },
+  {
+    label: "Digital Product Design",
+    detail: "#XD #Figma #Framer #AfterEffect #ProtoPie",
+  },
+];
 
 const About = () => {
   return (
@@ -107,68 +145,9 @@ const About = () => {
               </p>
             </header>
           </div>
-          <section>
-            <h3>Work Experience</h3>
-
-            <strong>May KING</strong>
-            <p>Founder, Design Instructor · Jan 2018 ~ Dec 2019</p>
-
-            <strong>TNG</strong>
-            <p>Design Engineer · Jan 2020 ~ Aug 2021</p>
-
-            <strong>BE THE LIGHT</strong>
-            <p>Product Designer · Mar 2021 ~ Aug 2021</p>
-
-            <strong>Korean National Police Agency</strong>
-            <p>Auxiliary Police · Aug 2021 ~ Present</p>
-          </section>
-          <section>
-            <h3>Research & Patent</h3>
-
-            <strong>
-              원자층 복합 증착 챔버 (atomic layer deposition chamber)
-            </strong>
-            <p>KITECH · 10-2021-009228</p>
-
-            <strong>
-              원자층 복합 증착 장치 (Atomic layer deposition apparatus)
-            </strong>
-            <p>KITECH · 10-2021-0157694</p>
-
-            <strong>
-              지속가능한 ALD 공정챔버 개발을 위한 공정갭에 따른 가스유동 평가
-            </strong>
-            <p>제 29회 한국반도체학술대회(이하, KCS 2022) · D_0041 / TP1-085</p>
-
-            <strong>전기클린룸 개발을 위한 수분무 가습노즐 평가</strong>
-            <p>대한설비공학회 2021 동계학술발표대회 · 21-W-160</p>
-          </section>
-          <section>
-            <h3>Skills</h3>
-            <strong>Design Engineering</strong>
-            <div>
-              <p>#Solidworks</p>
-              <p>#Fusion 360</p>
-              <p>#Ansys Maxwell</p>
-              <p>#Keyshot</p>
-            </div>
-            <strong>Coding</strong>
-            <div>
-              <p>#JavaScript</p>
-              <p>#React</p>
-              <p>#Next</p>
-              <p>#Gatsby</p>
-              <p>#GraphQL</p>
-            </div>
-            <strong>Digital Product Design</strong>
-            <div>
-              <p>#XD</p>
-              <p>#Figma</p>
-              <p>#Framer</p>
-              <p>#AfterEffect</p>
-              <p>#ProtoPie</p>
-            </div>
-          </section>
+          <InfoList title={"Work Experience"} list={WorkList} />
+          <InfoList title={"Research & Patent"} list={ResearchList} />
+          <InfoList title={"Skills"} list={SkillList} />
           <section>
             <h3>Clients worked with</h3>
             <ImageContainer>
