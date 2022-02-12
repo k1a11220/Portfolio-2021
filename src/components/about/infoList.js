@@ -7,17 +7,25 @@ const Container = styled.section`
   margin-bottom: 20px;
 
   & h3 {
-    color: var(--color-text-3);
-    margin-bottom: 32px;
+    font-family: Oxygen, sans-serif;
+    color: var(--color-gray-6);
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
 `;
 
-const InfoList = ({ title, list }) => {
+const InfoList = ({ title, list, isList }) => {
   return (
     <Container>
       <h3>{title}</h3>
       {list.map((list) => (
-        <Info label={list.label} detail={list.detail} />
+        <Info
+          label={list.label}
+          detail={list.detail}
+          content={list.content}
+          isList={isList}
+        />
       ))}
     </Container>
   );
