@@ -6,7 +6,7 @@ const DetailWrapper = styled.div`
 
   & strong {
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: var(--text-title);
   }
 
   & p {

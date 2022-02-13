@@ -90,7 +90,7 @@ const WorkList = [
     label: "TNG",
     detail: "Design Engineer · 2020.1 ~ 2021.8",
     content: [
-      "비 접촉식 수소 압축기 연구개발",
+      "비 접촉식 수소 압축기 개발",
       "한국생산기술연구원 ALD 장비 연구개발",
       "ALD 장비 인터페이스 디자인",
       "OLED 장비 사용성과 안전성 개선",
@@ -109,20 +109,20 @@ const WorkList = [
     detail: "Founder, Design Instructor · 2018.1 ~ 2019.12",
     content: [
       "비영리 디자인, 설계 교육단체 May KING 설립",
-      "디자인, 설계 교육 커리큘럼 기획 및 강의",
+      "디자인, 설계 교육 커리큘럼 기획 및 운영",
     ],
   },
 ];
 
 const ResearchList = [
   {
-    label: "원자층 복합 증착 챔버 (atomic layer deposition chamber)",
-    detail: "KITECH · 10-2021-009228",
+    label: "원자층 복합 증착 챔버 (Atomic layer deposition chamber)",
+    detail: "KITECH 특허출원 · 10-2021-009228",
     content: [],
   },
   {
     label: "원자층 복합 증착 장치 (Atomic layer deposition apparatus)",
-    detail: "KITECH · 10-2021-0157694",
+    detail: "KITECH 특허출원 · 10-2021-0157694",
     content: [],
   },
   {
@@ -139,24 +139,24 @@ const ResearchList = [
 
 const SkillList = [
   {
-    label: "Design Engineering",
+    label: "디자인 엔지니어링",
     detail: "Solidworks, Fusion 360, Ansys Maxwell, Keyshot",
     content: [
-      "여러 기술이 얽혀있는 하드웨어 산업에서 실제로 개발, 적용 가능한 솔루션을 제시합니다. 연구실과 현장의 간격을 줄이고자 합니다. 사용자 뿐만 아니라 산업 전반에서 발생하는 문제를 해결하는 것을 지향합니다.",
+      "여러 기술이 얽혀있는 하드웨어 산업에서 실제로 개발, 적용 가능한 솔루션을 제시합니다. 제품 디자인부터 설계, 제조까지 모든 과정을 이해하고 때에 따라 follow-up까지 가능합니다. 사용자 뿐만 아니라 산업 전반에서 발생하는 문제를 해결하는 것을 지향합니다.",
     ],
   },
   {
-    label: "Product Development",
+    label: "웹 프론트 개발",
     detail: "React, React Navtive, Next.js, Gatsby, GraphQL",
     content: [
-      "가설과 디자인으로 끝나는 것이 아닌 실제 제품을 만들어 검증하고 측정합니다. 핵심 기능을 포함한 MVP를 만듭니다. 나아가 코드 기반의 디자인 시스템을 구축하고, 개발과 디자인 사이를 연결하고자 합니다.",
+      "가설과 디자인으로 끝나는 것이 아니라 실제 제품을 만들어 검증하고 측정합니다. 핵심 기능을 포함한 MVP를 만들어 배포할 수 있습니다. 나아가 코드 기반의 디자인 시스템을 구축하고, 디자인과 개발 사이를 연결합니다.",
     ],
   },
   {
-    label: "Digital Product Design",
+    label: "프로덕트 디자인 & 프로토타이핑",
     detail: "XD, Figma, Framer, AfterEffect, ProtoPie",
     content: [
-      "사용자 중심 디자인을 추구합니다. 완성도 높은 UI를 넘어 문제를 해결하기 위해 가설을 세우고 빠르게 실행하여 사용자의 문제를 해결할 수 있는 ",
+      "사용자 중심 디자인을 추구합니다. 완성도 높은 UI를 넘어 문제를 해결하기 위해 가설을 세우고 빠르게 실행하여 적절한 솔루션을 제시합니다. 합리적인 결과에 의거한, 데이터 기반(Data Driven) 의사결정을 중요하게 생각합니다.",
     ],
   },
 ];
@@ -170,7 +170,7 @@ const About = () => {
           <div>
             <Profile src="https://i.imgur.com/ZiyS9UC.png" />
             <header>
-              <h2 className="font-gradient">"안녕하세요 손범수입니다."</h2>
+              <h2 className="font-gradient">안녕하세요 손범수입니다.</h2>
               {/* <p>
                 I'm a design engineer who looks at the nature of the problem. In
                 the form of the product, Regardless of whether it's digital or
@@ -182,7 +182,7 @@ const About = () => {
                 문제의 본질을 바라보는 디자인 엔지니어입니다. 제품의 형태에
                 구애받지 않고 디지털과 하드웨어 사이를 넘나들며 문제를 풀어가고
                 있습니다. 제품과 사용자의 관계에 주목하며, 멋진 서비스가
-                사용자의 삶과 함께하는 모습을 꿈꿉니다.
+                사람들의 삶과 함께하는 모습을 꿈꿉니다.
               </p>
             </header>
           </div>

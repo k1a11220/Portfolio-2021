@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-import ThemeContext from 'store/themeContext';
-import ThemeIcon from './themeIcon';
-import Background from 'styles/background';
-import { DARK } from 'constants/constants';
+import React, { useContext } from "react";
+import styled from "styled-components";
+import ThemeContext from "store/themeContext";
+import ThemeIcon from "./themeIcon";
+import Background from "styles/background";
+import { DARK } from "constants/constants";
 
 const ThemeToggleButton = ({ themeToggler }) => {
   const theme = useContext(ThemeContext);
-  const LABEL_TEXT = theme === DARK ? 'Light theme' : 'Dark theme';
+  const LABEL_TEXT = theme === DARK ? "Light" : "Dark";
 
   return (
     <Button onClick={themeToggler}>
