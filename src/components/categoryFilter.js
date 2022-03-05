@@ -84,6 +84,10 @@ const CategoryUl = styled.ul`
   li + li {
     margin-left: 6px;
   }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export default CategoryFilter;

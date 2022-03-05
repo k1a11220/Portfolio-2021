@@ -6,7 +6,7 @@ import useTheme from "hooks/useTheme";
 import useSiteMetadata from "hooks/useSiteMetadata";
 import styledTheme from "styles/theme";
 import GlobalStyle from "styles/globalStyle";
-import Footer from "components/Footer";
+import Footer from "components/footer";
 
 const Layout = ({ children }) => {
   const [theme, themeToggler] = useTheme();
@@ -43,15 +43,6 @@ const Container = styled.div`
   min-height: calc(100vh - var(--footer-height));
   background-color: var(--color-post-background);
 `;
-
-// const Footer = styled.footer`
-//   display: flex;
-//   text-align: center;
-//   justify-content: center;
-//   align-items: center;
-//   height: var(--footer-height);
-//   background-color: var(--color-gray-1);
-// `;
 
 const Copyright = styled.span`
   font-size: var(--text-sm);

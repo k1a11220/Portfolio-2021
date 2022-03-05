@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
     --color-outline: rgba(0,125,250,0.6);
 
     body.light {
-      --color-text: #1d1d1d;
+      --color-text: #3d444b;
       --color-text-2: #1d1d1d;
       --color-text-3: #4191FD;
       --color-white: #ffffff;
@@ -128,7 +128,6 @@ const GlobalStyle = createGlobalStyle`
       --color-footer-background: #2B2B2B;
       --color-footer-button-background: #203E5C; 
       --color-footer-button-color: #62B1FF;
-      /* --font-weight-bold: 600; */
     }
   }
 

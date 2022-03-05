@@ -9,30 +9,32 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.footer`
-  min-width: var(--min-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 148px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: var(--min-width);
   background-color: var(--color-footer-background);
 `;
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   box-sizing: content-box;
   position: relative;
   margin: 0 auto;
   max-width: var(--width);
-  width: 100%;
   padding: 0 var(--padding-lg);
-  height: 100%;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${({ theme }) => theme.device.md}) {
+
+  /* @media (max-width: ${({ theme }) => theme.device.md}) {
     padding: 22px;
-  }
+  } */
+
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -49,6 +51,7 @@ const Cta = styled.div`
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-footer-button-color);
+
   &:hover {
     transform: scale(1.02);
   }
@@ -61,18 +64,14 @@ const Cta = styled.div`
 const IconWrapper = styled.div`
   display: flex;
   align-items: center;
-  & svg {
-    margin-left: 16px;
-  }
 `;
 
 const Icon = styled(FontAwesomeIcon)``;
 
 const IconContainer = styled.a`
-  &:hover {
-    & > svg {
-      color: green;
-    }
+  padding-left: 20px;
+  &:first-of-type {
+    padding-left: 0;
   }
 `;
 
@@ -80,13 +79,16 @@ const Footer = () => {
   return (
     <Container>
       <Wrapper>
+        {/* 좌측 CTA 버튼 */}
         <a
           href="mailto:beskar.son@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Cta>beskar.son@gmail.com</Cta>
+          <Cta>Contact me</Cta>
         </a>
+
+        {/* 우측 아이콘 영역 */}
         <IconWrapper>
           <IconContainer
             href="https://www.behance.net/sonbeomsoo"
